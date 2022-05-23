@@ -1,0 +1,7 @@
+---
+title: "Technology in Aphasia Rehabilitation Research Mapping Project"
+description: |
+  The Think Tank is a Collaboration of Aphasia Trialists Working Group 4 event sponsored by the Centre for Research Excellence in Aphasia Recovery and Rehabilitation, Australia (Aphasia CRE)
+site: distill::distill_website
+---
+

@@ -1,0 +1,14 @@
+name: "aphasia-tech-map"
+title: "Aphasia Tech Map"
+description: |
+  Aphasia Tech Map
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Map"
+      href: map.html
+    - text: "Projects"
+      href: list_view.html
+output: distill::distill_article
