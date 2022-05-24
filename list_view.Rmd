@@ -21,30 +21,23 @@ d-article li:last-child {
     margin-bottom: 0.2em;
 }
 
-.flyer {
-  width: auto!important;
-  height: auto;
-  max-height:70vh;
-  display: block;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
+
 ```
 
 
 
-```{r, echo = F, eval = F, message = F, warning = F}
+```{r, echo = F, echo = F, message = F, warning = F}
 
 knitr::opts_chunk$set(echo = FALSE)
 
 library(htmltools)
-library(flexdashboard)
 library(here)
 library(tidyverse)
 library(htmltools)
-library(knitr)
-library(kableExtra)
 
 responses = read.csv(here("data", "aphasia-tech-responses.csv")) %>%
   mutate(id = row_number())
@@ -59,170 +52,47 @@ data = responses %>%
 
 
 
-```{r warning = F, message = F, eval = F}
-get_eligibility <- function(criteria, type = "inclusion"){
-  if(type == "inclusion"){
-    n = 1
-  } else {
-    n = 2
-  }
-  split_Criteria = str_split(criteria, pattern = regex("Exclusion Criteria", ignore_case = T))
-  text = str_remove(split_Criteria[[1]][n], pattern = regex("Inclusion Criteria", ignore_case = T))
-  text = str_remove(text, ":")
-  text = str_replace_all(text, pattern = "<br><br>", "<br>")
-  text = str_replace_all(text, pattern = "<br>", "<li>")
-  text = str_replace(text, pattern = " - $", replacement = "<br>")
-  text = str_replace(text, "<li>$", "<br>")
-  text = str_replace(text, " [.] ", " ")
-  return(text)
-}
+```{r warning = F, message = F, echo = F}
 
-study <- function(data, contact, location, i, ...) {
+study <- function(data, i, ...) {
   
-  gov = data$clinicaltrialsgov[i]
+    info = data[i,]
+    additional = tagList()
+    if(nchar(info$Comments)>2){
+      additional = tagList(
+      tags$em("Additional Comments:"),
+      div(class = "Location", HTML(info$Comments))
+      )
+    }
   
-    name = data$BriefTitle[i]
-    NCT_ID = data$NCTId[i]
-    pi_name = unlist(data$ResponsiblePartyInvestigatorFullName[i])
-
-    contact_table = contact %>%
-    filter(NCTId == NCT_ID) %>%
-    select(
-           Name = CentralContactName,
-           `Phone:` = CentralContactPhone,
-           `Email:` = CentralContactEMail,
-           -NCTId
-           ) %>%
-    pivot_longer(cols = 2:3, names_to = "type", values_to = "value")
-    
-  contact_names = paste(sapply(strsplit(unique(contact_table$Name), ","),"[[",1), collapse = " and ")
-  contact_emails = paste(contact_table[which(contact_table$type=="Email:"),3]$value, collapse = ", ")
-  index_table = as_tibble(count(contact_table, Name) %>% t(), row.names = F, .name_repair = "minimal") %>%  
-    janitor::row_to_names(row_number = 1)
-  contact_kbl = contact_table %>%
-    select(-Name) %>%
-    kable(col.names = NULL, format = "html") %>%
-    pack_rows(index = index_table, indent = F, bold = F)
-  email_template = get_template(name=contact_names,
-                                div_id=paste0("emailID", i),
-                                email = contact_emails,
-                                close_id = NCT_ID)
-  
-  university = unlist(data$OrgFullName[i])
-  cities = location[location$NCTId==NCT_ID,]$cities
-  country = location[location$NCTId==NCT_ID,]$countries
-  
-  if(gov == 1){
-  
-  
-  summary = unlist(data$BriefSummary[i])
-  inclusion_text = data$inclusion[i]
-  exlcusion_text = data$exclusion[i]
-
-
     divOut = 
-      div(id=NCT_ID,
+      div(id=info$id,
       class = "study",
-      h3(class = "name", name),
-      div(class = "pi", paste("Principle Investigator:", pi_name)),
-      div(class = "university", paste("Institution:", university)),
-      div(class = "countries", paste("Country:", country)), 
-      div(class = "cities", paste("City:", cities)), br(),
+      div(class = "name", info$Title),
+      div(class = "pi", paste("Principle Investigator(s):", info$ResponsiblePartyInvestigators)),
+      div(class = "Location", paste("Country:", info$LocationFull)), 
+      div(class = "Location", paste("Funding Source:", info$FundingSource)), 
+      div(class = "Location", paste("Phase of Research:", info$PhaseOfResearch)), 
+      div(class = "Location", paste("Plan to Commercalise:", info$PlanToCommericalise)), 
+      div(class = "Location", paste("Category:", info$Category)), 
+      br(),
       tags$b("Brief Description:"),
-      div(class = "summary", HTML(summary)), br(),
-      #div(class = "eligibility", HTML(eCriteria))
-      tags$b("Inclusion Criteria:"),
-      div(HTML(inclusion_text)),
-      tags$b("Exlcusion Criteria:"),
-      div(HTML(exlcusion_text)), br(),
-      tags$b("Contact Information:"),
-      div(class = "contact",
-          HTML(
-            contact_kbl
-          )),
-      div(style="text-align:center;margin-bottom:5px;",
-          HTML(
-          glue::glue('<a href="#{NCT_ID}-modal" class="help-me">Help me write an email</a>')
-        )
-      ),
-      tags$div(
-        cat(knitr::asis_output(htmltools::htmlPreserve(
-          glue::glue(
-            '<div id="{NCT_ID}-modal" class="modalDialog">
-                  {email_template}
-            </div>'
-        )))
-      )
-      )
-    ) 
-  } else {
-    imgpath=here::here("data", "flyers", data$flyer[i])
-
-    divOut = 
-      div(id=NCT_ID,
-      class = "study",
-      h3(class = "name", name),
-      div(class = "pi", paste("Principle Investigator:", pi_name)),
-      div(class = "university", paste("Institution:", university)),
-      div(class = "countries", paste("Country:", country)), 
-      div(class = "cities", paste("City:", cities)), br(),
-      tags$a(tags$img(src = imgpath, class = "flyer"), href = paste0("data/flyers/", data$flyer[i]), target = "_blank"),
-      tags$b("Contact Information:"),
-      div(class = "contact",
-          HTML(
-            contact_kbl
-          )),
-      div(style="text-align:center;margin-bottom:5px;",
-          HTML(
-          glue::glue('<a href="#{NCT_ID}-modal" class="help-me">Help me write an email</a>')
-        )
-      ),
-      tags$div(
-        cat(knitr::asis_output(htmltools::htmlPreserve(
-          glue::glue(
-            '<div id="{NCT_ID}-modal" class="modalDialog">
-                  {email_template}
-            </div>'
-        )))
-      )
-      ),br(),
-      tags$em("This study was submitted manually, not through clinicaltrials.gov", style="font-size:0.7rem;")
+      div(class = "summary", HTML(info$BriefSummary)), br(),
+      additional
     ) 
     
-    
-    
-  }
+    return(divOut)
   
-  return(divOut)
-}
+  }
 
 
 ```
-    
-```{r, eval = F}
-data = study_info %>%
-  select(BriefTitle, Condition, NCTId,
-         OrgFullName, BriefSummary, DetailedDescription,
-         Keyword, StudyType, EligibilityCriteria, HealthyVolunteers,
-         MinimumAge, Gender, ResponsiblePartyInvestigatorFullName, flyer, clinicaltrialsgov) %>%
-  mutate(BriefTitle = gsub("[.]", "", x=BriefTitle)) %>%
-  rowwise() %>%
-  mutate(
-    EligibilityCriteria= str_replace_all(EligibilityCriteria, ">", "&gt;"),
-    EligibilityCriteria= str_replace_all(EligibilityCriteria, "<", "&lt;"),
-    EligibilityCriteria = str_replace_all(EligibilityCriteria, "\n", "<br>"),
-         inclusion = get_eligibility(EligibilityCriteria, type = "inclusion"),
-         exclusion = get_eligibility(EligibilityCriteria, type = "exclusion")
-         )
-```
 
-```{r, results = "asis", layout = "l-body-outset", eval = F}
+```{r, results = "asis", layout = "l-body-outset"}
 
 for(i in 1:nrow(data)){
   print(br())
   print(study(data,
-              contact = contact_dat,
-              location = location_dat,
               i = i))
   
 }

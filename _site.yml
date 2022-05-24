@@ -4,11 +4,13 @@ description: |
   Aphasia Tech Map
 output_dir: "docs"
 navbar:
+  search: true
   right:
     - text: "Home"
       href: index.html
-    - text: "Map"
-      href: map.html
+    - text: "Table"
+      href: table_view.html
     - text: "Projects"
       href: list_view.html
+theme: theme.css
 output: distill::distill_article

@@ -2033,6 +2033,473 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </script>
 
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+
+
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    sans-serif;
+    --mono-font:       monospace;
+    --body-font:       sans-serif;
+    --navbar-font:     sans-serif;  /* websites + blogs only */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  </style>
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+
+
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      24px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    sans-serif;
+    --mono-font:       monospace;
+    --body-font:       sans-serif;
+    --navbar-font:     sans-serif;  /* websites + blogs only */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  d-title {
+    padding-top:5rem;
+  }
+
+  d-title p {
+     font-size: 1rem; 
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+    /*margin-top: 5px;
+    padding-top:30px;*/
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+
+  .study {
+    background-color: white;
+    padding: 2%;
+    margin: 2%;
+    border: 2px solid;
+    border-radius: 2px;
+    box-shadow: 5px 2.5px 2.5px darkgrey;
+  }
+
+  .intro_box {
+    background-color: white;
+    padding: 2%;
+    margin: 1%;
+    border: 2px solid;
+    border-radius: 2px;
+    box-shadow: 5px 2.5px 2.5px darkgrey;
+    font-size:0.8rem;
+    line-height: 1.1rem;
+  }
+
+  .modalDialog {
+  	position: fixed;
+  	font-family: Arial, Helvetica, sans-serif;
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	background: rgba(0,0,0,0.8);
+  	z-index: 99999;
+  	opacity:0;
+  	-webkit-transition: opacity 400ms ease-in;
+  	-moz-transition: opacity 400ms ease-in;
+  	transition: opacity 400ms ease-in;
+  	pointer-events: none;
+  }
+
+  .modalDialog:target {
+  	opacity:1;
+  	pointer-events: auto;
+  }
+
+  .modalDialog > div {
+  	width: 60vw;
+  	position: relative;
+  	margin: 10% auto;
+  	padding: 5px 20px 13px 20px;
+  	border-radius: 5px;
+  	background: #fff;
+  }
+
+  .close {
+  	background: #fff;
+  	color: #FFFFFF;
+  	line-height: 25px;
+  	position: absolute;
+  	float: right;
+  	right: 10px;
+  	text-align: right;
+  	top: 12px;
+  	width: 24px;
+  	text-decoration: none;
+  	border-bottom: none;
+  	color: black!important;
+  	/*font-weight: bold;*/
+  	/*-webkit-border-radius: 12px;
+  	-moz-border-radius: 12px;
+  	border-radius: 12px;
+  	-moz-box-shadow: 1px 1px 3px #000;
+  	-webkit-box-shadow: 1px 1px 3px #000;
+  	box-shadow: 1px 1px 3px #000;*/
+  }
+
+  .close:hover { border-bottom:none!important; }
+
+  .copy-button {
+    width:200px;
+    font-size:1.2rem;
+    margin-left:auto;
+    cursor: pointer;
+  }
+
+  d-appendix a {
+    color: #004276!important;
+  }
+  d-article a {
+    color: #004276!important;
+  }
+
+  .help-me {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-color: #ccc;
+    background-color: #cccccc40;
+    padding: 2%;
+    margin: 2%;
+  }
+  .help-me:hover {
+    background-color: #cccccc90;
+  }
+
+  .btn{
+      display: inline-block;
+      width: 280px;
+      padding: 2%;
+      height: 10vh;
+      margin: 10px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 5vh;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+  }
+
+  .btn:hover{
+    background:#cccccc50;
+  }
+
+  .cols {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+
+  @media (max-width: 1000px) {
+    .cols {
+      flex-direction: column;
+    }
+  }</style>
+  <style type="text/css">
+  /* base style */
+
+  /* FONT FAMILIES */
+
+  :root {
+    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body,
+  .posts-list .post-preview p,
+  .posts-list .description p {
+    font-family: var(--body-font), var(--body-default);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .posts-list .post-preview h2,
+  .posts-list .description h2 {
+    font-family: var(--heading-font), var(--heading-default);
+  }
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: var(--mono-font), var(--mono-default);
+  }
+
+
+  /*-- TITLE --*/
+  d-title h1,
+  .posts-list > h1 {
+    color: var(--title-color, black);
+  }
+
+  d-title h1 {
+    font-size: var(--title-size, 50px);
+  }
+
+  /*-- HEADERS --*/
+  d-article h1,
+  d-article h2,
+  d-article h3,
+  d-article h4,
+  d-article h5,
+  d-article h6 {
+    color: var(--header-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- BODY --*/
+  d-article > p,  /* only text inside of <p> tags */
+  d-article > ul, /* lists */
+  d-article > ol {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+    font-size: var(--body-size, 1.06rem);
+  }
+
+
+  /*-- CODE --*/
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-size: var(--code-size, 14px);
+  }
+
+  /*-- ASIDE --*/
+  d-article aside {
+    font-size: var(--aside-size, 12px);
+    color: var(--aside-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- FIGURE CAPTIONS --*/
+  figure .caption,
+  figure figcaption,
+  .figure .caption {
+    font-size: var(--fig-cap-size, 13px);
+    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- METADATA --*/
+  d-byline h3 {
+    font-size: var(--heading-size, 0.6rem);
+    color: var(--heading-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-byline {
+    font-size: var(--body-size, 0.8rem);
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  d-byline a,
+  d-article d-byline a {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- TABLE OF CONTENTS --*/
+  .d-contents nav h3 {
+    font-size: var(--heading-size, 18px);
+  }
+
+  .d-contents nav a {
+    font-size: var(--contents-size, 13px);
+  }
+
+  /*-- APPENDIX --*/
+  d-appendix h3 {
+    font-size: var(--heading-size, 15px);
+    color: var(--heading-color, rgba(0, 0, 0, 0.65));
+  }
+
+  d-appendix {
+    font-size: var(--text-size, 0.8em);
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-appendix d-footnote-list a.footnote-backlink {
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  .distill-site-header .title {
+    font-size: var(--title-size, 18px);
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .distill-site-header a,
+  .nav-dropdown .nav-dropbtn {
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    font-size: var(--text-size, 15px);
+  }
+
+  .distill-site-header a:hover,
+  .nav-dropdown:hover .nav-dropbtn {
+    color: var(--hover-color, white);
+  }
+
+  .distill-site-header {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer a:hover {
+    color: var(--hover-color, white);
+  }</style>
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
@@ -2063,10 +2530,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="index.html" class="title">Aphasia Tech Map</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
-<a href="map.html">Map</a>
+<a href="table_view.html">Table</a>
 <a href="list_view.html">Projects</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -2104,222 +2572,2120 @@ d-article li:last-child {
     margin-bottom: 0.2em;
 }
 
-.flyer {
-  width: auto!important;
-  height: auto;
-  max-height:70vh;
-  display: block;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
+
 </style>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>get_template</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>name</span>, <span class='va'>div_id</span>, <span class='va'>email</span>, <span class='va'>close_id</span><span class='op'>)</span><span class='op'>{</span>
-  
-<span class='va'>js_function</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='st'>"copyDivToClipboard('"</span>,<span class='va'>div_id</span>,<span class='st'>"')"</span><span class='op'>)</span>
-  
-<span class='fu'>glue</span><span class='fu'>::</span><span class='fu'><a href='https://glue.tidyverse.org/reference/glue.html'>glue</a></span><span class='op'>(</span>
-  <span class='st'>'&lt;div&gt;
-  &lt;a href="#{close_id}" title="Close" class="close material-icons"&gt;&amp;#xe5c9&lt;/a&gt;
-  &lt;h3&gt; Copy these email(s) into your email:&lt;/h3&gt;
-  &lt;p&gt;{email}&lt;/p&gt;
-  &lt;h3&gt;Copy this email template into your email:&lt;/h3&gt;
-  &lt;div id="{div_id}"&gt;
-  Dear {name},&lt;br&gt;&lt;br&gt;
-  I found your research on aphasiaresearch.org. &lt;br&gt;
-  I have aphasia and I\'m interested in learning more about the study. I think I may meet the study criteria. &lt;br&gt;
-  The best way to contact me is:&lt;br&gt;
-  &amp;nbsp;&amp;nbsp;Caregiver: &lt;b&gt;[Insert your phone / email]&lt;/b&gt;&lt;br&gt;
-  &amp;nbsp;&amp;nbsp;Person with aphasia: &lt;b&gt;[Insert your phone / email]&lt;/b&gt;&lt;br&gt;
-  Thank you for doing this research.&lt;br&gt;&lt;br&gt;
-  Sincerely,&lt;br&gt;
-  &lt;b&gt;[Insert your name]&lt;/b&gt;&lt;br&gt;&lt;br&gt;
-  &lt;/div&gt;
-  
-  &lt;div style="text-align:center;"&gt;
-  &lt;button onclick={js_function} class = "copy-button"&gt;Copy Email Template&lt;/button&gt;
-  &lt;/div&gt;&lt;/div&gt;
-'</span>
-<span class='op'>)</span>
-<span class='op'>}</span>
-</code></pre>
-</div>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>get_eligibility</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>criteria</span>, <span class='va'>type</span> <span class='op'>=</span> <span class='st'>"inclusion"</span><span class='op'>)</span><span class='op'>{</span>
-  <span class='kw'>if</span><span class='op'>(</span><span class='va'>type</span> <span class='op'>==</span> <span class='st'>"inclusion"</span><span class='op'>)</span><span class='op'>{</span>
-    <span class='va'>n</span> <span class='op'>=</span> <span class='fl'>1</span>
-  <span class='op'>}</span> <span class='kw'>else</span> <span class='op'>{</span>
-    <span class='va'>n</span> <span class='op'>=</span> <span class='fl'>2</span>
-  <span class='op'>}</span>
-  <span class='va'>split_Criteria</span> <span class='op'>=</span> <span class='fu'>str_split</span><span class='op'>(</span><span class='va'>criteria</span>, pattern <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/regex.html'>regex</a></span><span class='op'>(</span><span class='st'>"Exclusion Criteria"</span>, ignore_case <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span>
-  <span class='va'>text</span> <span class='op'>=</span> <span class='fu'>str_remove</span><span class='op'>(</span><span class='va'>split_Criteria</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>[</span><span class='va'>n</span><span class='op'>]</span>, pattern <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/regex.html'>regex</a></span><span class='op'>(</span><span class='st'>"Inclusion Criteria"</span>, ignore_case <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span>
-  <span class='va'>text</span> <span class='op'>=</span> <span class='fu'>str_remove</span><span class='op'>(</span><span class='va'>text</span>, <span class='st'>":"</span><span class='op'>)</span>
-  <span class='va'>text</span> <span class='op'>=</span> <span class='fu'>str_replace_all</span><span class='op'>(</span><span class='va'>text</span>, pattern <span class='op'>=</span> <span class='st'>"&lt;br&gt;&lt;br&gt;"</span>, <span class='st'>"&lt;br&gt;"</span><span class='op'>)</span>
-  <span class='va'>text</span> <span class='op'>=</span> <span class='fu'>str_replace_all</span><span class='op'>(</span><span class='va'>text</span>, pattern <span class='op'>=</span> <span class='st'>"&lt;br&gt;"</span>, <span class='st'>"&lt;li&gt;"</span><span class='op'>)</span>
-  <span class='va'>text</span> <span class='op'>=</span> <span class='fu'>str_replace</span><span class='op'>(</span><span class='va'>text</span>, pattern <span class='op'>=</span> <span class='st'>" - $"</span>, replacement <span class='op'>=</span> <span class='st'>"&lt;br&gt;"</span><span class='op'>)</span>
-  <span class='va'>text</span> <span class='op'>=</span> <span class='fu'>str_replace</span><span class='op'>(</span><span class='va'>text</span>, <span class='st'>"&lt;li&gt;$"</span>, <span class='st'>"&lt;br&gt;"</span><span class='op'>)</span>
-  <span class='va'>text</span> <span class='op'>=</span> <span class='fu'>str_replace</span><span class='op'>(</span><span class='va'>text</span>, <span class='st'>" [.] "</span>, <span class='st'>" "</span><span class='op'>)</span>
-  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>text</span><span class='op'>)</span>
-<span class='op'>}</span>
 
-<span class='va'>study</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>contact</span>, <span class='va'>location</span>, <span class='va'>i</span>, <span class='va'>...</span><span class='op'>)</span> <span class='op'>{</span>
-  
-  <span class='va'>gov</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>clinicaltrialsgov</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>
-  
-    <span class='va'>name</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>BriefTitle</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>
-    <span class='va'>NCT_ID</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>NCTId</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>
-    <span class='va'>pi_name</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/unlist.html'>unlist</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>ResponsiblePartyInvestigatorFullName</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span>
-
-    <span class='va'>contact_table</span> <span class='op'>=</span> <span class='va'>contact</span> <span class='op'>%&gt;%</span>
-    <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NCTId</span> <span class='op'>==</span> <span class='va'>NCT_ID</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-    <span class='fu'>select</span><span class='op'>(</span>
-           Name <span class='op'>=</span> <span class='va'>CentralContactName</span>,
-           `Phone:` <span class='op'>=</span> <span class='va'>CentralContactPhone</span>,
-           `Email:` <span class='op'>=</span> <span class='va'>CentralContactEMail</span>,
-           <span class='op'>-</span><span class='va'>NCTId</span>
-           <span class='op'>)</span> <span class='op'>%&gt;%</span>
-    <span class='fu'>pivot_longer</span><span class='op'>(</span>cols <span class='op'>=</span> <span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span>, names_to <span class='op'>=</span> <span class='st'>"type"</span>, values_to <span class='op'>=</span> <span class='st'>"value"</span><span class='op'>)</span>
-    
-  <span class='va'>contact_names</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>contact_table</span><span class='op'>$</span><span class='va'>Name</span><span class='op'>)</span>, <span class='st'>","</span><span class='op'>)</span>,<span class='st'>"[["</span>,<span class='fl'>1</span><span class='op'>)</span>, collapse <span class='op'>=</span> <span class='st'>" and "</span><span class='op'>)</span>
-  <span class='va'>contact_emails</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>contact_table</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>contact_table</span><span class='op'>$</span><span class='va'>type</span><span class='op'>==</span><span class='st'>"Email:"</span><span class='op'>)</span>,<span class='fl'>3</span><span class='op'>]</span><span class='op'>$</span><span class='va'>value</span>, collapse <span class='op'>=</span> <span class='st'>", "</span><span class='op'>)</span>
-  <span class='va'>index_table</span> <span class='op'>=</span> <span class='fu'>as_tibble</span><span class='op'>(</span><span class='fu'>count</span><span class='op'>(</span><span class='va'>contact_table</span>, <span class='va'>Name</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='op'>)</span>, row.names <span class='op'>=</span> <span class='cn'>F</span>, .name_repair <span class='op'>=</span> <span class='st'>"minimal"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>  
-    <span class='fu'>janitor</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/janitor/man/row_to_names.html'>row_to_names</a></span><span class='op'>(</span>row_number <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
-  <span class='va'>contact_kbl</span> <span class='op'>=</span> <span class='va'>contact_table</span> <span class='op'>%&gt;%</span>
-    <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>Name</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-    <span class='fu'>kable</span><span class='op'>(</span>col.names <span class='op'>=</span> <span class='cn'>NULL</span>, format <span class='op'>=</span> <span class='st'>"html"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-    <span class='fu'>pack_rows</span><span class='op'>(</span>index <span class='op'>=</span> <span class='va'>index_table</span>, indent <span class='op'>=</span> <span class='cn'>F</span>, bold <span class='op'>=</span> <span class='cn'>F</span><span class='op'>)</span>
-  <span class='va'>email_template</span> <span class='op'>=</span> <span class='fu'>get_template</span><span class='op'>(</span>name<span class='op'>=</span><span class='va'>contact_names</span>,
-                                div_id<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='st'>"emailID"</span>, <span class='va'>i</span><span class='op'>)</span>,
-                                email <span class='op'>=</span> <span class='va'>contact_emails</span>,
-                                close_id <span class='op'>=</span> <span class='va'>NCT_ID</span><span class='op'>)</span>
-  
-  <span class='va'>university</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/unlist.html'>unlist</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>OrgFullName</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span>
-  <span class='va'>cities</span> <span class='op'>=</span> <span class='va'>location</span><span class='op'>[</span><span class='va'>location</span><span class='op'>$</span><span class='va'>NCTId</span><span class='op'>==</span><span class='va'>NCT_ID</span>,<span class='op'>]</span><span class='op'>$</span><span class='va'>cities</span>
-  <span class='va'>country</span> <span class='op'>=</span> <span class='va'>location</span><span class='op'>[</span><span class='va'>location</span><span class='op'>$</span><span class='va'>NCTId</span><span class='op'>==</span><span class='va'>NCT_ID</span>,<span class='op'>]</span><span class='op'>$</span><span class='va'>countries</span>
-  
-  <span class='kw'>if</span><span class='op'>(</span><span class='va'>gov</span> <span class='op'>==</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>{</span>
-  
-  
-  <span class='va'>summary</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/unlist.html'>unlist</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>BriefSummary</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span>
-  <span class='va'>inclusion_text</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>inclusion</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>
-  <span class='va'>exlcusion_text</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>exclusion</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>
-
-    <span class='va'>divOut</span> <span class='op'>=</span> 
-      <span class='fu'>div</span><span class='op'>(</span>id<span class='op'>=</span><span class='va'>NCT_ID</span>,
-      class <span class='op'>=</span> <span class='st'>"study"</span>,
-      <span class='fu'>h3</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"name"</span>, <span class='va'>name</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"pi"</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Principle Investigator:"</span>, <span class='va'>pi_name</span><span class='op'>)</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"university"</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Institution:"</span>, <span class='va'>university</span><span class='op'>)</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"countries"</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Country:"</span>, <span class='va'>country</span><span class='op'>)</span><span class='op'>)</span>, 
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"cities"</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"City:"</span>, <span class='va'>cities</span><span class='op'>)</span><span class='op'>)</span>, <span class='fu'>br</span><span class='op'>(</span><span class='op'>)</span>,
-      <span class='va'>tags</span><span class='op'>$</span><span class='fu'>b</span><span class='op'>(</span><span class='st'>"Brief Description:"</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"summary"</span>, <span class='fu'>HTML</span><span class='op'>(</span><span class='va'>summary</span><span class='op'>)</span><span class='op'>)</span>, <span class='fu'>br</span><span class='op'>(</span><span class='op'>)</span>,
-      <span class='co'>#div(class = "eligibility", HTML(eCriteria))</span>
-      <span class='va'>tags</span><span class='op'>$</span><span class='fu'>b</span><span class='op'>(</span><span class='st'>"Inclusion Criteria:"</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span><span class='fu'>HTML</span><span class='op'>(</span><span class='va'>inclusion_text</span><span class='op'>)</span><span class='op'>)</span>,
-      <span class='va'>tags</span><span class='op'>$</span><span class='fu'>b</span><span class='op'>(</span><span class='st'>"Exlcusion Criteria:"</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span><span class='fu'>HTML</span><span class='op'>(</span><span class='va'>exlcusion_text</span><span class='op'>)</span><span class='op'>)</span>, <span class='fu'>br</span><span class='op'>(</span><span class='op'>)</span>,
-      <span class='va'>tags</span><span class='op'>$</span><span class='fu'>b</span><span class='op'>(</span><span class='st'>"Contact Information:"</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"contact"</span>,
-          <span class='fu'>HTML</span><span class='op'>(</span>
-            <span class='va'>contact_kbl</span>
-          <span class='op'>)</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>style<span class='op'>=</span><span class='st'>"text-align:center;margin-bottom:5px;"</span>,
-          <span class='fu'>HTML</span><span class='op'>(</span>
-          <span class='fu'>glue</span><span class='fu'>::</span><span class='fu'><a href='https://glue.tidyverse.org/reference/glue.html'>glue</a></span><span class='op'>(</span><span class='st'>'&lt;a href="#{NCT_ID}-modal" class="help-me"&gt;Help me write an email&lt;/a&gt;'</span><span class='op'>)</span>
-        <span class='op'>)</span>
-      <span class='op'>)</span>,
-      <span class='va'>tags</span><span class='op'>$</span><span class='fu'>div</span><span class='op'>(</span>
-        <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/asis_output.html'>asis_output</a></span><span class='op'>(</span><span class='fu'>htmltools</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/htmlPreserve.html'>htmlPreserve</a></span><span class='op'>(</span>
-          <span class='fu'>glue</span><span class='fu'>::</span><span class='fu'><a href='https://glue.tidyverse.org/reference/glue.html'>glue</a></span><span class='op'>(</span>
-            <span class='st'>'&lt;div id="{NCT_ID}-modal" class="modalDialog"&gt;
-                  {email_template}
-            &lt;/div&gt;'</span>
-        <span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
-      <span class='op'>)</span>
-      <span class='op'>)</span>
-    <span class='op'>)</span> 
-  <span class='op'>}</span> <span class='kw'>else</span> <span class='op'>{</span>
-    <span class='va'>imgpath</span><span class='op'>=</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"data"</span>, <span class='st'>"flyers"</span>, <span class='va'>data</span><span class='op'>$</span><span class='va'>flyer</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span>
-
-    <span class='va'>divOut</span> <span class='op'>=</span> 
-      <span class='fu'>div</span><span class='op'>(</span>id<span class='op'>=</span><span class='va'>NCT_ID</span>,
-      class <span class='op'>=</span> <span class='st'>"study"</span>,
-      <span class='fu'>h3</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"name"</span>, <span class='va'>name</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"pi"</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Principle Investigator:"</span>, <span class='va'>pi_name</span><span class='op'>)</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"university"</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Institution:"</span>, <span class='va'>university</span><span class='op'>)</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"countries"</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Country:"</span>, <span class='va'>country</span><span class='op'>)</span><span class='op'>)</span>, 
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"cities"</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"City:"</span>, <span class='va'>cities</span><span class='op'>)</span><span class='op'>)</span>, <span class='fu'>br</span><span class='op'>(</span><span class='op'>)</span>,
-      <span class='va'>tags</span><span class='op'>$</span><span class='fu'>a</span><span class='op'>(</span><span class='va'>tags</span><span class='op'>$</span><span class='fu'>img</span><span class='op'>(</span>src <span class='op'>=</span> <span class='va'>imgpath</span>, class <span class='op'>=</span> <span class='st'>"flyer"</span><span class='op'>)</span>, href <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='st'>"data/flyers/"</span>, <span class='va'>data</span><span class='op'>$</span><span class='va'>flyer</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span>, target <span class='op'>=</span> <span class='st'>"_blank"</span><span class='op'>)</span>,
-      <span class='va'>tags</span><span class='op'>$</span><span class='fu'>b</span><span class='op'>(</span><span class='st'>"Contact Information:"</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"contact"</span>,
-          <span class='fu'>HTML</span><span class='op'>(</span>
-            <span class='va'>contact_kbl</span>
-          <span class='op'>)</span><span class='op'>)</span>,
-      <span class='fu'>div</span><span class='op'>(</span>style<span class='op'>=</span><span class='st'>"text-align:center;margin-bottom:5px;"</span>,
-          <span class='fu'>HTML</span><span class='op'>(</span>
-          <span class='fu'>glue</span><span class='fu'>::</span><span class='fu'><a href='https://glue.tidyverse.org/reference/glue.html'>glue</a></span><span class='op'>(</span><span class='st'>'&lt;a href="#{NCT_ID}-modal" class="help-me"&gt;Help me write an email&lt;/a&gt;'</span><span class='op'>)</span>
-        <span class='op'>)</span>
-      <span class='op'>)</span>,
-      <span class='va'>tags</span><span class='op'>$</span><span class='fu'>div</span><span class='op'>(</span>
-        <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/asis_output.html'>asis_output</a></span><span class='op'>(</span><span class='fu'>htmltools</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/htmlPreserve.html'>htmlPreserve</a></span><span class='op'>(</span>
-          <span class='fu'>glue</span><span class='fu'>::</span><span class='fu'><a href='https://glue.tidyverse.org/reference/glue.html'>glue</a></span><span class='op'>(</span>
-            <span class='st'>'&lt;div id="{NCT_ID}-modal" class="modalDialog"&gt;
-                  {email_template}
-            &lt;/div&gt;'</span>
-        <span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
-      <span class='op'>)</span>
-      <span class='op'>)</span>,<span class='fu'>br</span><span class='op'>(</span><span class='op'>)</span>,
-      <span class='va'>tags</span><span class='op'>$</span><span class='fu'>em</span><span class='op'>(</span><span class='st'>"This study was submitted manually, not through clinicaltrials.gov"</span>, style<span class='op'>=</span><span class='st'>"font-size:0.7rem;"</span><span class='op'>)</span>
-    <span class='op'>)</span> 
-    
-    
-    
-  <span class='op'>}</span>
-  
-  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>divOut</span><span class='op'>)</span>
-<span class='op'>}</span>
-</code></pre>
-</div>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>data</span> <span class='op'>=</span> <span class='va'>study_info</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>select</span><span class='op'>(</span><span class='va'>BriefTitle</span>, <span class='va'>Condition</span>, <span class='va'>NCTId</span>,
-         <span class='va'>OrgFullName</span>, <span class='va'>BriefSummary</span>, <span class='va'>DetailedDescription</span>,
-         <span class='va'>Keyword</span>, <span class='va'>StudyType</span>, <span class='va'>EligibilityCriteria</span>, <span class='va'>HealthyVolunteers</span>,
-         <span class='va'>MinimumAge</span>, <span class='va'>Gender</span>, <span class='va'>ResponsiblePartyInvestigatorFullName</span>, <span class='va'>flyer</span>, <span class='va'>clinicaltrialsgov</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>BriefTitle <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span><span class='op'>(</span><span class='st'>"[.]"</span>, <span class='st'>""</span>, x<span class='op'>=</span><span class='va'>BriefTitle</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>rowwise</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>
-    EligibilityCriteria<span class='op'>=</span> <span class='fu'>str_replace_all</span><span class='op'>(</span><span class='va'>EligibilityCriteria</span>, <span class='st'>"&gt;"</span>, <span class='st'>"&amp;gt;"</span><span class='op'>)</span>,
-    EligibilityCriteria<span class='op'>=</span> <span class='fu'>str_replace_all</span><span class='op'>(</span><span class='va'>EligibilityCriteria</span>, <span class='st'>"&lt;"</span>, <span class='st'>"&amp;lt;"</span><span class='op'>)</span>,
-    EligibilityCriteria <span class='op'>=</span> <span class='fu'>str_replace_all</span><span class='op'>(</span><span class='va'>EligibilityCriteria</span>, <span class='st'>"\n"</span>, <span class='st'>"&lt;br&gt;"</span><span class='op'>)</span>,
-         inclusion <span class='op'>=</span> <span class='fu'>get_eligibility</span><span class='op'>(</span><span class='va'>EligibilityCriteria</span>, type <span class='op'>=</span> <span class='st'>"inclusion"</span><span class='op'>)</span>,
-         exclusion <span class='op'>=</span> <span class='fu'>get_eligibility</span><span class='op'>(</span><span class='va'>EligibilityCriteria</span>, type <span class='op'>=</span> <span class='st'>"exclusion"</span><span class='op'>)</span>
-         <span class='op'>)</span>
-</code></pre>
-</div>
 </div>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='fu'>br</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='fu'>study</span><span class='op'>(</span><span class='va'>data</span>,
-              contact <span class='op'>=</span> <span class='va'>contact_dat</span>,
-              location <span class='op'>=</span> <span class='va'>location_dat</span>,
-              i <span class='op'>=</span> <span class='va'>i</span><span class='op'>)</span><span class='op'>)</span>
-  
-<span class='op'>}</span>
-</code></pre>
+<br/>
+<div id="1" class="study">
+<div class="name">
+VESFA (Virtual Elaborated Semantic Feature Analysis)
+</div>
+<div class="pi">
+Principle Investigator(s): Niamh Devane, Katerina Hilari, Jane Marshall
+&amp; Stephanie Wilson
+</div>
+<div class="Location">
+Country: London, UK
+</div>
+<div class="Location">
+Funding Source: Doctoral studentship from the School of Health Sciences,
+City, University of London
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Virtual reality
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+The VESFA trial was a single-blind, phase II feasibility randomised
+controlled trial comparing usual care + elaborated semantic feature
+analysis delivered remotely in a virtual environment called EVA Park
+with a usual care control. Feasibility outcomes of this trial explored
+recruitment and retention, willingness to be randomised, compliance with
+and acceptability of the treatment and of the outcome measures. A range
+of outcome measures were used that explored word finding in picture
+naming and discourse, functional communication, language, mood and
+quality of life.
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="2" class="study">
+<div class="name">
+KeyPhone
+</div>
+<div class="pi">
+Principle Investigator(s): Victoria Fleming, Wendy Best, Wei Ping Sze,
+and team
+</div>
+<div class="Location">
+Country: London, UK and Singapore
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Use of orthographic cues in intervention with people with anomia.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Proof of concept was established in the 1980s by Carolyn Bruce, David
+Howard and team. This tech project builds on this and the results of a
+recent meta-analysis (Sze et al. 2021). May also be categorised as AAC
+for some users. If there are others working on something similar, please
+get in touch.
+</div>
+</div>
+<br/>
+<div id="3" class="study">
+<div class="name">
+Swaracharya
+</div>
+<div class="pi">
+Principle Investigator(s): Nisheeth Joshi, Pragya Kartyayan, Chitvan
+Mishra, Shefali Gupta
+</div>
+<div class="Location">
+Country: Banasthali, India
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Augmentative and Alternive
+Communication, communication accessibility (e.g. text to speech
+feature), Artificial Intelligence/Machine learning
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+The project helps in rehab of Aphasia patients who have difficulty in
+speaking. The system has brain training module for this. Since almost
+80% stokes occurs in rural India, the existing tools become useless for
+such patients or their care-givers. This system helps by providing brain
+training via Web and Mobile Interfaces.
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="4" class="study">
+<div class="name">
+Face to face nd telehealth equivalence of assessments in aphasia
+(FATE-A)
+</div>
+<div class="pi">
+Principle Investigator(s): Professor Katerina Hilari, Dr Nick Behn, Dr
+Sarah Northcott, Dr Silia Vitoratou, Dr Abi Roper, Dr Niamh Devane, Dr
+Annie Hill
+</div>
+<div class="Location">
+Country: London, United Kingdom
+</div>
+<div class="Location">
+Funding Source: Phase 1 of the project is funded by City, University of
+London. Funding will be sought for phase 2.
+</div>
+<div class="Location">
+Phase of Research: Phase IV - Effectiveness
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+The aims of the project are to: 1. Explore barriers and facilitators to
+the telehealth administration of key measures for people with aphasia
+post-stroke. (Phase 1) 2. Determine the equivalence of face-to-face and
+telehealth administration of these measures. (Phase 2) 3. Develop a
+toolkit of resources and training for clinicians to help with the
+implementation of telehealth assessment and outcome measurement. (Phase
+2)
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+This project is about assessment and outcome measurement. Phase IV was
+chosen as ‘Stage of research’, as at the end of the project findings
+will be directly implementable to clinical practice.
+</div>
+</div>
+<br/>
+<div id="5" class="study">
+<div class="name">
+Analyzing Communication Environments (ACE)
+</div>
+<div class="pi">
+Principle Investigator(s): Jennifer Mozeiko, PI; Louisa Suting, PhD
+student; 2 MA students; 10 undergraduate students
+</div>
+<div class="Location">
+Country: Storrs, CT, USA
+</div>
+<div class="Location">
+Funding Source: American Speech Language Hearing Foundation (ASHF)
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Generic software (e.g. dictation
+software already available)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Understand variables contributing to an “enriched” communicative
+environment to optimize rehabilitation.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+We are using technology to collect, process, and analyze language data.
+</div>
+</div>
+<br/>
+<div id="6" class="study">
+<div class="name">
+Characterizing inner speech in aphasia
+</div>
+<div class="pi">
+Principle Investigator(s): Brielle Stark, Julianne Alexander (PhD
+student), team from NEURAL Research Lab at Indiana University
+</div>
+<div class="Location">
+Country: Bloomington IN, USA
+</div>
+<div class="Location">
+Funding Source: NIDILRR Switzer Merit Fellowship
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Generic software (e.g. dictation software already available)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Explore the extent to which individuals with aphasia experience inner
+speech, and further characterize this phenomenon. We use experience
+sampling methods via a smartphone (push notification) or SMS (text) to
+do this.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+We have intentions of creating a specific smartphone app to evaluate
+this phenomenon after this exploratory phase.
+</div>
+</div>
+<br/>
+<div id="7" class="study">
+<div class="name">
+“Shabdchitr”: ILAT Digital Application (Hindi, English, and other Indian
+languages
+</div>
+<div class="pi">
+Principle Investigator(s): 1. Apoorva Pauranik. neurologist. 2. Pinky
+Singh, SLP. 3. N Sundaer, Computer Professional.
+</div>
+<div class="Location">
+Country: Indore, India
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Shabdchitr is a Card Matching game based rehabilitation module to
+improve Speech – language and reading interaction skills. It works as a
+group therapy tool for SLP’s. Shabdchitr application is available as an
+executable (.exe) format on windows platform.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Salient features: 1. Expandable and scalable, i.e. a large number and
+variety of stimuli and playlists can be added and edited by the end
+users. 2. One SLP as an admin and upto four persons with aphasia and
+dyslexia/alexia can play the game across the internet. 3. The
+performance scores ( reaction times, error rates, error types) of
+participants are displayed in tabular and graphic formats over mutple
+sessions
+</div>
+</div>
+<br/>
+<div id="8" class="study">
+<div class="name">
+A Digital compendium of Hindi-English Bilingual Home based Exercises for
+PWA.
+</div>
+<div class="pi">
+Principle Investigator(s): 1. Apoorva Pauranik, Neurologist. 2. Pinky
+Singh, SLP. 3. Soubhik Das , Computer Professional
+</div>
+<div class="Location">
+Country: Indore, India
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+<ol type="1">
+<li>To create and make widely available a large and expandacle and
+scalable collection of diverse Home Based Exercises for Persons with
+Aphasia. 2, To eneble record keeping and report generation of the
+performance by the client.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Salient Features: 1. The computer professional will be providing a
+logical framework, wherein the clinicians as end-users will have many
+opprtunities to add and edit more stimuli and more types of exercises.2.
+The Home Based exercises are meant to be delivered by trained
+communication partners under supervision of SLP,. 3. The application
+will have facility for record keeping, score card and report generation
+across many sessions and many exercises.4. the exercises are based on
+cognitive neuropsychological model of spoken and written language, but
+also cover many pragmatic aspects
+</div></li>
+</ol>
+</div>
+<br/>
+<div id="9" class="study">
+<div class="name">
+INCA (inclusive digital content for people with aphasia)
+</div>
+<div class="pi">
+Principle Investigator(s): Stephanie Wilson, Jane Marshall, Madeline
+Cruice, Abi Roper, Timothy Neate
+</div>
+<div class="Location">
+Country: London, UK
+</div>
+<div class="Location">
+Funding Source: Engineering and Physical Sciences Research Council +
+City, University of London
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To research and prototype digital technologies that will support people
+with aphasia in creating and curating digital content
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+No concrete plans for commercialisation, just exploring possibilities at
+present. See also <a href="https://blogs.city.ac.uk/inca/"
+class="uri">https://blogs.city.ac.uk/inca/</a>
+</div>
+</div>
+<br/>
+<div id="10" class="study">
+<div class="name">
+PNT-CAT: Computer Adaptive forms of the Philadelphia Naming Test
+</div>
+<div class="pi">
+Principle Investigator(s): Robert Cavanaugh, Alexander Swiderski, Stacey
+Steele, William D. Hula, Gerasimos Fergadiotis
+</div>
+<div class="Location">
+Country: Pittsbugh PA &amp; Portland OR, United States
+</div>
+<div class="Location">
+Funding Source: NIH NIDCD
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Disseminate a free, open-source computer adaptive version of the PNT for
+clinical and research use.
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="11" class="study">
+<div class="name">
+Smart-phone assisted langauge training (SaLT)
+</div>
+<div class="pi">
+Principle Investigator(s): PhD thesis: Mr. Rajath shenoy, Guide:
+Dr. Gopee Krishnan, Dr. Lyndsey Nickels
+</div>
+<div class="Location">
+Country: Manipal, Udupi, India
+</div>
+<div class="Location">
+Funding Source: Indian council of medical research (ICMR) Government of
+India (GOI)- Project title: Mixed reality in aphasia rehabilation
+(MiRaR)
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+PhD research on development and validation for people with aphasia in
+multilingual environment
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="12" class="study">
+<div class="name">
+APP4PPA
+</div>
+<div class="pi">
+Principle Investigator(s): 1 SLP, 2 neurologists
+</div>
+<div class="Location">
+Country: Bari, Italy
+</div>
+<div class="Location">
+Funding Source: Alzheimer’s Association GBHI Pilot Award
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To develop a web-based speech therapy platform for patients with PPA
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="13" class="study">
+<div class="name">
+Brain connectivity disorders in patients with post-stroke aphasia:
+</div>
+<div class="pi">
+Principle Investigator(s): Nevine El Nahas, Ahmed El Bokl, Tamer
+Roushdy, Eman Hamed, Hossam Shoukri, Fatma Kenawy, Hussein Hamouda,
+Nourhan Belal
+</div>
+<div class="Location">
+Country: Cairo, Egypt
+</div>
+<div class="Location">
+Funding Source: capacity building project provided by STDF
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: brain connectivity study
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+compare brain connectivity between healthy subjects and aphasia patients
+to discover abnormalities of brain connectivity in aphasia. This can
+guide for further therapeutic and rehabilitation methods
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+I am not sure if this project fits in what you consider as technology
+research
+</div>
+</div>
+<br/>
+<div id="14" class="study">
+<div class="name">
+Pupillometry and eyetracking to index cognitive and linguistic
+processing in people with aphasia
+</div>
+<div class="pi">
+Principle Investigator(s): Laura Chapman, Mohammad Haghighi
+</div>
+<div class="Location">
+Country: Springfield, MA, Boone, NC, Fayetteville, AR, United States
+</div>
+<div class="Location">
+Funding Source: Foundation funding now, previously NIH
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Assessment
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Harnessing the power of the eyes to reveal abilities and challenges not
+captured through typical assessment processes
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="15" class="study">
+<div class="name">
+M-MAT-tele
+</div>
+<div class="pi">
+Principle Investigator(s): John E Pierce, Miranda Rose, Dana Wong,
+Rachelle Pitt, Annie Hill
+</div>
+<div class="Location">
+Country: Melbourne, Australia
+</div>
+<div class="Location">
+Funding Source: Internal university grant
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Generic software (e.g. dictation
+software already available)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Adapt Multi-Modality Aphasia Therapy for telehealth
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+May or may not require specific software, depending on user feedback
+during design process.
+</div>
+</div>
+<br/>
+<div id="16" class="study">
+<div class="name">
+Personalising dose in cued picture naming treatment
+</div>
+<div class="pi">
+Principle Investigator(s): Sam Harvey (PhD student), Miranda Rose,
+Michael Walsh Dickey, Marcella Carragher
+</div>
+<div class="Location">
+Country: Melbourne, Australia
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To investigate dose-response relationships in cued picture naming
+treatment
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+<p>We built a web-app that allows a clinician to set up online cued
+picture naming therapy sessions. Functions include adding users (PWA),
+adding assets (pictures, audio files for verbal cues) and linking
+assets, selecting and allocating pictures to stimulus sets, adjusting
+the amount of time the PWA has to respond to cues throughout treatment.
+The experimental set up also allows for probe sessions and capturing
+pre- and post-session subjective ratings of fatigue, motivation and task
+difficulty. The web-app can produce reports about sessions (timing data,
+subjective ratings response data, items probed/treated, etc) in excel
+format.</p>
+Future plans include expanding web-app (items, users), allowing
+independent practice (free-use), adding speech recognition to support
+independent practice.
+</div>
+</div>
+<br/>
+<div id="17" class="study">
+<div class="name">
+VA11y (Videoconference Accessibility)
+</div>
+<div class="pi">
+Principle Investigator(s): Timothy Neate, Stephanie Wilson
+</div>
+<div class="Location">
+Country: London, United Kingdom
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Virtual reality, Augmentative and
+Alternive Communication, communication accessibility (e.g. text to
+speech feature), Artificial Intelligence/Machine learning
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To design more accessible videoconference technologies for those with
+language impairments.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+<p>We are human-computer interaction researchers who work closely with
+SLTs and co-design technologies with people with aphasia. We have
+recently completed research which investigates the specific
+communication challenges faced by people with aphasia when
+videoconferencing. This is to be published at CHI 2022 [1]. We are
+currently working developing a project which will leverage recent
+technological innovations to complement videoconference, and support
+more effective total communication.</p>
+<p>[1] - <a
+href="https://kclpure.kcl.ac.uk/portal/files/166216025/chi_no_copyright.pdf"
+class="uri">https://kclpure.kcl.ac.uk/portal/files/166216025/chi_no_copyright.pdf</a></p>
+</div>
+</div>
+<br/>
+<div id="18" class="study">
+<div class="name">
+Integrating complementary learning principles in aphasia rehabilitation
+via adaptive modeling
+</div>
+<div class="pi">
+Principle Investigator(s): William Evans, William Hula, Jeff Starns,
+Peter Brusilovsky
+</div>
+<div class="Location">
+Country: Pittsburgh, United States
+</div>
+<div class="Location">
+Funding Source: NIH NIDCD
+</div>
+<div class="Location">
+Phase of Research: Phase III - Efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Generic software (e.g. dictation
+software already available)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Increase the functional impact of established aphasia treatment by
+combining the benefits of complementary learning approaches through
+adaptive timing models
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Submitting on behalf of Dr. Evans.
+</div>
+</div>
+<br/>
+<div id="19" class="study">
+<div class="name">
+Measuring, Monitoring, and Motivating Adherence to Self-Managed Aphasia
+Treatment.
+</div>
+<div class="pi">
+Principle Investigator(s): CIA Dr Sarah Jane Wallace The University of
+Queensland CIB Prof David A Copland The University of Queensland CIC
+Prof Janet Wiles The University of Queensland CID Assoc Prof Anthony J
+Angwin The University of Queensland CIE Assoc Prof Victoria Jane Palmer
+University of Melbourne CIF Dr Peter Harold Worthy The University of
+Queensland CIG Dr Anne Jane Hill The University of Queensland CIH Dr
+Barbra H. B. Timmer The University of Queensland CII Assoc Prof Matthew
+John Gullo The University of Queensland CIJ Dr Jessica Hay Campbell
+</div>
+<div class="Location">
+Country: Brisbane, Australia
+</div>
+<div class="Location">
+Funding Source: MRFF Cardiovascular Mission
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Generic software (e.g. dictation
+software already available), Augmentative and Alternive Communication,
+communication accessibility (e.g. text to speech feature)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+We aim to empower stroke survivors with aphasia to successfully
+self-manage their long-term recovery through co-design, development, and
+evaluation of a novel mobile health smartphone application that
+motivates adherence to real-life, self-managed Comprehensive, High-dose
+Aphasia Treatment (lifeCHAT).
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="20" class="study">
+<div class="name">
+Zooming Great
+</div>
+<div class="pi">
+Principle Investigator(s): FIRLE Beckley, Kate Whiteman
+</div>
+<div class="Location">
+Country: Eastbourne, United Kingdom
+</div>
+<div class="Location">
+Funding Source: Through local community grants
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Improving social connectedness using tech
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To pilot whether we can get people with aphasia independently using zoom
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+This is a small scale pilot being carried out by FIRLE in her role
+within a charity called Say Aphasia
+</div>
+</div>
+<br/>
+<div id="21" class="study">
+<div class="name">
+LAST-App for Acute Stroke
+</div>
+<div class="pi">
+Principle Investigator(s): Heather Flowers, Laura Monetta, Constance
+Flamand-Roze, Miguel Garzon, Susie Williams
+</div>
+<div class="Location">
+Country: Ottawa, Canada
+</div>
+<div class="Location">
+Funding Source: From a local research institute
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To Undertake Beta Testing and Implement a Training Platform of a New
+Health-Tech Application for the Language Screening Test (called
+LAST-App)
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Our app is based on the Language Screening Tool (LAST) developed for
+English (harmonized for Canadian, American, British, and Australian
+English) and French (European and Canadian French). The LAST-App is
+compatible with android, iOS, and web-based platforms (thanks to a
+year-long collaboration with software engineers). We are still seeking
+new international collaborations, but plan to undertake beta testing in
+Canada (with our grant funding).
+</div>
+</div>
+<br/>
+<div id="22" class="study">
+<div class="name">
+The development of an application compatible with mobile device to
+support language, cognition, communication for clients with neurological
+language disorders
+</div>
+<div class="pi">
+<p>Principle Investigator(s): Tolga Sözüçok (A Study for the requirement
+PhD / Doctoral Dissertation)</p>
+İlknur Maviş
+</div>
+<div class="Location">
+Country: Eskişehir, Turkey
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+to develop an application for auditory comprehension problems for for
+clients with neurological language disorders
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="23" class="study">
+<div class="name">
+PeerPAL- Digital Networking in Aphasia
+</div>
+<div class="pi">
+Principle Investigator(s): Project management: Prof. Dr. Norina Lauer
+&amp; Prof. Dr. Sabine Corsten; research assistants: Christina Kurfess,
+Almut Plath, Marie Knieriemen, Daniel Kreiter
+</div>
+<div class="Location">
+Country: Regensburg &amp; Mainz, Germany
+</div>
+<div class="Location">
+Funding Source: Federal Ministry of Education and Research (BMBF)
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Improve quality of life by conneting people with aphasia
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+<a href="http://www.peerpal.de/en/"
+class="uri">http://www.peerpal.de/en/</a>
+</div>
+</div>
+<br/>
+<div id="24" class="study">
+<div class="name">
+Aphasia iCafè interview project: Student-delivered online social support
+groups for people with aphasia and/or dysarthria- a qualitative
+investigation of members’ and providers’ experiences
+</div>
+<div class="pi">
+Principle Investigator(s): Dr Anna Caute, Annabel Kay, Erika Mangialardi
+</div>
+<div class="Location">
+Country: Colchester, UK
+</div>
+<div class="Location">
+Funding Source: British Aphasiology Society Initiatives in Aphasia Seed
+Fund grant
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Generic software (e.g. dictation software already available)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+The project will address the following questions: • What are the views
+of people with aphasia and/or dysarthria about taking part in
+student-delivered online social support groups? • What are the views of
+student speech and language therapists (SLTs) about delivering online
+social support groups for people with aphasia and/or dysarthria? • What
+facilitators or barriers did they experience? • What was the impact of
+taking part for people with aphasia/dysarthria and student SLTs?
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="25" class="study">
+<div class="name">
+KoLiPENs - Kognitive, linguistische und personenbezogene
+Einflussfaktoren auf das Schreiben (Cognitive, linguistic and personal
+factors influencing writing)
+</div>
+<div class="pi">
+Principle Investigator(s): Albrecht, Katharina; Jaecks, Petra; Jonas,
+Kristina; Stegenwallner-Schütz, Maja; von Lehmden, Friederike
+</div>
+<div class="Location">
+Country: Cologne, Germany
+</div>
+<div class="Location">
+Funding Source: Third-party funding
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: not yet finally decided
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+The long-term goal of the KoliPENs project is to develop a digital
+diagnostic procedure for the area of written language in neurological
+writing disorders which a) covers the levels of the ICF (function,
+activity, participation), b) covers analogue as well as digital writing
+competences and c) covers written language discourse skills.
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="26" class="study">
+<div class="name">
+Mixed reality in aphasia rehabilation (MiRaR)
+</div>
+<div class="pi">
+Principle Investigator(s): Dr. Gopee Krishnan, Dr. Shivani Tiwari,
+Dr. Apoorva Pauranik, Dr. Aparna Pai, Mr. Rajath Shenoy, Mr Intiaz, Ms
+Sona
+</div>
+<div class="Location">
+Country: Manipal, India
+</div>
+<div class="Location">
+Funding Source: Indian council of medical research , Government of India
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Virtual reality
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+to develop and clinical validated the newly developed Mixed reality
+application for persons with aphasia
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Google form submitted by Mr.Rajath Shenoy on behalf of Dr. Gopee
+Krishnan, Manipal college of health professions, India
+</div>
+</div>
+<br/>
+<div id="27" class="study">
+<div class="name">
+Therapy calculator for rehabilitation outcomes after acquired brain
+injury
+</div>
+<div class="pi">
+Principle Investigator(s): Dr. Swathi Kiran; Dr. Margrit Betke;
+Dr. Prakash Ishwar; Dr. Claire Cordella
+</div>
+<div class="Location">
+Country: Boston, United States
+</div>
+<div class="Location">
+Funding Source: Internal institutional funds
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Artificial Intelligence/Machine learning
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To use machine learning methods to predict recovery trajectory profiles
+following rehabilitation for ABI individuals with chronic disability
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="28" class="study">
+<div class="name">
+Assessing Communication and Clinical Effectiveness of Self-managed
+Speech-language therapy: a randomized control trial of a novel digital
+therapeutic in individuals with post-stroke aphasia (ACCESS)
+</div>
+<div class="pi">
+Principle Investigator(s): Dr. Swathi Kiran; Dr. Steven Cramer;
+Dr. Maria Varkanitsa
+</div>
+<div class="Location">
+Country: Boston; Los Angeles, United States
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To examine if a self-managed, at-home, personalized, and comprehensive
+(i.e., targeting multiple language domains) CT program will lead to
+greater language-based recovery gains compared to usual care and an
+active control
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="29" class="study">
+<div class="name">
+Virtual Groups and Computerized Therapy for Primary Progressive Aphasia
+</div>
+<div class="pi">
+Principle Investigator(s): Jessica D. Richardson, H. Isabel Hubbard,
+Christie Duhigg, Jordyn Sims
+</div>
+<div class="Location">
+Country: Albuquerque, United States
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To determine the feasibility and preliminary efficacy of weekly virtual
+group meetings and daily computerized therapy for communication and life
+participation in persons with primary progressive aphasia
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="30" class="study">
+<div class="name">
+The impact of home-based computer therapy to improve speech and
+cognitive function during stroke recovery
+</div>
+<div class="pi">
+Principle Investigator(s): Janet Alexander MSPH; Patricia Zrelak PhD RN;
+Michelle Camicia PhD RN FAHA; Brian Theodore PhD; Kam Gardner CCC-SLP;
+Diana Storti MS CCC-SLP; Linda Heckenlively MS, CCC-SLP; Melissa Meighan
+DNP MS RN; Mai N Nguyen-Huynh MD MAS
+</div>
+<div class="Location">
+Country: Walnut Creek, United States
+</div>
+<div class="Location">
+Funding Source: Constant Therapy Health/The Learning Corp
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Artificial Intelligence/Machine
+learning
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Identify cost-savings options for patients with aphasia, e.g., utilizing
+digital therapeutics to reduce in-clinic visits
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Technology is already commercialized
+</div>
+</div>
+<br/>
+<div id="31" class="study">
+<div class="name">
+Development of a Free Online Interactive Naming Therapy for Bilingual
+Aphasia
+</div>
+<div class="pi">
+Principle Investigator(s): Chaleece Sandberg, Teresa Gray, Swathi Kiran
+</div>
+<div class="Location">
+Country: University Park, United States
+</div>
+<div class="Location">
+Funding Source: American Speech-Language- Hearing Association Projects
+on Multicultural Activities grant
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+The purpose of this ongoing project was to provide speech-language
+pathologists who serve culturally and linguistically diverse populations
+with a freely available online tool for naming therapy in a variety of
+languages.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Paper about this work published at AJSLP: <a
+href="https://doi.org/10.1044/2019_AJSLP-19-0035"
+class="uri">https://doi.org/10.1044/2019_AJSLP-19-0035</a>
+</div>
+</div>
+<br/>
+<div id="32" class="study">
+<div class="name">
+Social-ABI-lity
+</div>
+<div class="pi">
+Principle Investigator(s): Liss Brunner, Rachael Rietdijk, Emma Power,
+Melissa Miao, Petra Avramovic, Leanne Togher
+</div>
+<div class="Location">
+Country: Sydney, Australia
+</div>
+<div class="Location">
+Funding Source: icare NSW
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Promote safe use of social media for people with ABI
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="33" class="study">
+<div class="name">
+interact-ABI-lity
+</div>
+<div class="pi">
+Principle Investigator(s): Leanne Togher, Rachael Rietdijk, Emma Power,
+Petra Avramovic, Melissa Miao, Liss Brunner
+</div>
+<div class="Location">
+Country: Sydney, Australia
+</div>
+<div class="Location">
+Funding Source: icare NSW
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Communication partner training and education
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="34" class="study">
+<div class="name">
+Convers-ABI-lity
+</div>
+<div class="pi">
+Principle Investigator(s): Leanne Togher, Rachael Rietdijk, Emma Power,
+Melissa Brunner, Melissa Miao, Petra Avramovic
+</div>
+<div class="Location">
+Country: Sydney, Australia
+</div>
+<div class="Location">
+Funding Source: icare NSW
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To improve conversations of people with acquired brain injury
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="35" class="study">
+<div class="name">
+Virtual reality for social communication
+</div>
+<div class="pi">
+Principle Investigator(s): Leanne Togher, Sophie Brassel, Emma Power,
+Andrew Campbell, Liss Brunner
+</div>
+<div class="Location">
+Country: Sydney, Australia
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Virtual reality
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To develop virtual reality assessment scenarios for social communication
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="36" class="study">
+<div class="name">
+Communication partner training for health professional students
+</div>
+<div class="pi">
+Principle Investigator(s): Leanne Togher, Michelle Attard, Emma Power,
+Rachael Rietdijk, Lucy Lanyon
+</div>
+<div class="Location">
+Country: Sydney, Australia
+</div>
+<div class="Location">
+Funding Source: NHMRC CRE Aphasia
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To provide communication partner training to students in health related
+fields
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="37" class="study">
+<div class="name">
+Phase III Development of a Valid, Reliable, Clinically Feasible Measure
+of Transactional Success in Aphasic Conversation: Modernizing Methods of
+Acquisition and Analysis of Discourse Data
+</div>
+<div class="pi">
+Principle Investigator(s): Jacquie Kurland, Polly Stokes, Anna Liu,
+Brendan O’Connor
+</div>
+<div class="Location">
+Country: Amherst, U.S.
+</div>
+<div class="Location">
+Funding Source: NIDCD R21
+</div>
+<div class="Location">
+Phase of Research: Phase III - Efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: A combination of telehealth delivery and natural language
+processing (including some machine learning tools) for data analysis
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+There are two specific aims, both of which involve technology in aphasia
+rehabilitation research. In developing a tool that can be used to assess
+transactional success in conversation, we are evaluating the use of
+natural language processing tools to automatically transcribe and
+analyze discourse text. In addition, all of the testing will be
+delivered remotely.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+I look forward to hearing more about the map!
+</div>
+</div>
+<br/>
+<div id="38" class="study">
+<div class="name">
+Communication Bridge: A person-centered Internet-based intervention for
+individuals with primary progressive aphasia
+</div>
+<div class="pi">
+Principle Investigator(s): Emily Rogalski, PhD, Angela Roberts, Phd,
+Alfred Rademaker, PhD, Darby Morhardt, PhD
+</div>
+<div class="Location">
+Country: Chicago, IL, USA
+</div>
+<div class="Location">
+Funding Source: NIA R01
+</div>
+<div class="Location">
+Phase of Research: Phase III - Efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+RCT
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="39" class="study">
+<div class="name">
+Remote administration of Combined Aphasia and Apraxia of Speech
+Treatment (CAAST)
+</div>
+<div class="pi">
+Principle Investigator(s): Julie Wambaugh, Lydia Kallhoff
+</div>
+<div class="Location">
+Country: Salt Lake City, United States
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Phase III - Efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Powerpoint
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To evaluate the effects of CAAST administered remotely
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="40" class="study">
+<div class="name">
+“Lets talk” app for smartphone
+</div>
+<div class="pi">
+Principle Investigator(s): Merav Raveh Malka
+</div>
+<div class="Location">
+Country: Jerusalem, Israel
+</div>
+<div class="Location">
+Funding Source: Thru a non profit organization called Ezer Metzion
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Augmentative and Alternive
+Communication, communication accessibility (e.g. text to speech feature)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To transfer the low tech communication aids with highly accessible high
+tech easy to use phone app
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+The app is being prepared in hebrew and Arabic. It is being developed by
+HILMA - high tech for the good of society. The app will be free to use.
+I am really excited to share it with the world and looking forward to
+hear about new technologies around the world!!
+</div>
+</div>
+<br/>
+<div id="41" class="study">
+<div class="name">
+Sentactics
+</div>
+<div class="pi">
+Principle Investigator(s): Elena Barbieri
+</div>
+<div class="Location">
+Country: Chicago, United States
+</div>
+<div class="Location">
+Funding Source: NIH
+</div>
+<div class="Location">
+Phase of Research: Phase IV - Effectiveness
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Treatment of sentence processing impairments in aphasia.
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="42" class="study">
+<div class="name">
+Assessment of anomia: Improving efficiency and utility using item
+response theory
+</div>
+<div class="pi">
+Principle Investigator(s): WIlliam D. Hula, Gerasimos Fergadiotis,
+Michael Walsh Dickey, Daniel Taylor-Rodriguez
+</div>
+<div class="Location">
+Country: Pittsburgh, United States of America
+</div>
+<div class="Location">
+Funding Source: NIH/NIDCD R01DC018813
+</div>
+<div class="Location">
+Phase of Research: Phase III - Efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Framework that can be used for a
+range of assessment purposes.
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Develop a suite of psychometric tools for the assessment of anomia.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Given that this project is focused on assessment, the “Phases of
+research” do not align well. Currently, our primary goals are to (i)
+disseminate a computer adaptive version of the Philadelphia Naming Test;
+(ii) develop a universal metric of anomia, linking multiple published
+tests, and (iii) create a computer adaptive test with hundreds of items
+for the assessment of both object and action naming.
+</div>
+</div>
+<br/>
+<div id="43" class="study">
+<div class="name">
+Automatic Classification of Paraphasias
+</div>
+<div class="pi">
+Principle Investigator(s): Steven Bedrick; Gerasimos Fergadiotis; Robert
+Gale, Mikala Fleegle
+</div>
+<div class="Location">
+Country: Portland, United States
+</div>
+<div class="Location">
+Funding Source: NIH/NIDCD R01DC015999
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Artificial Intelligence/Machine
+learning
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+The aims include: (i) develop a series of NLP algorithms for
+automatically classifying paraphasias in the context of confrontation
+naming tests and discourse; (i) automatically identify paraphasias in
+connected speech; and (iii) predict the intended production of a person
+with aphasia when they produce a paraphasia.
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="44" class="study">
+<div class="name">
+Automatic Speech Recognition for Aphasic Speech
+</div>
+<div class="pi">
+Principle Investigator(s): Robert Gale, Gerasimos Fergadiotis, Steven
+Bedrick, Mikala Fleegle
+</div>
+<div class="Location">
+Country: Portland OR, United States
+</div>
+<div class="Location">
+Funding Source: NIH/NIDCD Administrative Supplement for R01DC015999
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Artificial Intelligence/Machine
+learning
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To develop an automatic speech recognition system for automatic
+transcription of aphasic speech in the context of confrontation naming
+applications and connected speech.
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="45" class="study">
+<div class="name">
+Home-based language therapy and transcranial direct current stimulation
+in pri-mary progressive aphasia.
+</div>
+<div class="pi">
+Principle Investigator(s): Meinzer, Flöel, Grewe, Binkofski
+</div>
+<div class="Location">
+Country: Greifswald, Germany
+</div>
+<div class="Location">
+Funding Source: German Federal Ministry for Education and Research
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), technology adapation (brain
+stimulation)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+We aim to facilitate access to effective treatments for patients with
+PPA by using technological aids that will allow us to treat the patients
+remotely, in their own homes (for details see comment below)
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+We will adapt a highly effective language therapy and brain stimulation
+program, developed by our group, in such a way that it can be executed
+via a tablet computer and a mobile brain stimulation device under close
+remote supervision by a therapist. The core of the program is a
+computer-based naming therapy, that will be combined with a training of
+communication strategies relevant for everyday life. A trained speech
+therapist will provide treatment via the internet. We will also work
+with the manufacturer of the brain stimulation device, to make it easy
+and comfortable for patients or their carers to administer the
+stimulation. The project has two main goals: (1) first, we will
+repeatedly consult with patients, their carers and patient advocacy
+groups to identify specific needs and potential barriers with regard to
+how assessments and therapy will be conducted. This information will be
+used to optimize the existing treatment program for home-based use and
+patients with primary progressive aphasia. (2) Subsequently, we will
+implement and test the procedures and technology in a small group of
+patients in their homes to find out how well their needs and wishes have
+been considered and make further adjustments, if necessary. With this
+iterative process, we aim to enhance adherence to this novel treatment
+program, its effectiveness and ultimately patient benefit.
+</div>
+</div>
+<br/>
+<div id="46" class="study">
+<div class="name">
+Modulating stimulus intensity to improve clinical outcomes in aphasia
+treatment (MIDAS)
+</div>
+<div class="pi">
+Principle Investigator(s): Leora Cherney and Sarel van Vuuren (MPI)
+</div>
+<div class="Location">
+Country: Chicago, United States
+</div>
+<div class="Location">
+Funding Source: NIH - R01 (5 years)
+</div>
+<div class="Location">
+Phase of Research: Phase III - Efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+An RCT to investigate stimulus repetition and stimulus distribution as
+factors that modulate dose and intensity of treatment.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+The goal is not to assess the technology - but we are using the
+technology to facilitate the study. As we have written in the grant - we
+use a script treatment (AphasiaScripts) that has experimental support
+regarding its efficacy, and that allows the manipulation of the two
+variables under study, stimulus practice distribution and stimulus
+repetition. To ensure independence and fidelity, treatment is provided
+in a controlled computer environment (desktop and tablet). To avoid
+clinician-related variables such as expertise and personality factors
+that may influence treatment, sentences are modeled during treatment by
+an anthropomorphic agent with high visual speech intelligibility and
+affective expressions.
+</div>
+</div>
+<br/>
+<div id="47" class="study">
+<div class="name">
+Improving electronic written communication in persons with aphasia: A
+clinical trial
+</div>
+<div class="pi">
+Principle Investigator(s): Leora Cherney (PI).
+</div>
+<div class="Location">
+Country: Chicago, United States
+</div>
+<div class="Location">
+Funding Source: 3 year federal grant from NIDILRR (National Institute on
+Disability, Independent Living, and Rehabilitation Research)
+</div>
+<div class="Location">
+Phase of Research: Phase III - Efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Aims are to: 1) evaluate the efficacy of computer-based texting
+treatment for improving written communication in persons with aphasia
+and 2) assess the extent to which improvements in electronic written
+communication impact social connectedness and health-related quality of
+life (HRQOL).
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+The computer software in this study is an expansion of our ORLA
+treatment that adds a writing component - which has then been further
+adapted to target texting
+</div>
+</div>
+<br/>
+<div id="48" class="study">
+<div class="name">
+Timing of transcranial direct current stimulation (tDCS) combined with
+speech and language therapy (SLT) : An Intervention Development Study
+for Aphasia
+</div>
+<div class="pi">
+Principle Investigator(s): Leora Cherney, Sameer Ashaie
+</div>
+<div class="Location">
+Country: Chicago, United States
+</div>
+<div class="Location">
+Funding Source: Federal grant from NIDILRR (3 year grant)
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), tDCS (brain stimulation technology)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To conduct a randomized clinical trial in individuals with aphasia that
+compares the differential effects of tDCS delivered prior to, concurrent
+with, and following SLT.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Use of technology is two-fold: 1) tDCS and 2) the aphasia treatment that
+is provided before, during or after the tDCS, is provided by ciomputer
+and is AphasiaScripts.
+</div>
+</div>
+<br/>
+<div id="49" class="study">
+<div class="name">
+N/A - there are technology tools that we are using across multiple
+projects to measure outcomes
+</div>
+<div class="pi">
+Principle Investigator(s): Leora Cherney, Sameer Ashaie
+</div>
+<div class="Location">
+Country: Chicago, United States
+</div>
+<div class="Location">
+Funding Source: Projects may or may not be funded - but we have
+exploratory aims for objectively measuring relevant behaviors
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Measurement tools
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To identify novel ways to measure behaviors in the lab and in the real
+world environment
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Across various treatment studies, we are exploring the use of eye
+tracking, heart rate variability, laryngeal sensors, GPS, EEG, and
+resting state MRI as measures of change from pre to post treatment.
+</div>
+</div>
+<br/>
+<div id="50" class="study">
+<div class="name">
+Communication Access and Participation Through Immersive Virtual and
+Augmented Reality Technologies (CAPTIVATE)
+</div>
+<div class="pi">
+Principle Investigator(s): Lucy Bryant, Bronwyn Hemsley, Emma Power, et
+al.
+</div>
+<div class="Location">
+Country: Sydney, Australia
+</div>
+<div class="Location">
+Funding Source: To date, through seed grants and internal grant funding
+at the University of Technology Sydney (Graduate School of Health Seed
+Grant, UTS ECR Development Grant, Faculty of Health Mentoring Grant)
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: Yes
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Virtual reality
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+The project aims to design, develop, and evaluate immersive VR and AR
+applications that enable adults with aphasia to practice their
+communication skills for social and occupational interactions. The
+project plan is to design and implement virtual reality (VR) and
+augmented reality (AR) to improve communication access, and social and
+economic participation.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Others have been involved across various stages and arms of this
+research, including: UTS researchers (Peter Stubbs (physio), Vincent
+Nguyen (orthoptics), Benjamin Bailey (speech pathology), Andrew Bluff
+(visualization and animation)); UTS Masters of Speech Pathology students
+(Neira Sedlarevic, Henry Keegan, Clarisse Baker), and expert reference
+group members from industry, UTS, and NSW Health.
+</div>
+</div>
+<br/>
+<div id="51" class="study">
+<div class="name">
+VoiceAdapt: Voice Adaptive Training for Older Adults with Aphasia
+</div>
+<div class="pi">
+Principle Investigator(s): Esther Kim (University of Alberta); Elizabeth
+Rochon (University of Toronto)
+</div>
+<div class="Location">
+Country: Edmonton, Toronto, Canada
+</div>
+<div class="Location">
+Funding Source: Joint Programming Initiative - More Years Better Lives
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+The purpose of the VoiceAdapt project is to develop and test the
+efficacy of an app designed using principles of User Centered Design
+(UCD) on the lexical retrieval abilities of people with aphasia.
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+Other consortium members based in Germany (Technical University Berlin;
+Nurogames - Cologne) and Austria (Austrian Institute of Technology)
+</div>
+</div>
+<br/>
+<div id="52" class="study">
+<div class="name">
+TEleCHAT
+</div>
+<div class="pi">
+Principle Investigator(s): Annie, Hill, Genevieve Vuong, Jade Dignam,
+Clare Burns, David Copland
+</div>
+<div class="Location">
+Country: Brisbane, Australia
+</div>
+<div class="Location">
+Funding Source: QARC and initial support from CRE Aphasia
+</div>
+<div class="Location">
+Phase of Research: Phase II - Feasibility, acceptability, preliminary
+efficacy
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+To investigate the usability, feasibility, acceptability and
+effectivelness of delivering CHAT via telerehabilitation (TeleCHAT)
+</div>
+<br/> <em>Additional Comments:</em>
+<div class="Location">
+TeleCHAT uses Zoom to delivery this ICAP. A wide range of tech features
+within Zoom are utilised to maximise participation of PWA and places
+most of the technology burden on the SLP.
+</div>
+</div>
+<br/>
+<div id="53" class="study">
+<div class="name">
+CHAT-Maintain: Maintaining language and quality of life gains with
+low-dose technology-delivered aphasia therapy
+</div>
+<div class="pi">
+Principle Investigator(s): Jessica Campbell, Jade Dignam, David Copland,
+Annie Hill, Miranda Rose, Deborah Hersh, Kirstine Shrubsole, John
+Pierce, Sarah J. Wallace, Emma Power, Kate O’Brien, Kat Roxas, Emma
+O’Neill, Kylie Short, Penni Burfein
+</div>
+<div class="Location">
+Country: Brisbane, Australia
+</div>
+<div class="Location">
+Funding Source: Stroke Foundation Lady Marigold Southey Aphasia Research
+Grant
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Generic software (e.g. dictation
+software already available), Augmentative and Alternive Communication,
+communication accessibility (e.g. text to speech feature)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Aim 1: To evaluate CHAT-Maintain’s potential efficacy in maintaining
+language, functional communication and quality of life outcomes at 3 and
+6 months post intensive treatment and feasibility. Aim 2: To evaluate
+the potential impact of CHAT-Maintain on communication activity, social
+participation, and communication confidence. Aim 3: To collaborate with
+people with aphasia and family members to iteratively improve
+CHAT-maintain.
+</div>
+<p><br/></p>
+</div>
+<br/>
+<div id="54" class="study">
+<div class="name">
+Aphasia Tech Quest
+</div>
+<div class="pi">
+Principle Investigator(s): Jessica Campbell, Kori Ramajoo, Sarah J.
+Wallace, Sonia Brownsett, Peter Worthy, Jacki Liddle, Ciara Shiggins,
+Lisa Anemaat, David Copland
+</div>
+<div class="Location">
+Country: Brisbane, Australia
+</div>
+<div class="Location">
+Funding Source: School of Health and Rehabilitation Sciences: ART Hub
+project
+</div>
+<div class="Location">
+Phase of Research: Phase I - Proof of concept
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Platform
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+<ol type="1">
+<li>Develop and describe a model collaborative design process involving
+people with aphasia, clinicians, technologists and researchers which may
+be used more broadly in rehabilitation sciences in future. 2. Explore
+person with aphasia experience of a collaborative design process,
+particularly accessibility of the event, aspects of co-production
+(e.g. perceived equality between participants and equal opportunity to
+decide goals and outcomes), opportunities for social connection, and
+likelihood of engaging in future collaborations. 3. Explore clinician,
+technologist and researcher experience of collaborative design process,
+particularly capacity to collaborate with people with aphasia in future.
+4. Explore a collaborative design process as a way of increasing public
+awareness of aphasia within and externally to UQ.
+</div>
+<br/></li>
+</ol>
+</div>
+<br/>
+<div id="55" class="study">
+<div class="name">
+Technology access service priorities of people with aphasia, significant
+others, and healthcare providers
+</div>
+<div class="pi">
+Principle Investigator(s): Jessica Campbell, Sarah J. Wallace, Annie
+Hill, Jade Dignam, Kirstine Shrubsole, Peter Worthy, Jacki Liddle, David
+Copland
+</div>
+<div class="Location">
+Country: Brisbane, Australia
+</div>
+<div class="Location">
+Funding Source:
+</div>
+<div class="Location">
+Phase of Research: Early development work
+</div>
+<div class="Location">
+Plan to Commercalise: No
+</div>
+<div class="Location">
+Category: Specific app (mobile or computer software; including software
+designed for telehealth delivery), Generic software (e.g. dictation
+software already available), Augmentative and Alternive Communication,
+communication accessibility (e.g. text to speech feature)
+</div>
+<br/> <b>Brief Description:</b>
+<div class="summary">
+Phase I: This phase aims to determine consumer priorities for services
+that would support access to technology in a sample of Queensland people
+with aphasia, significant others of people with aphasia, and healthcare
+providers treating people with aphasia. Phase 2: This phase aims to
+investigate consumer priorities more closely by exploring individual
+goals of people with aphasia related to accessing technology to work on
+communication or life participation goals, determine individual consumer
+preferences for receiving technology-related services, and understand
+the acceptability and goal attainment outcomes of receiving support,
+advice and consultation from a speech pathologist and/or supervised
+speech pathology students.
+</div>
+<p><br/></p>
 </div>
 </div>
 <div class="sourceCode" id="cb1"><pre

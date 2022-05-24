@@ -1,0 +1,59 @@
+---
+title: "Aphasia research studies"
+---
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+```{css echo = F}
+d-article{
+  padding-bottom:20px;
+  padding-top: 20px;
+}
+table td{ 
+  word-break: break-all;
+}
+
+d-article li {
+    margin-bottom: 0em;
+}
+
+d-article li:last-child {
+    margin-bottom: 0.2em;
+}
+
+```
+
+
+
+```{r, echo = F, echo = F, message = F, warning = F, layout = "l-page"}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+library(htmltools)
+library(here)
+library(tidyverse)
+library(htmltools)
+library(DT)
+
+responses = read.csv(here("data", "aphasia-tech-responses.csv")) %>%
+  mutate(id = row_number())
+
+data = responses %>%
+  mutate(link=paste0("list_view.html#",id),
+         Name = paste0("<a href=", link, ">", Title, "</a>")
+         )
+
+```
+
+
+
+
+```{r warning = F, message = F, echo = F, layout = "l-screen-inset"}
+data %>%
+  select(Title = Name, PI = ResponsiblePartyInvestigators, Location = LocationFull,
+         Funded, Phase = PhaseOfResearch, Category) %>%
+  mutate(Category = str_replace_all(Category, " \\s*\\([^\\)]+\\)", "")) %>%
+  DT::datatable(escape = 1)
+
+```
+    

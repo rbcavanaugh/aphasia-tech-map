@@ -5,3 +5,58 @@ description: |
 site: distill::distill_website
 ---
 
+```{css, echo = F}
+
+d-appendix{
+  display: none !important;
+}
+
+/*Fix for Marker Clusters*/
+.marker-cluster {
+  background-color: #31882A20 !important;
+}
+
+.marker-cluster div {
+  background-color: #31882A !important;
+  color: #fff !important;
+}
+
+d-article{
+  margin-top: 0px;
+  max-height: 90vh !important;
+  padding-top: 0px;
+}
+
+l-screen{
+  margin: 1%;
+}
+
+```
+
+```{r, include=FALSE}
+library(here)
+library(tidyverse)
+library(leaflet)
+
+responses = read.csv(here("data", "aphasia-tech-responses.csv")) %>%
+  mutate(id = row_number())
+
+data = responses %>%
+  mutate(link=paste0("list_view.html#",id),
+         Name = paste0("<a href=", link, ">", Title, "</a>")
+         )
+
+```
+
+```{r, echo = F, layout = "l-screen-inset", out.height = "70vh"}
+data %>%
+  rename(lng = Lon, lat = Lat) %>%
+  leaflet() %>%
+  setView(lng = 20, lat = 30, zoom = 2) %>% 
+  addTiles() %>%
+  addMarkers(popup = ~Name,
+             clusterOptions = markerClusterOptions(
+                               maxClusterRadius = 30,
+                               showCoverageOnHover = F)
+             )
+```
