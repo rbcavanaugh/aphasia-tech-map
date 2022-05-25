@@ -37,7 +37,6 @@ knitr::opts_chunk$set(echo = FALSE)
 library(htmltools)
 library(here)
 library(tidyverse)
-library(htmltools)
 
 responses = read.csv(here("data", "aphasia-tech-responses.csv")) %>%
   mutate(id = row_number())
@@ -70,6 +69,7 @@ study <- function(data, i, ...) {
       class = "study",
       div(class = "name", info$Title),
       div(class = "pi", paste("Principle Investigator(s):", info$ResponsiblePartyInvestigators)),
+      div(class = "email", paste("Email:", info$Email)),
       div(class = "Location", paste("Country:", info$LocationFull)), 
       div(class = "Location", paste("Funding Source:", info$FundingSource)), 
       div(class = "Location", paste("Phase of Research:", info$PhaseOfResearch)), 
