@@ -92,10 +92,11 @@ d-appendix {
 
 .study {
   background-color: white;
+  padding: 2%;
   margin: 2%;
   border: 2px solid;
-  border-radius: 1rem;
-  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: 5px 2.5px 2.5px darkgrey;
 }
 
 .intro_box {
@@ -231,4 +232,6 @@ d-article a {
   .cols {
     flex-direction: column;
   }
+
 }
+
