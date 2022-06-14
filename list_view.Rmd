@@ -22,8 +22,10 @@ d-article li:last-child {
 }
 
 .name {
-  font-size: 1.2rem;
+   font-size: 1.5rem;
   font-weight: bold;
+  color: #0f5c81;
+  margin: 1rem auto;
 }
 
 ```
@@ -68,13 +70,20 @@ study <- function(data, i, ...) {
       div(id=info$id,
       class = "study",
       div(class = "name", info$Title),
-      div(class = "pi", paste("Principle Investigator(s):", info$ResponsiblePartyInvestigators)),
-      div(class = "email", paste("Email:", info$Email)),
-      div(class = "Location", paste("Country:", info$LocationFull)), 
-      div(class = "Location", paste("Funding Source:", info$FundingSource)), 
-      div(class = "Location", paste("Phase of Research:", info$PhaseOfResearch)), 
-      div(class = "Location", paste("Plan to Commercalise:", info$PlanToCommericalise)), 
-      div(class = "Location", paste("Category:", info$Category)), 
+      tags$strong("Principle Investigator(s):"),
+      div(class = "pi", paste(info$ResponsiblePartyInvestigators)),
+       tags$strong("Email:"),
+      div(class = "email", paste(info$Email)),
+       tags$strong("Country:"),
+      div(class = "Location", paste(info$LocationFull)), 
+       tags$strong("Funding Source:"),
+      div(class = "Location", paste(info$FundingSource)), 
+       tags$strong("Phase of Research:"),
+      div(class = "Location", paste(info$PhaseOfResearch)), 
+       tags$strong("Plan to Commercalise:"),
+      div(class = "Location", paste(info$PlanToCommericalise)), 
+       tags$strong("Category:"),
+      div(class = "Location", paste(info$Category)), 
       br(),
       tags$b("Brief Description:"),
       div(class = "summary", HTML(info$BriefSummary)), br(),

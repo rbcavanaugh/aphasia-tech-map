@@ -5,7 +5,7 @@ title: "Current Aphasia Research Studies"
 ```{css, echo = F}
 /* Don't display the title on the map page so there's more map*/
 d-title, d-byline {
-  display: none
+  display: none !important;
 }
 
 d-appendix{
