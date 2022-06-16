@@ -49,11 +49,43 @@ data = responses %>%
 
 
 ```{r warning = F, message = F, echo = F, layout = "l-screen-inset"}
+
+pf = function(col){
+  tmp = paste0('<div style="word-break: normal">', col, '</div>')
+  return(tmp)
+}
+
 data %>%
   select(Title = Name, PI = ResponsiblePartyInvestigators, Location = LocationFull,
          Funded, Phase = PhaseOfResearch, Category) %>%
   mutate(Category = str_replace_all(Category, " \\s*\\([^\\)]+\\)", "")) %>%
-  DT::datatable(escape = 1)
+  mutate(beg = '<div style="word-break: normal">', 
+         end = '</div>') %>%
+  unite(Title, beg, Title, end, sep = "", remove = FALSE) %>%
+  unite(PI, beg, PI, end, sep = "", remove = FALSE) %>%
+  unite(Location, beg, Location, end, sep = "", remove = FALSE) %>%
+  unite(Funded, beg, Funded, end, sep = "", remove = FALSE) %>%
+  unite(Phase, beg, Phase, end, sep = "", remove = FALSE) %>%
+  unite(Category, beg, Category, end, sep = "", remove = FALSE) %>%
+  select(-beg, -end) %>%
+  #mutate(across(Funded:Category, as.factor)) %>%
+  DT::datatable(escape = FALSE,
+                filter = list(position = 'top', clear = TRUE, plain = FALSE),
+                rownames= FALSE,
+                options = list(
+                    autoWidth = FALSE,
+                    #scrollX = TRUE,
+                    columnDefs = list(
+                      list(width = 200, targets = 0:1),
+                      list(width = 50, targets = 2),
+                      list(width = 10, targets = 3),
+                      list(width = 50, targets = 4:5),
+                      # list(width = 20, targets = 1),
+                      # list(width = '15px', targets = 3:6),
+                      list(className = "dt-center", targets = 2:5)
+                    )
+                  )
+            )
 
 ```
     

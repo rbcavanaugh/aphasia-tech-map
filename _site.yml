@@ -4,7 +4,7 @@ description: |
   Aphasia Tech Map
 output_dir: "docs"
 navbar:
-  search: true
+  search: false
   right:
     - text: "Home"
       href: index.html

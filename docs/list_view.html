@@ -457,265 +457,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2532,7 +2273,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="index.html" class="title">Aphasia Tech Map</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
@@ -3505,53 +3245,6 @@ Canada (with our grant funding).
 <br/>
 <div id="20" class="study">
 <div class="name">
-Brain connectivity disorders in patients with post-stroke aphasia:
-</div>
-<strong>Principle Investigator(s):</strong>
-<div class="pi">
-Nevine El Nahas, Ahmed El Bokl, Tamer Roushdy, Eman Hamed, Hossam
-Shoukri, Fatma Kenawy, Hussein Hamouda, Nourhan Belal
-</div>
-<strong>Email:</strong>
-<div class="email">
-<a href="mailto:nevine_elnahas@med.asu.edu.eg"
-class="email">nevine_elnahas@med.asu.edu.eg</a>
-</div>
-<strong>Country:</strong>
-<div class="Location">
-Cairo, Egypt
-</div>
-<strong>Funding Source:</strong>
-<div class="Location">
-capacity building project provided by STDF
-</div>
-<strong>Phase of Research:</strong>
-<div class="Location">
-Phase I - Proof of concept
-</div>
-<strong>Plan to Commercalise:</strong>
-<div class="Location">
-Yes
-</div>
-<strong>Category:</strong>
-<div class="Location">
-brain connectivity study
-</div>
-<br/> <b>Brief Description:</b>
-<div class="summary">
-compare brain connectivity between healthy subjects and aphasia patients
-to discover abnormalities of brain connectivity in aphasia. This can
-guide for further therapeutic and rehabilitation methods
-</div>
-<br/> <em>Additional Comments:</em>
-<div class="Location">
-I am not sure if this project fits in what you consider as technology
-research
-</div>
-</div>
-<br/>
-<div id="21" class="study">
-<div class="name">
 PeerPAL- Digital Networking in Aphasia
 </div>
 <strong>Principle Investigator(s):</strong>
@@ -3597,7 +3290,7 @@ class="uri">http://www.peerpal.de/en/</a>
 </div>
 </div>
 <br/>
-<div id="22" class="study">
+<div id="21" class="study">
 <div class="name">
 KoLiPENs - Kognitive, linguistische und personenbezogene
 Einflussfaktoren auf das Schreiben (Cognitive, linguistic and personal
@@ -3644,7 +3337,7 @@ competences and c) covers written language discourse skills.
 <p><br/></p>
 </div>
 <br/>
-<div id="23" class="study">
+<div id="22" class="study">
 <div class="name">
 Home-based language therapy and transcranial direct current stimulation
 in pri-mary progressive aphasia.
@@ -3710,7 +3403,7 @@ program, its effectiveness and ultimately patient benefit.
 </div>
 </div>
 <br/>
-<div id="24" class="study">
+<div id="23" class="study">
 <div class="name">
 Swaracharya
 </div>
@@ -3757,7 +3450,7 @@ training via Web and Mobile Interfaces.
 <p><br/></p>
 </div>
 <br/>
-<div id="25" class="study">
+<div id="24" class="study">
 <div class="name">
 “Shabdchitr”: ILAT Digital Application (Hindi, English, and other Indian
 languages
@@ -3814,7 +3507,7 @@ sessions
 </ol>
 </div>
 <br/>
-<div id="26" class="study">
+<div id="25" class="study">
 <div class="name">
 A Digital compendium of Hindi-English Bilingual Home based Exercises for
 PWA.
@@ -3875,7 +3568,7 @@ also cover many pragmatic aspects
 </ol>
 </div>
 <br/>
-<div id="27" class="study">
+<div id="26" class="study">
 <div class="name">
 Smart-phone assisted langauge training (SaLT)
 </div>
@@ -3919,7 +3612,7 @@ multilingual environment
 <p><br/></p>
 </div>
 <br/>
-<div id="28" class="study">
+<div id="27" class="study">
 <div class="name">
 Mixed reality in aphasia rehabilation (MiRaR)
 </div>
@@ -3965,7 +3658,7 @@ Krishnan, Manipal college of health professions, India
 </div>
 </div>
 <br/>
-<div id="29" class="study">
+<div id="28" class="study">
 <div class="name">
 “Lets talk” app for smartphone
 </div>
@@ -4014,7 +3707,7 @@ hear about new technologies around the world!!
 </div>
 </div>
 <br/>
-<div id="30" class="study">
+<div id="29" class="study">
 <div class="name">
 APP4PPA
 </div>
@@ -4055,7 +3748,7 @@ To develop a web-based speech therapy platform for patients with PPA
 <p><br/></p>
 </div>
 <br/>
-<div id="31" class="study">
+<div id="30" class="study">
 <div class="name">
 The development of an application compatible with mobile device to
 support language, cognition, communication for clients with neurological
@@ -4101,7 +3794,7 @@ clients with neurological language disorders
 <p><br/></p>
 </div>
 <br/>
-<div id="32" class="study">
+<div id="31" class="study">
 <div class="name">
 Phase III Development of a Valid, Reliable, Clinically Feasible Measure
 of Transactional Success in Aphasic Conversation: Modernizing Methods of
@@ -4151,7 +3844,7 @@ I look forward to hearing more about the map!
 </div>
 </div>
 <br/>
-<div id="33" class="study">
+<div id="32" class="study">
 <div class="name">
 VESFA (Virtual Elaborated Semantic Feature Analysis)
 </div>
@@ -4200,7 +3893,7 @@ quality of life.
 <p><br/></p>
 </div>
 <br/>
-<div id="34" class="study">
+<div id="33" class="study">
 <div class="name">
 INCA (inclusive digital content for people with aphasia)
 </div>
@@ -4249,7 +3942,7 @@ class="uri">https://blogs.city.ac.uk/inca/</a>
 </div>
 </div>
 <br/>
-<div id="35" class="study">
+<div id="34" class="study">
 <div class="name">
 Aphasia iCafè interview project: Student-delivered online social support
 groups for people with aphasia and/or dysarthria- a qualitative
@@ -4297,7 +3990,7 @@ taking part for people with aphasia/dysarthria and student SLTs?
 <p><br/></p>
 </div>
 <br/>
-<div id="36" class="study">
+<div id="35" class="study">
 <div class="name">
 KeyPhone
 </div>
@@ -4344,7 +4037,7 @@ get in touch.
 </div>
 </div>
 <br/>
-<div id="37" class="study">
+<div id="36" class="study">
 <div class="name">
 Face to face nd telehealth equivalence of assessments in aphasia
 (FATE-A)
@@ -4399,7 +4092,7 @@ will be directly implementable to clinical practice.
 </div>
 </div>
 <br/>
-<div id="38" class="study">
+<div id="37" class="study">
 <div class="name">
 VA11y (Videoconference Accessibility)
 </div>
@@ -4456,7 +4149,7 @@ class="uri">https://kclpure.kcl.ac.uk/portal/files/166216025/chi_no_copyright.pd
 </div>
 </div>
 <br/>
-<div id="39" class="study">
+<div id="38" class="study">
 <div class="name">
 Zooming Great
 </div>
@@ -4500,7 +4193,7 @@ within a charity called Say Aphasia
 </div>
 </div>
 <br/>
-<div id="40" class="study">
+<div id="39" class="study">
 <div class="name">
 PNT-CAT: Computer Adaptive forms of the Philadelphia Naming Test
 </div>
@@ -4543,7 +4236,7 @@ clinical and research use.
 <p><br/></p>
 </div>
 <br/>
-<div id="41" class="study">
+<div id="40" class="study">
 <div class="name">
 Integrating complementary learning principles in aphasia rehabilitation
 via adaptive modeling
@@ -4591,7 +4284,7 @@ Submitting on behalf of Dr. Evans.
 </div>
 </div>
 <br/>
-<div id="42" class="study">
+<div id="41" class="study">
 <div class="name">
 Therapy calculator for rehabilitation outcomes after acquired brain
 injury
@@ -4633,7 +4326,7 @@ following rehabilitation for ABI individuals with chronic disability
 <p><br/></p>
 </div>
 <br/>
-<div id="43" class="study">
+<div id="42" class="study">
 <div class="name">
 Assessing Communication and Clinical Effectiveness of Self-managed
 Speech-language therapy: a randomized control trial of a novel digital
@@ -4678,7 +4371,7 @@ active control
 <p><br/></p>
 </div>
 <br/>
-<div id="44" class="study">
+<div id="43" class="study">
 <div class="name">
 Virtual Groups and Computerized Therapy for Primary Progressive Aphasia
 </div>
@@ -4721,7 +4414,7 @@ participation in persons with primary progressive aphasia
 <p><br/></p>
 </div>
 <br/>
-<div id="45" class="study">
+<div id="44" class="study">
 <div class="name">
 The impact of home-based computer therapy to improve speech and
 cognitive function during stroke recovery
@@ -4770,7 +4463,7 @@ Technology is already commercialized
 </div>
 </div>
 <br/>
-<div id="46" class="study">
+<div id="45" class="study">
 <div class="name">
 Development of a Free Online Interactive Naming Therapy for Bilingual
 Aphasia
@@ -4820,7 +4513,7 @@ class="uri">https://doi.org/10.1044/2019_AJSLP-19-0035</a>
 </div>
 </div>
 <br/>
-<div id="47" class="study">
+<div id="46" class="study">
 <div class="name">
 Remote administration of Combined Aphasia and Apraxia of Speech
 Treatment (CAAST)
@@ -4861,7 +4554,7 @@ To evaluate the effects of CAAST administered remotely
 <p><br/></p>
 </div>
 <br/>
-<div id="48" class="study">
+<div id="47" class="study">
 <div class="name">
 Sentactics
 </div>
@@ -4902,7 +4595,7 @@ Treatment of sentence processing impairments in aphasia.
 <p><br/></p>
 </div>
 <br/>
-<div id="49" class="study">
+<div id="48" class="study">
 <div class="name">
 Automatic Classification of Paraphasias
 </div>
@@ -4946,7 +4639,7 @@ with aphasia when they produce a paraphasia.
 <p><br/></p>
 </div>
 <br/>
-<div id="50" class="study">
+<div id="49" class="study">
 <div class="name">
 Automatic Speech Recognition for Aphasic Speech
 </div>
@@ -4988,7 +4681,7 @@ applications and connected speech.
 <p><br/></p>
 </div>
 <br/>
-<div id="51" class="study">
+<div id="50" class="study">
 <div class="name">
 Modulating stimulus intensity to improve clinical outcomes in aphasia
 treatment (MIDAS)
@@ -5044,7 +4737,7 @@ affective expressions.
 </div>
 </div>
 <br/>
-<div id="52" class="study">
+<div id="51" class="study">
 <div class="name">
 Improving electronic written communication in persons with aphasia: A
 clinical trial
@@ -5096,7 +4789,7 @@ adapted to target texting
 </div>
 </div>
 <br/>
-<div id="53" class="study">
+<div id="52" class="study">
 <div class="name">
 Timing of transcranial direct current stimulation (tDCS) combined with
 speech and language therapy (SLT) : An Intervention Development Study
@@ -5146,7 +4839,7 @@ and is AphasiaScripts.
 </div>
 </div>
 <br/>
-<div id="54" class="study">
+<div id="53" class="study">
 <div class="name">
 N/A - there are technology tools that we are using across multiple
 projects to measure outcomes
@@ -5194,7 +4887,7 @@ resting state MRI as measures of change from pre to post treatment.
 </div>
 </div>
 <br/>
-<div id="55" class="study">
+<div id="54" class="study">
 <div class="name">
 Pupillometry and eyetracking to index cognitive and linguistic
 processing in people with aphasia
@@ -5236,7 +4929,7 @@ captured through typical assessment processes
 <p><br/></p>
 </div>
 <br/>
-<div id="56" class="study">
+<div id="55" class="study">
 <div class="name">
 Assessment of anomia: Improving efficiency and utility using item
 response theory
@@ -5287,7 +4980,7 @@ for the assessment of both object and action naming.
 </div>
 </div>
 <br/>
-<div id="57" class="study">
+<div id="56" class="study">
 <div class="name">
 Analyzing Communication Environments (ACE)
 </div>
@@ -5334,7 +5027,7 @@ We are using technology to collect, process, and analyze language data.
 </div>
 </div>
 <br/>
-<div id="58" class="study">
+<div id="57" class="study">
 <div class="name">
 Characterizing inner speech in aphasia
 </div>
@@ -5381,7 +5074,7 @@ this phenomenon after this exploratory phase.
 </div>
 </div>
 <br/>
-<div id="59" class="study">
+<div id="58" class="study">
 <div class="name">
 Communication Bridge: A person-centered Internet-based intervention for
 individuals with primary progressive aphasia
@@ -5424,7 +5117,7 @@ RCT
 <p><br/></p>
 </div>
 <br/>
-<div id="60" class="study">
+<div id="59" class="study">
 <div class="name">
 WRITE-IT
 </div>
@@ -5470,7 +5163,7 @@ recruiting N=8 people with aphasia.
 </div>
 </div>
 <br/>
-<div id="61" class="study">
+<div id="60" class="study">
 <div class="name">
 MARS: ROJECT: Exploring initial feasibility of MARS: A LUNA-TherapyBox
 collaboration MARS: Machine learning Analysis and Reporting of Spoken
