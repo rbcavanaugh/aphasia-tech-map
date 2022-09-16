@@ -1,7 +1,7 @@
 ---
-title: "Technology in Aphasia Rehabilitation Research Mapping Project"
+title: "Aphasia Rehabilitation Research Technology Mapping Project"
 description: |
-  The Think Tank is a Collaboration of Aphasia Trialists Working Group 4 event sponsored by the Centre for Research Excellence in Aphasia Recovery and Rehabilitation, Australia (Aphasia CRE)
+  The Aphasia Tech Map is a product of the [Collaboration of Aphasia Trialists](https://www.aphasiatrials.org) Working Group 4,  sponsored by the [Centre for Research Excellence in Aphasia Recovery and Rehabilitation](https://www.latrobe.edu.au/research/centres/health/aphasia).
 site: distill::distill_website
 ---
 
@@ -9,6 +9,11 @@ site: distill::distill_website
 
 d-appendix{
   display: none !important;
+}
+
+d-title h1 {
+font-size: 1.35rem;
+grid-column-gap: 62px;
 }
 
 /*Fix for Marker Clusters*/
@@ -38,17 +43,19 @@ library(here)
 library(tidyverse)
 library(leaflet)
 
-responses = read.csv(here("data", "aphasia-tech-responses.csv")) %>%
-  mutate(id = row_number())
+# responses = read.csv(here("data", "aphasia-tech-responses.csv")) %>%
+#   
 
-data = responses %>%
+google_data  = readRDS("~/shiny-apps/aphasia-tech-map/google_data.rds")
+data = google_data %>%
+  mutate(id = row_number()) %>%
   mutate(link=paste0("list_view.html#",id),
          Name = paste0("<a href=", link, ">", Title, "</a>")
          )
 
 ```
 
-```{r, echo = F, layout = "l-screen-inset", out.height = "70vh"}
+```{r, echo = F, layout = "l-screen-inset", out.height = "60vh"}
 data %>%
   rename(lng = Lon, lat = Lat) %>%
   leaflet() %>%
@@ -60,3 +67,7 @@ data %>%
                                showCoverageOnHover = F)
              )
 ```
+
+<center><small>
+*Website built by [Rob Cavanaugh](https://rbcavanaugh.github.io) with assistance from [John Pierce](http://www.aphasiatherapyonline.com/aboutdetailed.html)*
+</small></center>

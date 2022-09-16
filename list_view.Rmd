@@ -40,14 +40,13 @@ library(htmltools)
 library(here)
 library(tidyverse)
 
-responses = read.csv(here("data", "aphasia-tech-responses.csv")) %>%
-  mutate(id = row_number())
+google_data  = readRDS("~/shiny-apps/aphasia-tech-map/google_data.rds")
 
-data = responses %>%
+data = google_data %>%
+  mutate(id = row_number()) %>%
   mutate(link=paste0("list_view.html#",id),
          Name = paste0("<a href=", link, ">", Title, "</a>")
          )
-
 ```
 
 
@@ -59,7 +58,7 @@ study <- function(data, i, ...) {
   
     info = data[i,]
     additional = tagList()
-    if(nchar(info$Comments)>2){
+    if(isTRUE(nchar(info$Comments)>2)){
       additional = tagList(
       tags$em("Additional Comments:"),
       div(class = "Location", HTML(info$Comments))
