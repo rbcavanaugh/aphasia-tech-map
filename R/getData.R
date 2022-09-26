@@ -5,8 +5,6 @@ library(googlesheets4)
 library(mapboxapi)
 # Comment out for local push
 #token = Sys.getenv("MAPBOX")
-token = get_mb_access_token()
-mb_access_token(token)
 
 googlesheets4::gs4_deauth()
 
@@ -15,7 +13,7 @@ sheet_url = 'https://docs.google.com/spreadsheets/d/1FOYUEroO90Pn-qHxHVvwIOkNN24
 google_data = googlesheets4::read_sheet(sheet_url) %>%
   rowwise() %>%
   mutate(
-    geo = list(mb_geocode(LocationFull, limit = 3)),
+    geo = list(mb_geocode(LocationFull, limit = 3, access_token = token)),
     geo = geo[1]
     ) %>%
   mutate(
