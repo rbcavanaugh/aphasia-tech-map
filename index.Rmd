@@ -46,7 +46,7 @@ library(leaflet)
 # responses = read.csv(here("data", "aphasia-tech-responses.csv")) %>%
 #   
 
-google_data  = readRDS("~/shiny-apps/aphasia-tech-map/google_data.rds")
+google_data  = readRDS(here::here("google_data.rds"))
 data = google_data %>%
   mutate(id = row_number()) %>%
   mutate(link=paste0("list_view.html#",id),

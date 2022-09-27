@@ -40,7 +40,7 @@ library(htmltools)
 library(here)
 library(tidyverse)
 
-google_data  = readRDS("~/shiny-apps/aphasia-tech-map/google_data.rds")
+google_data  = readRDS(here::here("google_data.rds"))
 
 data = google_data %>%
   mutate(id = row_number()) %>%
