@@ -70,4 +70,6 @@ data %>%
 
 <center><small>
 *Website built by [Rob Cavanaugh](https://rbcavanaugh.github.io) with assistance from [John Pierce](http://www.aphasiatherapyonline.com/aboutdetailed.html)*
+<br>
+*Last updated on `r Sys.Date()`*
 </small></center>
