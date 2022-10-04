@@ -3,6 +3,7 @@ title: "Aphasia Tech Map"
 description: |
   Aphasia Tech Map
 output_dir: "docs"
+google_analytics: "G-K27Y5EDCX3"
 navbar:
   search: false
   right:
