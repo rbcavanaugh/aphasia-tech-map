@@ -4,6 +4,12 @@ description: |
   Aphasia Tech Map
 output_dir: "docs"
 google_analytics: "G-K27Y5EDCX3"
+cookie_consent:
+    style: simple
+    type: implied
+    palette: light
+    lang: en/de/fr/es/ca_es/it/nl/pt/fi/hu/cs/hr/da/sl/pl/ro/sr/bg/cy
+    privacy_policy: link to privacy policy
 navbar:
   search: false
   right:
