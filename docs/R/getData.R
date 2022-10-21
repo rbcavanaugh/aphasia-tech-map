@@ -8,7 +8,7 @@ library(mapboxapi)
 
 googlesheets4::gs4_deauth()
 
-sheet_url = 'https://docs.google.com/spreadsheets/d/1FOYUEroO90Pn-qHxHVvwIOkNN24hxtRKWE23Zt34P-E/edit?usp=sharing'
+sheet_url = 'https://docs.google.com/spreadsheets/d/1JKI9l_WxcO2nl7wrJ5wRvAy_PcezXPXalZ8s6Ae5CQY/edit?usp=sharing'
 
 google_data = googlesheets4::read_sheet(sheet_url) %>%
   rowwise() %>%
