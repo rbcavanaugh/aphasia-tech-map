@@ -43,6 +43,7 @@ library(tidyverse)
 google_data  = readRDS(here::here("google_data.rds"))
 
 data = google_data %>%
+  ungroup() %>%
   mutate(id = row_number()) %>%
   mutate(link=paste0("list_view.html#",id),
          Name = paste0("<a href=", link, ">", Title, "</a>")
