@@ -1,7 +1,7 @@
 ---
 title: "Aphasia Rehabilitation Research Technology Mapping Project"
 description: |
-  The Aphasia Tech Map is a product of the [Collaboration of Aphasia Trialists](https://www.aphasiatrials.org) Working Group 4,  sponsored by the [Centre for Research Excellence in Aphasia Recovery and Rehabilitation](https://www.latrobe.edu.au/research/centres/health/aphasia). ***[Submit your project](https://forms.gle/xjMy3ZgCABeuX9Kf7)***
+  The Aphasia Tech Map is a product of the [Collaboration of Aphasia Trialists](https://www.aphasiatrials.org) Working Group 4,  sponsored by the [Centre for Research Excellence in Aphasia Recovery and Rehabilitation](https://www.latrobe.edu.au/research/centres/health/aphasia).
 site: distill::distill_website
 ---
 
@@ -36,6 +36,10 @@ l-screen{
   margin: 1%;
 }
 
+.html-widget {
+margin-bottom: 0.5em;
+}
+
 ```
 
 ```{r, include=FALSE}
@@ -68,6 +72,8 @@ data %>%
                                showCoverageOnHover = F)
              )
 ```
+
+<center style="margin-bottom:0.5rem;">**[Submit your project](https://forms.gle/xjMy3ZgCABeuX9Kf7){target="_blank"}**</center>
 
 <center><small>
 *Website built by [Rob Cavanaugh](https://rbcavanaugh.github.io) with assistance from [John Pierce](http://www.aphasiatherapyonline.com/aboutdetailed.html)*
