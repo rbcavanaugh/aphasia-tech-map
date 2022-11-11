@@ -81,6 +81,8 @@ study <- function(data, i, ...) {
        tags$strong("Phase of Research:"),
       div(class = "Location", paste(info$PhaseOfResearch)), 
        tags$strong("Plan to Commercalise:"),
+      div(class = "OngoingOrComplete", paste(info$OngoingOrComplete)),
+       tags$strong("Status: "),
       div(class = "Location", paste(info$PlanToCommericalise)), 
        tags$strong("Category:"),
       div(class = "Location", paste(info$Category)), 
