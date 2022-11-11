@@ -65,6 +65,14 @@ study <- function(data, i, ...) {
       div(class = "Location", HTML(info$Comments))
       )
     }
+    
+    pubs = tagList()
+    if(isTRUE(nchar(info$Publications)>2)){
+      pubs = tagList(
+      tags$em("Publications or resources:"),
+      div(class = "Location", HTML(info$Publications))
+      )
+    }
   
     divOut = 
       div(id=info$id,
@@ -89,7 +97,8 @@ study <- function(data, i, ...) {
       br(),
       tags$b("Brief Description:"),
       div(class = "summary", HTML(info$BriefSummary)), br(),
-      additional
+      additional,
+      pubs
     ) 
     
     return(divOut)
