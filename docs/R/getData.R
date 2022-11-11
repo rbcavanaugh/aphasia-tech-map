@@ -33,9 +33,11 @@ google_data = googlesheets4::read_sheet(sheet_url) %>%
          Funded = "Is the project funded?",
          FundingSource = "If yes, how is the project funded?",
          PhaseOfResearch = "Phase of research",
+         OngoingOrComplete = "This project is:",
          PlanToCommericalise = "Are there plans to commercialise the technology?",
          Category = "The technology in this project is categorised as:",
-         Comments = "Other comments:"
+         Comments = "Other comments:",
+         Publications = "Publications or resources:"
   )
 
 write_rds(google_data, file = "google_data.rds")
