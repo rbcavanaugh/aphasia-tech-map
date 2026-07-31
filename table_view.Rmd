@@ -57,7 +57,7 @@ pf = function(col){
 }
 
 data %>%
-  select(Title = Name, PI = ResponsiblePartyInvestigators, Location = LocationFull,
+  select(Title = Name, PI = ResponsiblePartyInvestigators, Location = LocationDisplay,
          Funded, Phase = PhaseOfResearch, Category) %>%
   mutate(Category = str_replace_all(Category, " \\s*\\([^\\)]+\\)", "")) %>%
   mutate(beg = '<div style="word-break: normal">', 
