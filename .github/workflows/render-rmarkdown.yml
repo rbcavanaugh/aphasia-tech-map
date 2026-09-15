@@ -17,6 +17,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@v2
       - uses: r-lib/actions/setup-pandoc@v2
+      - name: Check Pandoc
+        run: pandoc --version
+
       
       - name: Install rmarkdown
         run: Rscript -e 'install.packages("rmarkdown")'
