@@ -20,19 +20,20 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -52,9 +53,9 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   { color: #00769e; background-color: #f1f3f5; }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span. { color: #00769e; } /* Normal */
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
 code span.at { color: #657422; } /* Attribute */
@@ -89,36 +90,36 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--radix_placeholder_meta_tags-->
   <title>Aphasia Tech Map: Aphasia research studies</title>
-  
-  
-  
-  
+
+
+
+
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Aphasia Tech Map: Aphasia research studies"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Aphasia Tech Map"/>
-  
+
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Aphasia Tech Map: Aphasia research studies"/>
-  
+
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
-  
+
   <script type="text/json" id="radix-rmarkdown-metadata">
   {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["Aphasia research studies"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
   <meta name="distill:offset" content=""/>
-  
+
   <script type="application/javascript">
-  
+
     window.headroom_prevent_pin = false;
-  
+
     window.document.addEventListener("DOMContentLoaded", function (event) {
-  
+
       // initialize headroom for banner
       var header = $('header').get(0);
       var headerHeight = header.offsetHeight;
@@ -135,13 +136,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       if(window.location.hash)
         headroom.unpin();
       $(header).addClass('headroom--transition');
-  
+
       // offset scroll location for banner on hash change
       // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
       window.addEventListener("hashchange", function(event) {
         window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
       });
-  
+
       // responsive menu
       $('.distill-site-header').each(function(i, val) {
         var topnav = $(this);
@@ -150,7 +151,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           topnav.toggleClass('responsive');
         });
       });
-  
+
       // nav dropdowns
       $('.nav-dropbtn').click(function(e) {
         $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
@@ -165,99 +166,99 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       });
     });
   </script>
-  
+
   <style type="text/css">
-  
+
   /* Theme (user-documented overrideables for nav appearance) */
-  
+
   .distill-site-nav {
     color: rgba(255, 255, 255, 0.8);
     background-color: #0F2E3D;
     font-size: 15px;
     font-weight: 300;
   }
-  
+
   .distill-site-nav a {
     color: inherit;
     text-decoration: none;
   }
-  
+
   .distill-site-nav a:hover {
     color: white;
   }
-  
+
   @media print {
     .distill-site-nav {
       display: none;
     }
   }
-  
+
   .distill-site-header {
-  
+
   }
-  
+
   .distill-site-footer {
-  
+
   }
-  
-  
+
+
   /* Site Header */
-  
+
   .distill-site-header {
     width: 100%;
     box-sizing: border-box;
     z-index: 3;
   }
-  
+
   .distill-site-header .nav-left {
     display: inline-block;
     margin-left: 8px;
   }
-  
+
   @media screen and (max-width: 768px) {
     .distill-site-header .nav-left {
       margin-left: 0;
     }
   }
-  
-  
+
+
   .distill-site-header .nav-right {
     float: right;
     margin-right: 8px;
   }
-  
+
   .distill-site-header a,
   .distill-site-header .title {
     display: inline-block;
     text-align: center;
     padding: 14px 10px 14px 10px;
   }
-  
+
   .distill-site-header .title {
     font-size: 18px;
     min-width: 150px;
   }
-  
+
   .distill-site-header .logo {
     padding: 0;
   }
-  
+
   .distill-site-header .logo img {
     display: none;
     max-height: 20px;
     width: auto;
     margin-bottom: -4px;
   }
-  
+
   .distill-site-header .nav-image img {
     max-height: 18px;
     width: auto;
     display: inline-block;
     margin-bottom: -3px;
   }
-  
-  
-  
+
+
+
   @media screen and (min-width: 1000px) {
     .distill-site-header .logo img {
       display: inline-block;
@@ -272,17 +273,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       padding-left: 12px;
     }
   }
-  
-  
+
+
   .distill-site-header .nav-toggle {
     display: none;
   }
-  
+
   .nav-dropdown {
     display: inline-block;
     position: relative;
   }
-  
+
   .nav-dropdown .nav-dropbtn {
     border: none;
     outline: none;
@@ -296,7 +297,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 1px;
     z-index: 2;
   }
-  
+
   .nav-dropdown-content {
     display: none;
     position: absolute;
@@ -311,18 +312,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-top: 4px;
     padding-bottom: 4px;
   }
-  
+
   .nav-dropdown-content hr {
     margin-top: 4px;
     margin-bottom: 4px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .nav-dropdown-active {
     display: block;
   }
-  
+
   .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
     color: black;
     padding: 6px 24px;
@@ -330,7 +331,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: block;
     text-align: left;
   }
-  
+
   .nav-dropdown-content .nav-dropdown-header {
     display: block;
     padding: 5px 24px;
@@ -340,21 +341,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: #999999;
     white-space: nowrap;
   }
-  
+
   .nav-dropdown:hover .nav-dropbtn {
     color: white;
   }
-  
+
   .nav-dropdown-content a:hover {
     background-color: #ddd;
     color: black;
   }
-  
+
   .nav-right .nav-dropdown-content {
     margin-left: -45%;
     right: 0;
   }
-  
+
   @media screen and (max-width: 768px) {
     .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
     .distill-site-header a.nav-toggle {
@@ -374,8 +375,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       margin-left: 0;
     }
   }
-  
-  
+
+
   @media screen and (max-width: 768px) {
     .distill-site-header.responsive {position: relative; min-height: 500px; }
     .distill-site-header.responsive a.nav-toggle {
@@ -400,9 +401,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       text-align: left;
     }
   }
-  
+
   /* Site Footer */
-  
+
   .distill-site-footer {
     width: 100%;
     overflow: hidden;
@@ -413,19 +414,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-bottom: 30px;
     text-align: center;
   }
-  
+
   /* Headroom */
-  
+
   d-title {
     padding-top: 6rem;
   }
-  
+
   @media print {
     d-title {
       padding-top: 4rem;
     }
   }
-  
+
   .headroom {
     z-index: 1000;
     position: fixed;
@@ -433,68 +434,68 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     left: 0;
     right: 0;
   }
-  
+
   .headroom--transition {
     transition: all .4s ease-in-out;
   }
-  
+
   .headroom--unpinned {
     top: -100px;
   }
-  
+
   .headroom--pinned {
     top: 0;
   }
-  
+
   /* adjust viewport for navbar height */
   /* helps vertically center bootstrap (non-distill) content */
   .min-vh-100 {
     min-height: calc(100vh - 100px) !important;
   }
-  
+
   </style>
-  
+
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
-  
+
   <style type="text/css">
-  
+
   body {
     background-color: white;
   }
-  
+
   .pandoc-table {
     width: 100%;
   }
-  
+
   .pandoc-table>caption {
     margin-bottom: 10px;
   }
-  
+
   .pandoc-table th:not([align]) {
     text-align: left;
   }
-  
+
   .pagedtable-footer {
     font-size: 15px;
   }
-  
+
   d-byline .byline {
     grid-template-columns: 2fr 2fr;
   }
-  
+
   d-byline .byline h3 {
     margin-block-start: 1.5em;
   }
-  
+
   d-byline .byline .authors-affiliations h3 {
     margin-block-start: 0.5em;
   }
-  
+
   .authors-affiliations .orcid-id {
     width: 16px;
     height:16px;
@@ -503,12 +504,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     vertical-align: middle;
     padding-bottom: 2px;
   }
-  
+
   d-title .dt-tags {
     margin-top: 1em;
     grid-column: text;
   }
-  
+
   .dt-tags .dt-tag {
     text-decoration: none;
     display: inline-block;
@@ -522,25 +523,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-transform: uppercase;
     font-weight: 500;
   }
-  
+
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
     font-size: 100%;
   }
-  
+
   .html-widget {
     margin-bottom: 2.0em;
   }
-  
+
   .l-screen-inset {
     padding-right: 16px;
   }
-  
+
   .l-screen .caption {
     margin-left: 10px;
   }
-  
+
   .shaded {
     background: rgb(247, 247, 247);
     padding-top: 20px;
@@ -548,87 +549,87 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .html-widget {
     margin-bottom: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .shaded-content {
     background: white;
   }
-  
+
   .text-output {
     margin-top: 0;
     line-height: 1.5em;
   }
-  
+
   .hidden {
     display: none !important;
   }
-  
+
   hr.section-separator {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin: 0px;
   }
-  
-  
+
+
   d-byline {
     border-top: none;
   }
-  
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
     border-top: none;
   }
-  
+
   d-appendix {
     padding-top: 30px;
   }
-  
+
   d-article>p>img {
     width: 100%;
   }
-  
+
   d-article h2 {
     margin: 1rem 0 1.5rem 0;
   }
-  
+
   d-article h3 {
     margin-top: 1.5rem;
   }
-  
+
   d-article iframe {
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 2.0em;
     width: 100%;
   }
-  
+
   /* Tweak code blocks */
-  
+
   d-article div.sourceCode code,
   d-article pre code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
-  
+
   d-article pre,
   d-article div.sourceCode,
   d-article div.sourceCode pre {
     overflow: auto;
   }
-  
+
   d-article div.sourceCode {
     background-color: white;
   }
-  
+
   d-article div.sourceCode pre {
     padding-left: 10px;
     font-size: 12px;
     border-left: 2px solid rgba(0,0,0,0.1);
   }
-  
+
   d-article pre {
     font-size: 12px;
     color: black;
@@ -640,55 +641,55 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-  
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-  
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
   }
-  
+
   d-article pre a {
     border-bottom: none;
   }
-  
+
   d-article pre a:hover {
     border-bottom: none;
     text-decoration: underline;
   }
-  
+
   d-article details {
     grid-column: text;
     margin-bottom: 0.8em;
   }
-  
+
   @media(min-width: 768px) {
-  
+
   d-article pre,
   d-article div.sourceCode,
   d-article div.sourceCode pre {
     overflow: visible !important;
   }
-  
+
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
   }
-  
+
   /* tweak for Pandoc numbered line within distill */
   d-article pre.numberSource code > span {
       left: -2em;
   }
-  
+
   d-article pre {
     font-size: 14px;
   }
-  
+
   }
-  
+
   figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -696,9 +697,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding: 18px;
     box-sizing: border-box;
   }
-  
+
   /* CSS for d-contents */
-  
+
   .d-contents {
     grid-column: text;
     color: rgba(0,0,0,0.8);
@@ -710,7 +711,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-left: 0.25em;
     justify-self: start;
   }
-  
+
   @media(min-width: 1000px) {
     .d-contents.d-contents-float {
       height: 0;
@@ -721,78 +722,78 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       padding-left: 2em;
     }
   }
-  
+
   .d-contents nav h3 {
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 1em;
   }
-  
+
   .d-contents li {
     list-style-type: none
   }
-  
+
   .d-contents nav > ul {
     padding-left: 0;
   }
-  
+
   .d-contents ul {
     padding-left: 1em
   }
-  
+
   .d-contents nav ul li {
     margin-top: 0.6em;
     margin-bottom: 0.2em;
   }
-  
+
   .d-contents nav a {
     font-size: 13px;
     border-bottom: none;
     text-decoration: none
     color: rgba(0, 0, 0, 0.8);
   }
-  
+
   .d-contents nav a:hover {
     text-decoration: underline solid rgba(0, 0, 0, 0.6)
   }
-  
+
   .d-contents nav > ul > li > a {
     font-weight: 600;
   }
-  
+
   .d-contents nav > ul > li > ul {
     font-weight: inherit;
   }
-  
+
   .d-contents nav > ul > li > ul > li {
     margin-top: 0.2em;
   }
-  
-  
+
+
   .d-contents nav ul {
     margin-top: 0;
     margin-bottom: 0.25em;
   }
-  
+
   .d-article-with-toc h2:nth-child(2) {
     margin-top: 0;
   }
-  
-  
+
+
   /* Figure */
-  
+
   .figure {
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
   }
-  
+
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
     line-height: 1.5em;
   }
-  
+
   .figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -800,42 +801,42 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding: 18px;
     box-sizing: border-box;
   }
-  
+
   .figure .caption a {
     color: rgba(0, 0, 0, 0.6);
   }
-  
+
   .figure .caption b,
   .figure .caption strong, {
     font-weight: 600;
     color: rgba(0, 0, 0, 1.0);
   }
-  
+
   /* Citations */
-  
+
   d-article .citation {
     color: inherit;
     cursor: inherit;
   }
-  
+
   div.hanging-indent{
     margin-left: 1em; text-indent: -1em;
   }
-  
+
   /* Citation hover box */
-  
+
   .tippy-box[data-theme~=light-border] {
     background-color: rgba(250, 250, 250, 0.95);
   }
-  
+
   .tippy-content > p {
     margin-bottom: 0;
     padding: 2px;
   }
-  
-  
+
+
   /* Tweak 1000px media break to show more text */
-  
+
   @media(min-width: 1000px) {
     .base-grid,
     distill-header,
@@ -851,11 +852,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 16px;
     }
-  
+
     .grid {
       grid-column-gap: 16px;
     }
-  
+
     d-article {
       font-size: 1.06rem;
       line-height: 1.7em;
@@ -864,7 +865,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       font-size: 13px;
     }
   }
-  
+
   @media(min-width: 1180px) {
     .base-grid,
     distill-header,
@@ -880,16 +881,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 32px;
     }
-  
+
     .grid {
       grid-column-gap: 32px;
     }
   }
-  
-  
+
+
   /* Get the citation styles for the appendix (not auto-injected on render since
      we do our own rendering of the citation appendix) */
-  
+
   d-appendix .citation-appendix,
   .d-appendix .citation-appendix {
     font-size: 11px;
@@ -906,9 +907,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     white-space: pre-wrap;
     word-wrap: break-word;
   }
-  
+
   /* Include appendix styles here so they can be overridden */
-  
+
   d-appendix {
     contain: layout style;
     font-size: 0.8em;
@@ -920,7 +921,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-top: 60px;
     padding-bottom: 48px;
   }
-  
+
   d-appendix h3 {
     grid-column: page-start / text-start;
     font-size: 15px;
@@ -929,59 +930,59 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-bottom: 0;
     color: rgba(0,0,0,0.65);
   }
-  
+
   d-appendix h3 + * {
     margin-top: 1em;
   }
-  
+
   d-appendix ol {
     padding: 0 0 0 15px;
   }
-  
+
   @media (min-width: 768px) {
     d-appendix ol {
       padding: 0 0 0 30px;
       margin-left: -30px;
     }
   }
-  
+
   d-appendix li {
     margin-bottom: 1em;
   }
-  
+
   d-appendix a {
     color: rgba(0, 0, 0, 0.6);
   }
-  
+
   d-appendix > * {
     grid-column: text;
   }
-  
+
   d-appendix > d-footnote-list,
   d-appendix > d-citation-list,
   d-appendix > distill-appendix {
     grid-column: screen;
   }
-  
+
   /* Include footnote styles here so they can be overridden */
-  
+
   d-footnote-list {
     contain: layout style;
   }
-  
+
   d-footnote-list > * {
     grid-column: text;
   }
-  
+
   d-footnote-list a.footnote-backlink {
     color: rgba(0,0,0,0.3);
     padding-left: 0.5em;
   }
-  
-  
-  
+
+
+
   /* Anchor.js */
-  
+
   .anchorjs-link {
     /*transition: all .25s linear; */
     text-decoration: none;
@@ -992,86 +993,86 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-decoration: none;
     border-bottom: none;
   }
-  
+
   /* Social footer */
-  
+
   .social_footer {
     margin-top: 30px;
     margin-bottom: 0;
     color: rgba(0,0,0,0.67);
   }
-  
+
   .disqus-comments {
     margin-right: 30px;
   }
-  
+
   .disqus-comment-count {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
-  
+
   #disqus_thread {
     margin-top: 30px;
   }
-  
+
   .article-sharing a {
     border-bottom: none;
     margin-right: 8px;
   }
-  
+
   .article-sharing a:hover {
     border-bottom: none;
   }
-  
+
   .sidebar-section.subscribe {
     font-size: 12px;
     line-height: 1.6em;
   }
-  
+
   .subscribe p {
     margin-bottom: 0.5em;
   }
-  
-  
+
+
   .article-footer .subscribe {
     font-size: 15px;
     margin-top: 45px;
   }
-  
-  
+
+
   .sidebar-section.custom {
     font-size: 12px;
     line-height: 1.6em;
   }
-  
+
   .custom p {
     margin-bottom: 0.5em;
   }
-  
+
   /* Styles for listing layout (hide title) */
   .layout-listing d-title, .layout-listing .d-title {
     display: none;
   }
-  
+
   /* Styles for posts lists (not auto-injected) */
-  
-  
+
+
   .posts-with-sidebar {
     padding-left: 45px;
     padding-right: 45px;
   }
-  
+
   .posts-list .description h2,
   .posts-list .description p {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   }
-  
+
   .posts-list .description h2 {
     font-weight: 700;
     border-bottom: none;
     padding-bottom: 0;
   }
-  
+
   .posts-list h2.post-tag {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 12px;
@@ -1080,7 +1081,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 60px;
     margin-bottom: 24px;
   }
-  
+
   .posts-list .post-preview {
     text-decoration: none;
     overflow: hidden;
@@ -1088,29 +1089,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 24px 0;
   }
-  
+
   .post-preview-last {
     border-bottom: none !important;
   }
-  
+
   .posts-list .posts-list-caption {
     grid-column: screen;
     font-weight: 400;
   }
-  
+
   .posts-list .post-preview h2 {
     margin: 0 0 6px 0;
     line-height: 1.2em;
     font-style: normal;
     font-size: 24px;
   }
-  
+
   .posts-list .post-preview p {
     margin: 0 0 12px 0;
     line-height: 1.4em;
     font-size: 16px;
   }
-  
+
   .posts-list .post-preview .thumbnail {
     box-sizing: border-box;
     margin-bottom: 24px;
@@ -1121,32 +1122,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     width: 100%;
     display: block;
   }
-  
+
   .posts-list .metadata {
     font-size: 12px;
     line-height: 1.4em;
     margin-bottom: 18px;
   }
-  
+
   .posts-list .metadata > * {
     display: inline-block;
   }
-  
+
   .posts-list .metadata .publishedDate {
     margin-right: 2em;
   }
-  
+
   .posts-list .metadata .dt-authors {
     display: block;
     margin-top: 0.3em;
     margin-right: 2em;
   }
-  
+
   .posts-list .dt-tags {
     display: block;
     line-height: 1em;
   }
-  
+
   .posts-list .dt-tags .dt-tag {
     display: inline-block;
     color: rgba(0,0,0,0.6);
@@ -1159,24 +1160,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-transform: uppercase;
     font-weight: 500;
   }
-  
+
   .posts-list img {
     opacity: 1;
   }
-  
+
   .posts-list img[data-src] {
     opacity: 0;
   }
-  
+
   .posts-more {
     clear: both;
   }
-  
-  
+
+
   .posts-sidebar {
     font-size: 16px;
   }
-  
+
   .posts-sidebar h3 {
     font-size: 16px;
     margin-top: 0;
@@ -1184,39 +1185,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-weight: 400;
     text-transform: uppercase;
   }
-  
+
   .sidebar-section {
     margin-bottom: 30px;
   }
-  
+
   .categories ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  
+
   .categories li {
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 0;
   }
-  
+
   .categories li>a {
     border-bottom: none;
   }
-  
+
   .categories li>a:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   }
-  
+
   .categories .active {
     font-weight: 600;
   }
-  
+
   .categories .category-count {
     color: rgba(0, 0, 0, 0.4);
   }
-  
-  
+
+
   @media(min-width: 768px) {
     .posts-list .post-preview h2 {
       font-size: 26px;
@@ -1252,55 +1253,55 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       padding-bottom: 24px;
     }
   }
-  
-  
+
+
   /* Improve display for browsers without grid (IE/Edge <= 15) */
-  
+
   .downlevel {
     line-height: 1.6em;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
   }
-  
+
   .downlevel .d-title {
     padding-top: 6rem;
     padding-bottom: 1.5rem;
   }
-  
+
   .downlevel .d-title h1 {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.1em;
     margin: 0 0 0.5rem;
   }
-  
+
   .downlevel .d-title p {
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.55em;
     margin-top: 0;
   }
-  
+
   .downlevel .d-byline {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
     font-size: 0.8rem;
     line-height: 1.8em;
   }
-  
+
   .downlevel .section-separator {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .downlevel .d-article {
     font-size: 1.06rem;
     line-height: 1.7em;
     padding-top: 1rem;
     padding-bottom: 2rem;
   }
-  
-  
+
+
   .downlevel .d-appendix {
     padding-left: 0;
     padding-right: 0;
@@ -1312,11 +1313,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-top: 40px;
     padding-bottom: 48px;
   }
-  
+
   .downlevel .footnotes ol {
     padding-left: 13px;
   }
-  
+
   .downlevel .base-grid,
   .downlevel .distill-header,
   .downlevel .d-title,
@@ -1333,7 +1334,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-left: 40px;
     padding-right: 40px;
   }
-  
+
   @media(min-width: 768px) {
     .downlevel .base-grid,
     .downlevel .distill-header,
@@ -1353,14 +1354,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     max-width: 900px;
   }
   }
-  
+
   .downlevel pre code {
     display: block;
     border-left: 2px solid rgba(0, 0, 0, .1);
     padding: 0 0 0 20px;
     font-size: 14px;
   }
-  
+
   .downlevel code, .downlevel pre {
     color: black;
     background: none;
@@ -1371,27 +1372,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-  
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-  
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
   }
-  
+
   .downlevel .posts-list .post-preview {
     color: inherit;
   }
-  
-  
-  
+
+
+
   </style>
-  
+
   <script type="application/javascript">
-  
+
   function is_downlevel_browser() {
     if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
                                    window.navigator.userAgent)) {
@@ -1400,20 +1401,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       return window.load_distill_framework === undefined;
     }
   }
-  
+
   // show body when load is complete
   function on_load_complete() {
-  
+
     // add anchors
     if (window.anchors) {
       window.anchors.options.placement = 'left';
       window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
     }
-  
-  
+
+
     // set body to visible
     document.body.style.visibility = 'visible';
-  
+
     // force redraw for leaflet widgets
     if (window.HTMLWidgets) {
       var maps = window.HTMLWidgets.findAll(".leaflet");
@@ -1426,45 +1427,45 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
         });
       });
     }
-  
+
     // trigger 'shown' so htmlwidgets resize
     $('d-article').trigger('shown');
   }
-  
+
   function init_distill() {
-  
+
     init_common();
-  
+
     // create front matter
     var front_matter = $('<d-front-matter></d-front-matter>');
     $('#distill-front-matter').wrap(front_matter);
-  
+
     // create d-title
     $('.d-title').changeElementType('d-title');
-  
+
     // separator
     var separator = '<hr class="section-separator" style="clear: both"/>';
     // prepend separator above appendix
     $('.d-byline').before(separator);
     $('.d-article').before(separator);
-  
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
-  
+
     // create d-article
     var article = $('<d-article></d-article>');
     $('.d-article').wrap(article).children().unwrap();
-  
+
     // move posts container into article
     $('.posts-container').appendTo($('d-article'));
-  
+
     // create d-appendix
     $('.d-appendix').changeElementType('d-appendix');
-  
+
     // flag indicating that we have appendix items
     var appendix = $('.appendix-bottom').children('h3').length > 0;
-  
+
     // replace footnotes with <d-footnote>
     $('.footnote-ref').each(function(i, val) {
       appendix = true;
@@ -1480,10 +1481,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     });
     // remove footnotes
     $('.footnotes').remove();
-  
+
     // move refs into #references-listing
     $('#references-listing').replaceWith($('#refs'));
-  
+
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
     });
@@ -1493,16 +1494,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       appendix = true;
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
     });
-  
+
     // show d-appendix if we have appendix content
     $("d-appendix").css('display', appendix ? 'grid' : 'none');
-  
+
     // localize layout chunks to just output
     $('.layout-chunk').each(function(i, val) {
-  
+
       // capture layout
       var layout = $(this).attr('data-layout');
-  
+
       // apply layout to markdown level block elements
       var elements = $(this).children().not('details, div.sourceCode, pre, script');
       elements.each(function(i, el) {
@@ -1515,41 +1516,41 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           $(this).wrap(layout_div);
         }
       });
-  
-  
+
+
       // unwrap the layout-chunk div
       $(this).children().unwrap();
     });
-  
+
     // remove code block used to force  highlighting css
     $('.distill-force-highlighting-css').parent().remove();
-  
+
     // remove empty line numbers inserted by pandoc when using a
     // custom syntax highlighting theme, except when numbering line
     // in code chunk
     $('pre:not(.numberLines) code.sourceCode a:empty').remove();
-  
+
     // load distill framework
     load_distill_framework();
-  
+
     // wait for window.distillRunlevel == 4 to do post processing
     function distill_post_process() {
-  
+
       if (!window.distillRunlevel || window.distillRunlevel < 4)
         return;
-  
+
       // hide author/affiliations entirely if we have no authors
       var front_matter = JSON.parse($("#distill-front-matter").html());
       var have_authors = front_matter.authors && front_matter.authors.length > 0;
       if (!have_authors)
         $('d-byline').addClass('hidden');
-  
+
       // article with toc class
       $('.d-contents').parent().addClass('d-article-with-toc');
-  
+
       // strip links that point to #
       $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
-  
+
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
@@ -1565,12 +1566,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           $(this).append(a);
         }
       });
-  
+
       // hide elements of author/affiliations grid that have no value
       function hide_byline_column(caption) {
         $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
       }
-  
+
       // affiliations
       var have_affiliations = false;
       for (var i = 0; i<front_matter.authors.length; ++i) {
@@ -1582,11 +1583,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       }
       if (!have_affiliations)
         $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
-  
+
       // published date
       if (!front_matter.publishedDate)
         hide_byline_column("Published");
-  
+
       // document object identifier
       var doi = $('d-byline').find('h3:contains("DOI")');
       var doi_p = doi.next().empty();
@@ -1606,29 +1607,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
            .html(front_matter.doi)
            .appendTo(doi_p);
       }
-  
+
        // change plural form of authors/affiliations
       if (front_matter.authors.length === 1) {
         var grid = $('.authors-affiliations');
         grid.children('h3:contains("Authors")').text('Author');
         grid.children('h3:contains("Affiliations")').text('Affiliation');
       }
-  
+
       // remove d-appendix and d-footnote-list local styles
       $('d-appendix > style:first-child').remove();
       $('d-footnote-list > style:first-child').remove();
-  
+
       // move appendix-bottom entries to the bottom
       $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
       $('.appendix-bottom').remove();
-  
+
       // hoverable references
       $('span.citation[data-cites]').each(function() {
         const citeChild = $(this).children()[0]
         // Do not process if @xyz has been used without escaping and without bibliography activated
         // https://github.com/rstudio/distill/issues/466
         if (citeChild === undefined) return true
-  
+
         if (citeChild.nodeName == "D-FOOTNOTE") {
           var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
@@ -1650,7 +1651,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
-  
+
       // fix footnotes in tables (#411)
       // replacing broken distill.pub feature
       $('table d-footnote').each(function() {
@@ -1666,7 +1667,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
                   x += elem.offsetLeft;
                   y += elem.offsetTop;
               }
-  
+
               return { left: x, top: y };
           }
           // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
@@ -1675,39 +1676,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           this.show([offset.left + bbox.width, offset.top + bbox.height]);
         }
       })
-  
+
       // clear polling timer
       clearInterval(tid);
-  
+
       // show body now that everything is ready
       on_load_complete();
     }
-  
+
     var tid = setInterval(distill_post_process, 50);
     distill_post_process();
-  
+
   }
-  
+
   function init_downlevel() {
-  
+
     init_common();
-  
+
      // insert hr after d-title
     $('.d-title').after($('<hr class="section-separator"/>'));
-  
+
     // check if we have authors
     var front_matter = JSON.parse($("#distill-front-matter").html());
     var have_authors = front_matter.authors && front_matter.authors.length > 0;
-  
+
     // manage byline/border
     if (!have_authors)
       $('.d-byline').remove();
     $('.d-byline').after($('<hr class="section-separator"/>'));
     $('.d-byline a').remove();
-  
+
     // remove toc
     $('.d-contents').remove();
-  
+
     // move appendix elements
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
@@ -1715,62 +1716,62 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('h3.appendix').each(function(i, val) {
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
     });
-  
-  
+
+
     // inject headers into references and footnotes
     var refs_header = $('<h3></h3>');
     refs_header.text('References');
     $('#refs').prepend(refs_header);
-  
+
     var footnotes_header = $('<h3></h3');
     footnotes_header.text('Footnotes');
     $('.footnotes').children('hr').first().replaceWith(footnotes_header);
-  
+
     // move appendix-bottom entries to the bottom
     $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
     $('.appendix-bottom').remove();
-  
+
     // remove appendix if it's empty
     if ($('.d-appendix').children().length === 0)
       $('.d-appendix').remove();
-  
+
     // prepend separator above appendix
     $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
-  
+
     // trim code
     $('pre>code').each(function(i, val) {
       $(this).html($.trim($(this).html()));
     });
-  
+
     // move posts-container right before article
     $('.posts-container').insertBefore($('.d-article'));
-  
+
     $('body').addClass('downlevel');
-  
+
     on_load_complete();
   }
-  
-  
+
+
   function init_common() {
-  
+
     // jquery plugin to change element types
     (function($) {
       $.fn.changeElementType = function(newType) {
         var attrs = {};
-  
+
         $.each(this[0].attributes, function(idx, attr) {
           attrs[attr.nodeName] = attr.nodeValue;
         });
-  
+
         this.replaceWith(function() {
           return $("<" + newType + "/>", attrs).append($(this).contents());
         });
       };
     })(jQuery);
-  
+
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
-  
+
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
@@ -1784,35 +1785,35 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           var fig = $(this);
           fig.css('width', fig.attr('width') + 'px');
         });
-  
+
       }
     });
-  
+
     // auto-append index.html to post-preview links in file: protocol
     // and in rstudio ide preview
     $('.post-preview').each(function(i, val) {
       if (window.location.protocol === "file:")
         $(this).attr('href', $(this).attr('href') + "index.html");
     });
-  
+
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
         $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
-  
+
     // add class to pandoc style tables
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
-  
+
     // add figcaption style to table captions
     $('caption').parent('table').addClass("figcaption");
-  
+
     // initialize posts list
     if (window.init_posts_list)
       window.init_posts_list();
-  
+
     // implmement disqus comment link
     $('.disqus-comment-count').click(function() {
       window.headroom_prevent_pin = true;
@@ -1826,31 +1827,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       }
     });
   }
-  
+
   document.addEventListener('DOMContentLoaded', function() {
     if (is_downlevel_browser())
       init_downlevel();
     else
       window.addEventListener('WebComponentsReady', init_distill);
   });
-  
+
   </script>
-  
+
   <style type="text/css">
   /* base variables */
-  
+
   /* Edit the CSS properties in this file to create a custom
      Distill theme. Only edit values in the right column
      for each row; values shown are the CSS defaults.
      To return any property to the default,
      you may set its value to: unset
      All rows must end with a semi-colon.                      */
-  
+
   /* Optional: embed custom fonts here with `@import`          */
   /* This must remain at the top of this file.                 */
-  
-  
-  
+
+
+
   html {
     /*-- Main font sizes --*/
     --title-size:      50px;
@@ -1870,7 +1871,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --body-font:       sans-serif;
     --navbar-font:     sans-serif;  /* websites + blogs only */
   }
-  
+
   /*-- ARTICLE METADATA --*/
   d-byline {
     --heading-size:    0.6rem;
@@ -1878,13 +1879,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --body-size:       0.8rem;
     --body-color:      rgba(0, 0, 0, 0.8);
   }
-  
+
   /*-- ARTICLE TABLE OF CONTENTS --*/
   .d-contents {
     --heading-size:    18px;
     --contents-size:   13px;
   }
-  
+
   /*-- ARTICLE APPENDIX --*/
   d-appendix {
     --heading-size:    15px;
@@ -1892,10 +1893,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-size:       0.8em;
     --text-color:      rgba(0, 0, 0, 0.5);
   }
-  
+
   /*-- WEBSITE HEADER + FOOTER --*/
   /* These properties only apply to Distill sites and blogs  */
-  
+
   .distill-site-header {
     --title-size:       18px;
     --text-color:       rgba(255, 255, 255, 0.8);
@@ -1903,32 +1904,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --hover-color:      white;
     --bkgd-color:       #0F2E3D;
   }
-  
+
   .distill-site-footer {
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
     --bkgd-color:       #0F2E3D;
   }
-  
+
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
   </style>
   <style type="text/css">
   /* base variables */
-  
+
   /* Edit the CSS properties in this file to create a custom
      Distill theme. Only edit values in the right column
      for each row; values shown are the CSS defaults.
      To return any property to the default,
      you may set its value to: unset
      All rows must end with a semi-colon.                      */
-  
+
   /* Optional: embed custom fonts here with `@import`          */
   /* This must remain at the top of this file.                 */
-  
-  
-  
+
+
+
   html {
     /*-- Main font sizes --*/
     --title-size:      24px;
@@ -1948,7 +1949,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --body-font:       sans-serif;
     --navbar-font:     sans-serif;  /* websites + blogs only */
   }
-  
+
   /*-- ARTICLE METADATA --*/
   d-byline {
     --heading-size:    0.6rem;
@@ -1956,25 +1957,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --body-size:       0.8rem;
     --body-color:      rgba(0, 0, 0, 0.8);
   }
-  
+
   /*-- ARTICLE TABLE OF CONTENTS --*/
   .d-contents {
     --heading-size:    18px;
     --contents-size:   13px;
   }
-  
+
   d-title {
     padding-top:5rem;
   }
-  
+
   d-title p {
      font-size: 1rem; 
   }
-  
+
   p {
     margin-bottom: 0;
   }
-  
+
   /*-- ARTICLE APPENDIX --*/
   d-appendix {
     --heading-size:    15px;
@@ -1984,10 +1985,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /*margin-top: 5px;
     padding-top:30px;*/
   }
-  
+
   /*-- WEBSITE HEADER + FOOTER --*/
   /* These properties only apply to Distill sites and blogs  */
-  
+
   .distill-site-header {
     --title-size:       18px;
     --text-color:       rgba(255, 255, 255, 0.8);
@@ -1995,17 +1996,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --hover-color:      white;
     --bkgd-color:       #0F2E3D;
   }
-  
+
   .distill-site-footer {
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
     --bkgd-color:       #0F2E3D;
   }
-  
+
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
-  
+
   .study {
     background-color: white;
     padding: 2%;
@@ -2014,7 +2015,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     border-radius: 2px;
     box-shadow: 5px 2.5px 2.5px darkgrey;
   }
-  
+
   .intro_box {
     background-color: white;
     padding: 2%;
@@ -2025,7 +2026,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-size:0.8rem;
     line-height: 1.1rem;
   }
-  
+
   .modalDialog {
   	position: fixed;
   	font-family: Arial, Helvetica, sans-serif;
@@ -2041,12 +2042,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   	transition: opacity 400ms ease-in;
   	pointer-events: none;
   }
-  
+
   .modalDialog:target {
   	opacity:1;
   	pointer-events: auto;
   }
-  
+
   .modalDialog > div {
   	width: 60vw;
   	position: relative;
@@ -2055,7 +2056,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   	border-radius: 5px;
   	background: #fff;
   }
-  
+
   .close {
   	background: #fff;
   	color: #FFFFFF;
@@ -2077,23 +2078,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   	-webkit-box-shadow: 1px 1px 3px #000;
   	box-shadow: 1px 1px 3px #000;*/
   }
-  
+
   .close:hover { border-bottom:none!important; }
-  
+
   .copy-button {
     width:200px;
     font-size:1.2rem;
     margin-left:auto;
     cursor: pointer;
   }
-  
+
   d-appendix a {
     color: #004276!important;
   }
   d-article a {
     color: #004276!important;
   }
-  
+
   .help-me {
     border: 1px solid transparent;
     border-radius: 4px;
@@ -2105,7 +2106,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   .help-me:hover {
     background-color: #cccccc90;
   }
-  
+
   .btn{
       display: inline-block;
       width: 280px;
@@ -2133,63 +2134,63 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       background-color: #fff;
       border-color: #ccc;
   }
-  
+
   .btn:hover{
     background:#cccccc50;
   }
-  
+
   .cols {
     display: flex;
     align-items: center;
     justify-content:center;
   }
-  
+
   @media (max-width: 1000px) {
     .cols {
       flex-direction: column;
     }
-  
+
   }
   </style>
   <style type="text/css">
   /* base style */
-  
+
   /* FONT FAMILIES */
-  
+
   :root {
     --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   }
-  
+
   body,
   .posts-list .post-preview p,
   .posts-list .description p {
     font-family: var(--body-font), var(--body-default);
   }
-  
+
   h1, h2, h3, h4, h5, h6,
   .posts-list .post-preview h2,
   .posts-list .description h2 {
     font-family: var(--heading-font), var(--heading-default);
   }
-  
+
   d-article div.sourceCode code,
   d-article pre code {
     font-family: var(--mono-font), var(--mono-default);
   }
-  
-  
+
+
   /*-- TITLE --*/
   d-title h1,
   .posts-list > h1 {
     color: var(--title-color, black);
   }
-  
+
   d-title h1 {
     font-size: var(--title-size, 50px);
   }
-  
+
   /*-- HEADERS --*/
   d-article h1,
   d-article h2,
@@ -2199,7 +2200,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article h6 {
     color: var(--header-color, rgba(0, 0, 0, 0.8));
   }
-  
+
   /*-- BODY --*/
   d-article > p,  /* only text inside of <p> tags */
   d-article > ul, /* lists */
@@ -2207,20 +2208,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--body-color, rgba(0, 0, 0, 0.8));
     font-size: var(--body-size, 1.06rem);
   }
-  
-  
+
+
   /*-- CODE --*/
   d-article div.sourceCode code,
   d-article pre code {
     font-size: var(--code-size, 14px);
   }
-  
+
   /*-- ASIDE --*/
   d-article aside {
     font-size: var(--aside-size, 12px);
     color: var(--aside-color, rgba(0, 0, 0, 0.6));
   }
-  
+
   /*-- FIGURE CAPTIONS --*/
   figure .caption,
   figure figcaption,
@@ -2228,84 +2229,85 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-size: var(--fig-cap-size, 13px);
     color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
   }
-  
+
   /*-- METADATA --*/
   d-byline h3 {
     font-size: var(--heading-size, 0.6rem);
     color: var(--heading-color, rgba(0, 0, 0, 0.5));
   }
-  
+
   d-byline {
     font-size: var(--body-size, 0.8rem);
     color: var(--body-color, rgba(0, 0, 0, 0.8));
   }
-  
+
   d-byline a,
   d-article d-byline a {
     color: var(--body-color, rgba(0, 0, 0, 0.8));
   }
-  
+
   /*-- TABLE OF CONTENTS --*/
   .d-contents nav h3 {
     font-size: var(--heading-size, 18px);
   }
-  
+
   .d-contents nav a {
     font-size: var(--contents-size, 13px);
   }
-  
+
   /*-- APPENDIX --*/
   d-appendix h3 {
     font-size: var(--heading-size, 15px);
     color: var(--heading-color, rgba(0, 0, 0, 0.65));
   }
-  
+
   d-appendix {
     font-size: var(--text-size, 0.8em);
     color: var(--text-color, rgba(0, 0, 0, 0.5));
   }
-  
+
   d-appendix d-footnote-list a.footnote-backlink {
     color: var(--text-color, rgba(0, 0, 0, 0.5));
   }
-  
+
   /*-- WEBSITE HEADER + FOOTER --*/
   .distill-site-header .title {
     font-size: var(--title-size, 18px);
     font-family: var(--navbar-font), var(--heading-default);
   }
-  
+
   .distill-site-header a,
   .nav-dropdown .nav-dropbtn {
     font-family: var(--navbar-font), var(--heading-default);
   }
-  
+
   .nav-dropdown .nav-dropbtn {
     color: var(--text-color, rgba(255, 255, 255, 0.8));
     font-size: var(--text-size, 15px);
   }
-  
+
   .distill-site-header a:hover,
   .nav-dropdown:hover .nav-dropbtn {
     color: var(--hover-color, white);
   }
-  
+
   .distill-site-header {
     font-size: var(--text-size, 15px);
     color: var(--text-color, rgba(255, 255, 255, 0.8));
     background-color: var(--bkgd-color, #0F2E3D);
   }
-  
+
   .distill-site-footer {
     font-size: var(--text-size, 15px);
     color: var(--text-color, rgba(255, 255, 255, 0.8));
     background-color: var(--bkgd-color, #0F2E3D);
   }
-  
+
   .distill-site-footer a:hover {
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.32/header-attrs.js"></script>
   <link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
   <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
   <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
@@ -2338,7 +2340,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   'palette': 'light',
   'language': 'en/de/fr/es/ca_es/it/nl/pt/fi/hu/cs/hr/da/sl/pl/ro/sr/bg/cy',
   'website_name': 'aphasia-tech-map',
-  
+
   'change_preferences_selector':'#CookiePreferences'
   });});</script>
   <script type="text/plain" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-K27Y5EDCX3"></script>
@@ -2415,8 +2417,8 @@ d-article li:last-child {
 
 </div>
 <div class="layout-chunk" data-layout="l-screen-inset">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-f9e6c0730f6429768ef3" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f9e6c0730f6429768ef3">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["<div style=\"word-break: normal\"><a href=list_view.html#1>VESFA (Virtual Elaborated Semantic Feature Analysis)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#2>KeyPhone<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#3>Swaracharya<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#4>Face to face and telehealth equivalence of assessments in aphasia (FATE-A)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#5>Analyzing Communication Environments (ACE))<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#6>Characterizing inner speech experience in aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#7>\"Shabdchitr\": ILAT Digital Application (Hindi, English, and other Indian languages<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#8>A Digital compendium of Hindi-English Bilingual Home based Exercises for PWA.<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#9>INCA (inclusive digital content for people with aphasia)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#10>PNT-CAT: Computer Adaptive forms of the Philadelphia Naming Test<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#11>Smart-phone assisted langauge training (SaLT)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#12>Pupillometry and eyetracking to index cognitive and linguistic processing in people with aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#13>M-MAT Tele<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#14>Personalising dose in cued picture naming treatment<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#15>VA11y (Videoconference Accessibility)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#16>Integrating complementary learning principles in aphasia rehabilitation via adaptive modeling<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#17>Measuring, Monitoring, and Motivating Adherence to Self-Managed Aphasia Treatment<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#18>Zooming Great<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#19>LAST-App for Acute Stroke<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#20>The development of an application compatible with mobile device to support language, cognition, communication for clients with neurological language disorders<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#21>PeerPAL- Digital Networking in Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#22>Aphasia iCafè interview project: Student-delivered online social support groups for people with aphasia and/or dysarthria- a qualitative investigation of members’ and providers’ experiences<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#23>KoLiPENs - Kognitive, linguistische und personenbezogene Einflussfaktoren auf das Schreiben (Cognitive, linguistic and personal factors influencing writing)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#24>Mixed reality in aphasia rehabilation (MiRaR)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#25>Therapy calculator for rehabilitation outcomes after acquired brain injury<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#26>Assessing Communication and Clinical Effectiveness of Self-managed Speech-language therapy: a randomized control trial of a novel digital therapeutic in individuals with post-stroke aphasia (ACCESS)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#27>Virtual Groups and Computerized Therapy for Primary Progressive Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#28>The impact of home-based computer therapy to improve speech and cognitive function during stroke recovery<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#29>Development of a Free Online Interactive Naming Therapy for Bilingual Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#30>social-ABI-lity<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#31>interact-ABI-lity<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#32>Convers-ABI-lity<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#33>Virtual reality for social communication<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#34>Communication partner training for health professional students<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#35>Phase III Development of a Valid, Reliable, Clinically Feasible Measure of Transactional Success in Aphasic Conversation: Modernizing Methods of Acquisition and Analysis of Discourse Data<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#36>Communication Bridge: A person-centered Internet-based intervention for individuals with primary progressive aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#37>Remote administration of Combined Aphasia and Apraxia of Speech Treatment (CAAST)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#38>“Lets talk” app for smartphone<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#39>Sentactics<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#40>Assessment of anomia: Improving efficiency and utility using item response theory<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#41>Automatic Classification of Paraphasias<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#42>Automatic Speech Recognition for Aphasic Speech<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#43>Home-based language therapy and transcranial direct current stimulation in pri-mary progressive aphasia.<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#44>Modulating stimulus intensity to improve clinical outcomes in aphasia treatment (MIDAS)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#45>Improving electronic written communication in persons with aphasia: A clinical trial<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#46>Timing of transcranial direct current stimulation (tDCS) combined with speech and language therapy (SLT) : An Intervention Development Study for Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#47>N/A - there are technology tools that we are using across multiple projects to measure outcomes<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#48>Communication Access and Participation Through Immersive Virtual and Augmented Reality Technologies (CAPTIVATE)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#49>VoiceAdapt: Voice Adaptive Training for Older Adults with Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#50>TeleCHAT<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#51>CHAT-Maintain: Maintaining language and quality of life gains with low-dose technology-delivered aphasia therapy<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#52>Aphasia Tech Quest<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#53>Technology access service priorities of people with aphasia, significant others, and healthcare providers<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#54>HealthTalk Connect<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#55>Aphasia App - Community<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#56>Communication Connect<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#57>Social Brain Toolkit<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#58>WRITE-IT<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#59>MARS: ROJECT: Exploring initial feasibility of MARS: A LUNA-TherapyBox collaboration MARS: Machine learning Analysis and Reporting of Spoken personal stories<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#60>Strategies to Accommodate Reading in Aphasia: Using Assistive Technology to Support Reading by People with Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#61>Improving Home Program Practice for People with Language Disorders after Stroke<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#62>Telepresence robots for the care and support of stroke patients (TePUS)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#63>https://www.tell-teletherapie.de/    Konzeption und Entwicklung einer Plattform zur Telediagnostik  und Teletherapie bei neurogenen Sprachstörungen – teletherapeutisches lebensgeschichtliches Erzählen zur Steigerung von Lebensqualität (TELL)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#64>APP4PPA: Online Speech-language Therapy in Italian individuals with Primary Progressive Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#65>Plug-In and Power-Up: Boosting Health Self-Efficacy through Communication-Accessible Online Environments<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#66>Using a digital spelling aid to improve writing in persons with post-stroke aphasia: An intervention study<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#67>Utilization of Immersive Virtual Reality in Computerized Script Training for People With Aphasia: A Feasibility Study<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#68>Evaluating the SpeechFirst therapy app<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#69>Bridging the Digital Divide: Building Health Self-Efficacy through Communication-Accessible Online Environments<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#70>http://www.aphasiatherapyonline.com/<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#71>The CogNeuro App: A Novel Web-Based App for Neuropsychological Assessment of Impairments of Language<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#72>Dynamic Assessment of Everyday Communication using Virtual Reality: proof of concept for persons with post-stroke aphasia (DCOM-VR)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#73>A pilot-study into the effectiveness of therapeutic app SimpTell for speakers with chrnoaphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#74>Communication Bridge 3: A person-centered Internet-based intervention for individuals with primary progressive aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#75>HiSSS - Hybrid and interactive speech therapy after stroke<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#76>UTILISE-2: a digital intervention for sentence difficulties in aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#77>Optimising decision-making for aphasia therapy app use (OPTIMA)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#78>Mood Compass<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#79>HARP Aphasia Study<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#80>Dara (Inclusive data visualisation for human-centred decision-making)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#81>Co-design of an interdisciplinary intervention to support text-messaging for adults with post-stroke aphasia: The SMS study.<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#82>Advancing Use of LLMs in Analyzing Real-World Communication Outcome Measures in Clinical Research<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#83>Efficacy of language games as therapy for post stroke aphasia - Playing language games online as therapy for post stroke aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#84>Social Brain Clinic<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#85>AILAN<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#86>Watch Your Language: Using Smartwatches to Support Communication<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#87>Breaking Badge: Wearable AAC Smartbadges and Walkie Talkie AAC<\/a><\/div>"],["<div style=\"word-break: normal\">Niamh Devane, Katerina Hilari, Jane Marshall & Stephanie Wilson<\/div>","<div style=\"word-break: normal\">Victoria Fleming, Wendy Best, Wei Ping Sze, and team<\/div>","<div style=\"word-break: normal\">Nisheeth Joshi, Pragya Katyayan, Chitvan Mishra, Shefali Gupta<\/div>","<div style=\"word-break: normal\">Professor Katerina Hilari (Lead), Dr Nick Behn, Dr Sarah Northcott, Dr Abi Roper, Dr Niamh Devane, Amanda Comer, Jaycie Bohan. External collaborators: Dr Hortensia Gimeno, Dr Annie Hill, Dr Silia Vitoratou.<\/div>","<div style=\"word-break: normal\">Jennifer Mozeiko, PI; Louisa Suting, Post Doc, Kaila Cote, PhD student, Sarah Arnett, PhD student, 2 MA students; 10 undergraduate students<\/div>","<div style=\"word-break: normal\">Brielle Stark, Yin Sun (PhD student), team from NEURAL Research Lab at Indiana University<\/div>","<div style=\"word-break: normal\">1. Apoorva Pauranik. neurologist. 2. Pinky Singh, SLP. 3. N Sundaer, Computer Professional.<\/div>","<div style=\"word-break: normal\">1. Apoorva Pauranik, Neurologist. 2. Pinky Singh, SLP. 3. Soubhik Das , Computer Professional<\/div>","<div style=\"word-break: normal\">Stephanie Wilson, Jane Marshall, Madeline Cruice, Abi Roper, Timothy Neate<\/div>","<div style=\"word-break: normal\">Robert Cavanaugh, Alexander Swiderski, Stacey Steele, William D. Hula, Gerasimos Fergadiotis<\/div>","<div style=\"word-break: normal\">PhD thesis: Mr. Rajath shenoy, Guide: Dr. Gopee Krishnan, Dr. Lyndsey Nickels<\/div>","<div style=\"word-break: normal\">Mohammad Haghighi, Laura Chapman, Javad Anjum<\/div>","<div style=\"word-break: normal\">John E Pierce, Miranda Rose, Dana Wong, Rachelle Pitt, Annie Hill, David Copland, Emma Power, Erin Godecke, Hannah Johns, Jemma Tulloch, Joosup Kim, Julie Adam, Tim Adam, Leanne Togher, Leonid Churilov, Marcella Carragher, Miranda Rose, Rob Nicholls, Ruth Townsend, Sam Harvey, Sandy Barry<\/div>","<div style=\"word-break: normal\">Sam Harvey, Miranda Rose, Michael Walsh Dickey, Marcella Carragher<\/div>","<div style=\"word-break: normal\">Timothy Neate, Stephanie Wilson<\/div>","<div style=\"word-break: normal\">William Evans, William Hula, Jeff Starns, Peter Brusilovsky<\/div>","<div style=\"word-break: normal\">CIA A/Prof Sarah Jane Wallace The University of Queensland\nCIB Prof David A Copland The University of Queensland\nCIC Prof Janet Wiles The University of Queensland\nCID Assoc Prof Anthony J Angwin The University of Queensland\nCIE Assoc Prof Victoria Jane Palmer University of Melbourne\nCIF Dr Peter Harold Worthy The University of Queensland\nCIG Dr Anne Jane Hill The University of Queensland\nCIH Dr Barbra H. B. Timmer The University of Queensland\nCII Assoc Prof Matthew John Gullo The University of Queensland<\/div>","<div style=\"word-break: normal\">FIRLE Beckley, Kate Whiteman<\/div>","<div style=\"word-break: normal\">Heather Flowers, Laura Monetta, Constance Flamand-Roze, Miguel Garzon, Susie Williams<\/div>","<div style=\"word-break: normal\">Tolga Sözüçok (A Study for the requirement PhD / Doctoral Dissertation)\n\nİlknur Maviş<\/div>","<div style=\"word-break: normal\">Project management: Prof. Dr. Norina Lauer & Prof. Dr. Sabine Corsten; research assistants: Christina Kurfess, Maren Nickel, Daniel Kreiter<\/div>","<div style=\"word-break: normal\">Dr Anna Caute, Annabel Kay, Erika Mangialardi<\/div>","<div style=\"word-break: normal\">Albrecht, Katharina; Jaecks, Petra; Jonas, Kristina; Stegenwallner-Schütz, Maja; von Lehmden, Friederike<\/div>","<div style=\"word-break: normal\">Dr. Gopee Krishnan, Dr. Shivani Tiwari, Dr. Apoorva Pauranik, Dr. Aparna Pai, Mr. Rajath Shenoy, Mr Intiaz, Ms Sona<\/div>","<div style=\"word-break: normal\">Dr. Swathi Kiran; Dr. Margrit Betke; Dr. Prakash Ishwar; Dr. Claire Cordella<\/div>","<div style=\"word-break: normal\">Dr. Swathi Kiran; Dr. Steven Cramer; Dr. Maria Varkanitsa<\/div>","<div style=\"word-break: normal\">Jessica D. Richardson, H. Isabel Hubbard, Christie Duhigg, Jordyn Sims<\/div>","<div style=\"word-break: normal\">Janet Alexander MSPH; Patricia Zrelak PhD RN; Michelle Camicia PhD RN FAHA; Brian Theodore PhD; Kam Gardner CCC-SLP; Diana Storti MS CCC-SLP; Linda Heckenlively MS, CCC-SLP; Melissa Meighan DNP MS RN; Mai N Nguyen-Huynh MD MAS<\/div>","<div style=\"word-break: normal\">Chaleece Sandberg, Teresa Gray, Swathi Kiran<\/div>","<div style=\"word-break: normal\">Liss Brunner, Rachael Rietdijk, Emma Power, Melissa Miao, Petra Avramovic, Leanne Togher<\/div>","<div style=\"word-break: normal\">Leanne Togher, Rachael Rietdijk, Emma Power, Petra Avramovic, Melissa Miao, Liss Brunner<\/div>","<div style=\"word-break: normal\">Leanne Togher, Rachael Rietdijk, Emma Power, Melissa Brunner, Melissa Miao, Petra Avramovic<\/div>","<div style=\"word-break: normal\">Leanne Togher, Sophie Brassel, Emma Power, Andrew Campbell, Liss Brunner<\/div>","<div style=\"word-break: normal\">Leanne Togher, Michelle Attard, Emma Power, Rachael Rietdijk, Lucy Lanyon<\/div>","<div style=\"word-break: normal\">Jacquie Kurland, Polly Stokes, Anna Liu, Brendan O'Connor, Vishnupriya Varadharaju<\/div>","<div style=\"word-break: normal\">Emily Rogalski, PhD, Angela Roberts, Phd, Alfred Rademaker, PhD, Darby Morhardt, PhD<\/div>","<div style=\"word-break: normal\">Julie Wambaugh, Lydia Kallhoff<\/div>","<div style=\"word-break: normal\">Merav Raveh Malka<\/div>","<div style=\"word-break: normal\">Elena Barbieri<\/div>","<div style=\"word-break: normal\">WIlliam D. Hula, Gerasimos Fergadiotis, Michael Walsh Dickey, Daniel Taylor-Rodriguez, Miranda Babiak, Hannele Nicholson, Cheralyn Ranjan, Stacey Steel, Andrew Womack<\/div>","<div style=\"word-break: normal\">Steven Bedrick; Gerasimos Fergadiotis; Alexandra Salem; Robert Gale; Mikala Fleegle<\/div>","<div style=\"word-break: normal\">Robert Gale, Gerasimos Fergadiotis, Steven Bedrick, Mikala Fleegle<\/div>","<div style=\"word-break: normal\">Meinzer, Flöel, Grewe, Binkofski<\/div>","<div style=\"word-break: normal\">Leora Cherney and Sarel van Vuuren (MPI)<\/div>","<div style=\"word-break: normal\">Leora Cherney (PI).<\/div>","<div style=\"word-break: normal\">Leora Cherney, Sameer Ashaie<\/div>","<div style=\"word-break: normal\">Leora Cherney, Sameer Ashaie<\/div>","<div style=\"word-break: normal\">Lucy Bryant, Bronwyn Hemsley, Emma Power, et al.<\/div>","<div style=\"word-break: normal\">Esther Kim (University of Alberta); Elizabeth Rochon (University of Toronto)<\/div>","<div style=\"word-break: normal\">Annie, Hill, Genevieve Vuong, Jade Dignam, Clare Burns, David Copland<\/div>","<div style=\"word-break: normal\">Jade Dignam, David Copland, Annie Hill, Miranda Rose, Deborah Hersh, Kirstine Shrubsole, John Pierce, Sarah J. Wallace, Emma Power, Kate O'Brien, Kat Roxas, Emma O'Neill, Kylie Short, Penni Burfein, Jessica Campbell (†).<\/div>","<div style=\"word-break: normal\">Jessica Campbell, Kori Ramajoo, Sarah J. Wallace, Sonia Brownsett, Peter Worthy, Jacki Liddle, Ciara Shiggins, Lisa Anemaat, David Copland<\/div>","<div style=\"word-break: normal\">Annie Hill, Sonia Brownsett, Kori Ramajoo, Jessica Campbell, Sarah J. Wallace, Jade Dignam, Kirstine Shrubsole, Peter Worthy, Jacki Liddle, David Copland,<\/div>","<div style=\"word-break: normal\">Miranda Rose, Marcella Carragher, Robyn O'Halloran, Edwina Lamborn, Lauren Fletcher<\/div>","<div style=\"word-break: normal\">Miranda Rose, Robyn O'Halloran, Kylie Casey<\/div>","<div style=\"word-break: normal\">Miranda Rose, Damminda Alahakoon, Ian Kneebone, Brooke Ryan, Emma Power, Annie Hill, Leanne Togher, Tim Usherwood, David Copland, Richard Lindley, John E Pierce...<\/div>","<div style=\"word-break: normal\">Professor Leanne Togher, Dr Rachael Rietdijk, Professor Emma Power, Dr Melissa Brunner, Dr Petra Avramovic, Dr Sophie Brassel<\/div>","<div style=\"word-break: normal\">Dr Celia Woolf (Project Lead) and Co-investigators Dr Madeline Cruice and Morganie Naidoo<\/div>","<div style=\"word-break: normal\">Dr Madeline Cruice, Dr Lucy Dipper, Rebecca Bright, Swapnil Gudgil<\/div>","<div style=\"word-break: normal\">Kelly Knollman Porter, Sarah E. Wallace, Karen Hux, Jessica Brown<\/div>","<div style=\"word-break: normal\">Elena Donoso Brown, Sarah E. Wallace, Jamie Lee<\/div>","<div style=\"word-break: normal\">Prof. Dr. Karsten Weber, Prof. Dr. Sonja Haug, Prof. Dr. Norina Lauer, Prof. Dr. Christa Mohr, Prof. Dr. Andrea Pfingsten, Prof. Dr. Georgios Raptis, Edda Currle, Katrin Ettl, Dr. Debora Frommeld, Nina Greiner, Natalie Kudienko, Christof Popp, Anselm Stadler<\/div>","<div style=\"word-break: normal\">Prof.in Dr. Sabine Corsten, Catholic University of Apllied Sciences Mainz, Germany\nProf.in Dr. Juliane Leinweber, Hochschule für angewandte Wissenschaft und Kunst Hildesheim/Holzminden/Göttingen; Germany\nDr. Jürgen Keller, RELIMETRICS GmbH, Berlin, Germany\nFarid Kanbari, POLAVIS GmbH, Berlin; Germany<\/div>","<div style=\"word-break: normal\">Petronilla Battista, Simona Aresta, Gaia C. Santi, Stephanie Grasso, Maria Luisa Gorno Tempini, Maya Henry<\/div>","<div style=\"word-break: normal\">Sarah Wallace, Peter Worthy, David Copland, Kirstine Shrubsole, Kim Barron, Phil Jamieson,  Annie Hill, Janet Wiles, Alex Haslam, Jennifer Lee, Ryan Deslandes, Savita Datta<\/div>","<div style=\"word-break: normal\">Dr Charlotte Johansson Malmeling, Dr Malin Antonsson, Professor Åsa Wengelin<\/div>","<div style=\"word-break: normal\">Dr. Winsy Wong, Dr. Donald Li<\/div>","<div style=\"word-break: normal\">Michael Dean\nHannah Harvey<\/div>","<div style=\"word-break: normal\">A/Prof Sarah Wallace\nDr Peter Worthy\nProf David Copland\nPhillip Jamieson\nKim Barron\nProf Leanne Togher\nDr Kirstine Shrubsole\nDr Anne Hill\nProf Janet Wiles\nProf Alex Haslam\nDr Jennifer Lee\nMr Ryan Deslandes\nMs Savita Datta<\/div>","<div style=\"word-break: normal\">Özlem Oğuz, Memik Yıldız, John Pierce<\/div>","<div style=\"word-break: normal\">Britta Biedermann, Max Coltheart, Deborah Hersh, Lizz Hill, Steve Saunders<\/div>","<div style=\"word-break: normal\">Marina Ruiter, Vitoria Piai, Willemijn Doedens, and others<\/div>","<div style=\"word-break: normal\">Marina Ruiter, Vitoria Piai, Ardi Roelofs<\/div>","<div style=\"word-break: normal\">Emily Rogalski, PhD, Angela Roberts, PhD<\/div>","<div style=\"word-break: normal\">Klaus Kugelmann, Speechcare GmbH; Laura Tuschen, Fraunhofer IDMT; Prof. Dr. Juliane Leinweber, Hochschule für angewandte Wissenschaft und Kunst Hildesheim/Holzminden/Göttingen; Rolf Behrens, Bitnamic GmbH<\/div>","<div style=\"word-break: normal\">Professor Rosemary Varley, Dr Claudia Bruns, Kerry Dathan, Fern Rodgers, Dr Victoria Fleming; Dr Amir H Javadi<\/div>","<div style=\"word-break: normal\">Dr Vasiliki Kladouchou, Professor Katerina Hilari, Jaycie Bohan<\/div>","<div style=\"word-break: normal\">Achini Adikari, John Pierce, Nuwan Pallewela, Dana Wong, Ian Kneebone, Brooke Ryan, Nelson Hernandez, Trevor Bremner, Sue Bremner, Kim Barron, Damminda Alahakoon, Miranda Rose<\/div>","<div style=\"word-break: normal\">Dr Anna Caute, Professor Vicky Joffe, Professor Reinhold Scherer, Dr Bundy Mackintosh, Mark Allinson, Leila Mirza.<\/div>","<div style=\"word-break: normal\">Stephanie Wilson, Madeline Cruice, Jo Wood, Nicola Botting, Abi Roper, Niamh Devane, Ulfa Octaviani<\/div>","<div style=\"word-break: normal\">Dr Jade Dignam, Prof. David Copland, A/Prof. Sarah Wallace, Dr Pete Worthy, Prof. Emma Power, Dr Emmah Doig, Dr Elizabeth Beadle, Ms Emma O'Neill.<\/div>","<div style=\"word-break: normal\">Jacquie Kurland, Polly Stoke, Brendan O'Connor, Anna Liu, Thomas Mackie<\/div>","<div style=\"word-break: normal\">Dr Cristina Romani; Dr Andrew Olson; Louise Lander (SLT)<\/div>","<div style=\"word-break: normal\">Dr Rachael Rietdijk, Dr Liss Bruner, Dr Petra Avramovic, Dr Sophie Brassel, Dr Elise Bogart, Dr Renee Lim, Associate Professor Nikki McCaffrey, Dr Suzy Goldmsith, Naomi Fuller, Victoria Kennedy<\/div>","<div style=\"word-break: normal\">Petronilla Battista, Simona Aresta, Gaia C. Santi<\/div>","<div style=\"word-break: normal\">Humphrey Curtis; Timothy Neate; co-design participants and collaborators from Aphasia Re-Connect<\/div>","<div style=\"word-break: normal\">Humphrey Curtis; Ying Hei Lau; Timothy Neate; 19 co-design participants and collaborators from Aphasia Re-Connect<\/div>"],["<div style=\"word-break: normal\">London, UK<\/div>","<div style=\"word-break: normal\">London, UK<\/div>","<div style=\"word-break: normal\">Banasthali, India<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">Storrs, CT, United States<\/div>","<div style=\"word-break: normal\">Bloomington , Indiana, USA<\/div>","<div style=\"word-break: normal\">Indore, India<\/div>","<div style=\"word-break: normal\">Indore, India<\/div>","<div style=\"word-break: normal\">London, UK<\/div>","<div style=\"word-break: normal\">Pittsburgh, PA, United States<\/div>","<div style=\"word-break: normal\">Manipal, Udupi, India<\/div>","<div style=\"word-break: normal\">Phoenixville, PA, Pennsylvania, USA; Buffalo, NY, New York, USA; Scranton, PA; Athens, Georgia, USA<\/div>","<div style=\"word-break: normal\">Melbourne, Victoria, Australia; Brisbane, Sydney, Perth, Bendigo<\/div>","<div style=\"word-break: normal\">Melbourne, Victoria , Australia; Pittsburgh, USA<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">Pittsburgh, Pennsylvania, United States; Amherst, Massachusetts, United States<\/div>","<div style=\"word-break: normal\">Brisbane, Queensland, Australia<\/div>","<div style=\"word-break: normal\">Eastbourne, United Kingdom<\/div>","<div style=\"word-break: normal\">Ottawa, Canada<\/div>","<div style=\"word-break: normal\">Eskişehir, Turkey<\/div>","<div style=\"word-break: normal\">Regensburg & Mainz, Germany<\/div>","<div style=\"word-break: normal\">Colchester, UK<\/div>","<div style=\"word-break: normal\">Cologne, Germany<\/div>","<div style=\"word-break: normal\">Manipal, Udupi, India<\/div>","<div style=\"word-break: normal\">Boston, United States<\/div>","<div style=\"word-break: normal\">Boston, United States<\/div>","<div style=\"word-break: normal\">Albuquerque, United States<\/div>","<div style=\"word-break: normal\">Walnut Creek, United States<\/div>","<div style=\"word-break: normal\">University Pk, USA<\/div>","<div style=\"word-break: normal\">Sydney, Australia<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">Sydney, Australia<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">Amherst, MA, Massachusetts, US<\/div>","<div style=\"word-break: normal\">Chicago, IL, USA<\/div>","<div style=\"word-break: normal\">Salt Lake City, Utah, United States<\/div>","<div style=\"word-break: normal\">Jerusalem, Israel<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Pittsburgh, PA, USA; Portland, OR, USA<\/div>","<div style=\"word-break: normal\">Portland, OR, United States<\/div>","<div style=\"word-break: normal\">Portland OR, USA<\/div>","<div style=\"word-break: normal\">Greifswald, Germany<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">Edmonton, Canada; Toronto, Canada<\/div>","<div style=\"word-break: normal\">Brisbane, Queensland, Australia; Melbourne, Victoria, Australia<\/div>","<div style=\"word-break: normal\">Brisbane, Australia<\/div>","<div style=\"word-break: normal\">Brisbane, QLD, Australia<\/div>","<div style=\"word-break: normal\">Brisbane, QLD, Australia<\/div>","<div style=\"word-break: normal\">Melbourne, VIC, Australia<\/div>","<div style=\"word-break: normal\">Melbourne, VIC, Australia<\/div>","<div style=\"word-break: normal\">Melbourne, Victoria, Australia; Sydney, Australia; Bendigo, Brisbane<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">Pittsburgh, PA, United States<\/div>","<div style=\"word-break: normal\">Pittsburgh, PA, United States<\/div>","<div style=\"word-break: normal\">Regensburg, Germany<\/div>","<div style=\"word-break: normal\">Berlin, Germany<\/div>","<div style=\"word-break: normal\">Bari, Italy, Italy<\/div>","<div style=\"word-break: normal\">Brisbane, Queensland, a<\/div>","<div style=\"word-break: normal\">Gothenburg, Sverige<\/div>","<div style=\"word-break: normal\">Hong Kong SAR, China<\/div>","<div style=\"word-break: normal\">London, London, United Kingdom<\/div>","<div style=\"word-break: normal\">Brisbane, Queensland , Australia<\/div>","<div style=\"word-break: normal\">İstanbul, Turkiye<\/div>","<div style=\"word-break: normal\">Perth, Australia; Sydney, Australia<\/div>","<div style=\"word-break: normal\">Nijmegen, the Netherlands<\/div>","<div style=\"word-break: normal\">Nijmegen, the Netherlands<\/div>","<div style=\"word-break: normal\">Chicago, United States<\/div>","<div style=\"word-break: normal\">Göttingen, Germany<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">London, London, United Kingdom<\/div>","<div style=\"word-break: normal\">Melbourne, Victoria, Australia; Sydney, NSW, Australia; Bendigo, Brisbane<\/div>","<div style=\"word-break: normal\">Colchester, United Kingdom<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">Brisbane, Australia<\/div>","<div style=\"word-break: normal\">Amherst, MA, Massachusetts, US<\/div>","<div style=\"word-break: normal\">Birmingham, United Kingdom<\/div>","<div style=\"word-break: normal\">Sydney, Australia<\/div>","<div style=\"word-break: normal\">Bari, Italy, Italy; Milan, Italy<\/div>","<div style=\"word-break: normal\">London, England, United Kingdom<\/div>","<div style=\"word-break: normal\">London, England, United Kingdom<\/div>"],["<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>"],["<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Other<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase IV - Effectiveness<\/div>","<div style=\"word-break: normal\">Phase IV - Effectiveness<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Other<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Other<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>"],["<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Specific software, It is also specific hardware<\/div>","<div style=\"word-break: normal\">Remote-delivered assessments / telehealth for inner speech assessment, in the future!<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Assessment<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific app, Virtual reality, Augmentative and Alternive Communication, communication accessibility, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, Generic software, Augmentative and Alternative Communication, communication accessibility, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Improving social connectedness using tech<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">not yet finally decided<\/div>","<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">A combination of telehealth delivery and natural language processing for data analysis<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Powerpoint<\/div>","<div style=\"word-break: normal\">Specific software, Augmentative and Alternative Communication, communication accessibility<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Framework that can be used for a range of assessment purposes.<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">technology adapation<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app, tDCS<\/div>","<div style=\"word-break: normal\">Measurement tools<\/div>","<div style=\"word-break: normal\">Specific app, Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Telerehabilitation delivered through Zoom<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Platform<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific software, Generic software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Software developed for developmental reading- and writing difficulties<\/div>","<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software, Generic software, Augmentative and Alternative Communication, communication accessibility, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, This will be an assessment app accessible from Desktops, Laptops, Tablets and Mobiles.<\/div>","<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Generic software, Augmentative and Alternative Communication, communication accessibility<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Generic software, Augmentative and Alternative Communication, communication accessibility, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software, Augmentative and Alternative Communication, communication accessibility<\/div>","<div style=\"word-break: normal\">Specific software, Augmentative and Alternative Communication, communication accessibility<\/div>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Title<\/th>\n      <th>PI<\/th>\n      <th>Location<\/th>\n      <th>Funded<\/th>\n      <th>Phase<\/th>\n      <th>Category<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":false,"columnDefs":[{"width":200,"targets":[0,1]},{"width":50,"targets":2},{"width":10,"targets":3},{"width":50,"targets":[4,5]},{"className":"dt-center","targets":[2,3,4,5]},{"name":"Title","targets":0},{"name":"PI","targets":1},{"name":"Location","targets":2},{"name":"Funded","targets":3},{"name":"Phase","targets":4},{"name":"Category","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-47cb100a3988d66fa5ba" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-47cb100a3988d66fa5ba">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["<div style=\"word-break: normal\"><a href=list_view.html#1>VESFA (Virtual Elaborated Semantic Feature Analysis)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#2>KeyPhone<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#3>Swaracharya<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#4>Face to face and telehealth equivalence of assessments in aphasia (FATE-A)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#5>Analyzing Communication Environments (ACE))<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#6>Characterizing inner speech experience in aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#7>\"Shabdchitr\": ILAT Digital Application (Hindi, English, and other Indian languages<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#8>A Digital compendium of Hindi-English Bilingual Home based Exercises for PWA.<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#9>INCA (inclusive digital content for people with aphasia)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#10>PNT-CAT: Computer Adaptive forms of the Philadelphia Naming Test<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#11>Smart-phone assisted langauge training (SaLT)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#12>Pupillometry and eyetracking to index cognitive and linguistic processing in people with aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#13>M-MAT Tele<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#14>Personalising dose in cued picture naming treatment<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#15>VA11y (Videoconference Accessibility)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#16>Integrating complementary learning principles in aphasia rehabilitation via adaptive modeling<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#17>Measuring, Monitoring, and Motivating Adherence to Self-Managed Aphasia Treatment<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#18>Zooming Great<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#19>LAST-App for Acute Stroke<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#20>The development of an application compatible with mobile device to support language, cognition, communication for clients with neurological language disorders<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#21>PeerPAL- Digital Networking in Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#22>Aphasia iCafè interview project: Student-delivered online social support groups for people with aphasia and/or dysarthria- a qualitative investigation of members’ and providers’ experiences<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#23>KoLiPENs - Kognitive, linguistische und personenbezogene Einflussfaktoren auf das Schreiben (Cognitive, linguistic and personal factors influencing writing)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#24>Mixed reality in aphasia rehabilation (MiRaR)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#25>Therapy calculator for rehabilitation outcomes after acquired brain injury<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#26>Assessing Communication and Clinical Effectiveness of Self-managed Speech-language therapy: a randomized control trial of a novel digital therapeutic in individuals with post-stroke aphasia (ACCESS)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#27>Virtual Groups and Computerized Therapy for Primary Progressive Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#28>The impact of home-based computer therapy to improve speech and cognitive function during stroke recovery<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#29>Development of a Free Online Interactive Naming Therapy for Bilingual Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#30>social-ABI-lity<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#31>interact-ABI-lity<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#32>Convers-ABI-lity<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#33>Virtual reality for social communication<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#34>Communication partner training for health professional students<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#35>Phase III Development of a Valid, Reliable, Clinically Feasible Measure of Transactional Success in Aphasic Conversation: Modernizing Methods of Acquisition and Analysis of Discourse Data<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#36>Communication Bridge: A person-centered Internet-based intervention for individuals with primary progressive aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#37>Remote administration of Combined Aphasia and Apraxia of Speech Treatment (CAAST)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#38>“Lets talk” app for smartphone<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#39>Sentactics<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#40>Assessment of anomia: Improving efficiency and utility using item response theory<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#41>Automatic Classification of Paraphasias<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#42>Automatic Speech Recognition for Aphasic Speech<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#43>Home-based language therapy and transcranial direct current stimulation in pri-mary progressive aphasia.<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#44>Modulating stimulus intensity to improve clinical outcomes in aphasia treatment (MIDAS)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#45>Improving electronic written communication in persons with aphasia: A clinical trial<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#46>Timing of transcranial direct current stimulation (tDCS) combined with speech and language therapy (SLT) : An Intervention Development Study for Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#47>N/A - there are technology tools that we are using across multiple projects to measure outcomes<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#48>Communication Access and Participation Through Immersive Virtual and Augmented Reality Technologies (CAPTIVATE)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#49>VoiceAdapt: Voice Adaptive Training for Older Adults with Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#50>TeleCHAT<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#51>CHAT-Maintain: Maintaining language and quality of life gains with low-dose technology-delivered aphasia therapy<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#52>Aphasia Tech Quest<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#53>Technology access service priorities of people with aphasia, significant others, and healthcare providers<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#54>HealthTalk Connect<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#55>Aphasia App - Community<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#56>Communication Connect<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#57>Social Brain Toolkit<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#58>WRITE-IT<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#59>MARS: ROJECT: Exploring initial feasibility of MARS: A LUNA-TherapyBox collaboration MARS: Machine learning Analysis and Reporting of Spoken personal stories<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#60>Strategies to Accommodate Reading in Aphasia: Using Assistive Technology to Support Reading by People with Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#61>Improving Home Program Practice for People with Language Disorders after Stroke<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#62>Telepresence robots for the care and support of stroke patients (TePUS)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#63>https://www.tell-teletherapie.de/    Konzeption und Entwicklung einer Plattform zur Telediagnostik  und Teletherapie bei neurogenen Sprachstörungen – teletherapeutisches lebensgeschichtliches Erzählen zur Steigerung von Lebensqualität (TELL)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#64>APP4PPA: Online Speech-language Therapy in Italian individuals with Primary Progressive Aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#65>Plug-In and Power-Up: Boosting Health Self-Efficacy through Communication-Accessible Online Environments<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#66>Using a digital spelling aid to improve writing in persons with post-stroke aphasia: An intervention study<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#67>Utilization of Immersive Virtual Reality in Computerized Script Training for People With Aphasia: A Feasibility Study<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#68>Evaluating the SpeechFirst therapy app<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#69>Bridging the Digital Divide: Building Health Self-Efficacy through Communication-Accessible Online Environments<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#70>http://www.aphasiatherapyonline.com/<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#71>The CogNeuro App: A Novel Web-Based App for Neuropsychological Assessment of Impairments of Language<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#72>Dynamic Assessment of Everyday Communication using Virtual Reality: proof of concept for persons with post-stroke aphasia (DCOM-VR)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#73>A pilot-study into the effectiveness of therapeutic app SimpTell for speakers with chrnoaphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#74>Communication Bridge 3: A person-centered Internet-based intervention for individuals with primary progressive aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#75>HiSSS - Hybrid and interactive speech therapy after stroke<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#76>UTILISE-2: a digital intervention for sentence difficulties in aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#77>Optimising decision-making for aphasia therapy app use (OPTIMA)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#78>Mood Compass<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#79>HARP Aphasia Study<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#80>Dara (Inclusive data visualisation for human-centred decision-making)<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#81>Co-design of an interdisciplinary intervention to support text-messaging for adults with post-stroke aphasia: The SMS study.<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#82>Advancing Use of LLMs in Analyzing Real-World Communication Outcome Measures in Clinical Research<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#83>Efficacy of language games as therapy for post stroke aphasia - Playing language games online as therapy for post stroke aphasia<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#84>Social Brain Clinic<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#85>AILAN<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#86>Watch Your Language: Using Smartwatches to Support Communication<\/a><\/div>","<div style=\"word-break: normal\"><a href=list_view.html#87>Breaking Badge: Wearable AAC Smartbadges and Walkie Talkie AAC<\/a><\/div>"],["<div style=\"word-break: normal\">Niamh Devane, Katerina Hilari, Jane Marshall & Stephanie Wilson<\/div>","<div style=\"word-break: normal\">Victoria Fleming, Wendy Best, Wei Ping Sze, and team<\/div>","<div style=\"word-break: normal\">Nisheeth Joshi, Pragya Katyayan, Chitvan Mishra, Shefali Gupta<\/div>","<div style=\"word-break: normal\">Professor Katerina Hilari (Lead), Dr Nick Behn, Dr Sarah Northcott, Dr Abi Roper, Dr Niamh Devane, Amanda Comer, Jaycie Bohan, Dr Ciara Shiggins. External collaborators: Dr Hortensia Gimeno, Dr Annie Hill, Dr Silia Vitoratou.<\/div>","<div style=\"word-break: normal\">Jennifer Mozeiko, PI; Louisa Suting, Post Doc, Kaila Cote, PhD student, Sarah Arnett, PhD student, 2 MA students; 10 undergraduate students<\/div>","<div style=\"word-break: normal\">Brielle Stark, Yin Sun (PhD student), team from NEURAL Research Lab at Indiana University<\/div>","<div style=\"word-break: normal\">1. Apoorva Pauranik. neurologist. 2. Pinky Singh, SLP. 3. N Sundaer, Computer Professional.<\/div>","<div style=\"word-break: normal\">1. Apoorva Pauranik, Neurologist. 2. Pinky Singh, SLP. 3. Soubhik Das , Computer Professional<\/div>","<div style=\"word-break: normal\">Stephanie Wilson, Jane Marshall, Madeline Cruice, Abi Roper, Timothy Neate<\/div>","<div style=\"word-break: normal\">Robert Cavanaugh, Alexander Swiderski, Stacey Steele, William D. Hula, Gerasimos Fergadiotis<\/div>","<div style=\"word-break: normal\">PhD thesis: Mr. Rajath shenoy, Guide: Dr. Gopee Krishnan, Dr. Lyndsey Nickels<\/div>","<div style=\"word-break: normal\">Mohammad Haghighi, Laura Chapman, Javad Anjum<\/div>","<div style=\"word-break: normal\">John E Pierce, Miranda Rose, Dana Wong, Rachelle Pitt, Annie Hill, David Copland, Emma Power, Erin Godecke, Hannah Johns, Jemma Tulloch, Joosup Kim, Julie Adam, Tim Adam, Leanne Togher, Leonid Churilov, Marcella Carragher, Miranda Rose, Rob Nicholls, Ruth Townsend, Sam Harvey, Sandy Barry<\/div>","<div style=\"word-break: normal\">Sam Harvey, Miranda Rose, Michael Walsh Dickey, Marcella Carragher<\/div>","<div style=\"word-break: normal\">Timothy Neate, Stephanie Wilson<\/div>","<div style=\"word-break: normal\">William Evans, William Hula, Jeff Starns, Peter Brusilovsky<\/div>","<div style=\"word-break: normal\">CIA A/Prof Sarah Jane Wallace The University of Queensland\nCIB Prof David A Copland The University of Queensland\nCIC Prof Janet Wiles The University of Queensland\nCID Assoc Prof Anthony J Angwin The University of Queensland\nCIE Assoc Prof Victoria Jane Palmer University of Melbourne\nCIF Dr Peter Harold Worthy The University of Queensland\nCIG Dr Anne Jane Hill The University of Queensland\nCIH Dr Barbra H. B. Timmer The University of Queensland\nCII Assoc Prof Matthew John Gullo The University of Queensland<\/div>","<div style=\"word-break: normal\">FIRLE Beckley, Kate Whiteman<\/div>","<div style=\"word-break: normal\">Heather Flowers, Laura Monetta, Constance Flamand-Roze, Miguel Garzon, Susie Williams<\/div>","<div style=\"word-break: normal\">Tolga Sözüçok (A Study for the requirement PhD / Doctoral Dissertation)\n\nİlknur Maviş<\/div>","<div style=\"word-break: normal\">Project management: Prof. Dr. Norina Lauer & Prof. Dr. Sabine Corsten; research assistants: Christina Kurfess, Maren Nickel, Daniel Kreiter<\/div>","<div style=\"word-break: normal\">Dr Anna Caute, Annabel Kay, Erika Mangialardi<\/div>","<div style=\"word-break: normal\">Albrecht, Katharina; Jaecks, Petra; Jonas, Kristina; Stegenwallner-Schütz, Maja; von Lehmden, Friederike<\/div>","<div style=\"word-break: normal\">Dr. Gopee Krishnan, Dr. Shivani Tiwari, Dr. Apoorva Pauranik, Dr. Aparna Pai, Mr. Rajath Shenoy, Mr Intiaz, Ms Sona<\/div>","<div style=\"word-break: normal\">Dr. Swathi Kiran; Dr. Margrit Betke; Dr. Prakash Ishwar; Dr. Claire Cordella<\/div>","<div style=\"word-break: normal\">Dr. Swathi Kiran; Dr. Steven Cramer; Dr. Maria Varkanitsa<\/div>","<div style=\"word-break: normal\">Jessica D. Richardson, H. Isabel Hubbard, Christie Duhigg, Jordyn Sims<\/div>","<div style=\"word-break: normal\">Janet Alexander MSPH; Patricia Zrelak PhD RN; Michelle Camicia PhD RN FAHA; Brian Theodore PhD; Kam Gardner CCC-SLP; Diana Storti MS CCC-SLP; Linda Heckenlively MS, CCC-SLP; Melissa Meighan DNP MS RN; Mai N Nguyen-Huynh MD MAS<\/div>","<div style=\"word-break: normal\">Chaleece Sandberg, Teresa Gray, Swathi Kiran<\/div>","<div style=\"word-break: normal\">Liss Brunner, Rachael Rietdijk, Emma Power, Melissa Miao, Petra Avramovic, Leanne Togher<\/div>","<div style=\"word-break: normal\">Leanne Togher, Rachael Rietdijk, Emma Power, Petra Avramovic, Melissa Miao, Liss Brunner<\/div>","<div style=\"word-break: normal\">Leanne Togher, Rachael Rietdijk, Emma Power, Melissa Brunner, Melissa Miao, Petra Avramovic<\/div>","<div style=\"word-break: normal\">Leanne Togher, Sophie Brassel, Emma Power, Andrew Campbell, Liss Brunner<\/div>","<div style=\"word-break: normal\">Leanne Togher, Michelle Attard, Emma Power, Rachael Rietdijk, Lucy Lanyon<\/div>","<div style=\"word-break: normal\">Jacquie Kurland, Polly Stokes, Anna Liu, Brendan O'Connor, Vishnupriya Varadharaju<\/div>","<div style=\"word-break: normal\">Emily Rogalski, PhD, Angela Roberts, Phd, Alfred Rademaker, PhD, Darby Morhardt, PhD<\/div>","<div style=\"word-break: normal\">Julie Wambaugh, Lydia Kallhoff<\/div>","<div style=\"word-break: normal\">Merav Raveh Malka<\/div>","<div style=\"word-break: normal\">Elena Barbieri<\/div>","<div style=\"word-break: normal\">WIlliam D. Hula, Gerasimos Fergadiotis, Michael Walsh Dickey, Daniel Taylor-Rodriguez, Miranda Babiak, Hannele Nicholson, Cheralyn Ranjan, Stacey Steel, Andrew Womack<\/div>","<div style=\"word-break: normal\">Steven Bedrick; Gerasimos Fergadiotis; Alexandra Salem; Robert Gale; Mikala Fleegle<\/div>","<div style=\"word-break: normal\">Robert Gale, Gerasimos Fergadiotis, Steven Bedrick, Mikala Fleegle<\/div>","<div style=\"word-break: normal\">Meinzer, Flöel, Grewe, Binkofski<\/div>","<div style=\"word-break: normal\">Leora Cherney and Sarel van Vuuren (MPI)<\/div>","<div style=\"word-break: normal\">Leora Cherney (PI).<\/div>","<div style=\"word-break: normal\">Leora Cherney, Sameer Ashaie<\/div>","<div style=\"word-break: normal\">Leora Cherney, Sameer Ashaie<\/div>","<div style=\"word-break: normal\">Lucy Bryant, Bronwyn Hemsley, Emma Power, et al.<\/div>","<div style=\"word-break: normal\">Esther Kim (University of Alberta); Elizabeth Rochon (University of Toronto)<\/div>","<div style=\"word-break: normal\">Annie, Hill, Genevieve Vuong, Jade Dignam, Clare Burns, David Copland<\/div>","<div style=\"word-break: normal\">Jade Dignam, David Copland, Annie Hill, Miranda Rose, Deborah Hersh, Kirstine Shrubsole, John Pierce, Sarah J. Wallace, Emma Power, Kate O'Brien, Kat Roxas, Emma O'Neill, Kylie Short, Penni Burfein, Jessica Campbell (†).<\/div>","<div style=\"word-break: normal\">Jessica Campbell, Kori Ramajoo, Sarah J. Wallace, Sonia Brownsett, Peter Worthy, Jacki Liddle, Ciara Shiggins, Lisa Anemaat, David Copland<\/div>","<div style=\"word-break: normal\">Annie Hill, Sonia Brownsett, Kori Ramajoo, Jessica Campbell, Sarah J. Wallace, Jade Dignam, Kirstine Shrubsole, Peter Worthy, Jacki Liddle, David Copland,<\/div>","<div style=\"word-break: normal\">Miranda Rose, Marcella Carragher, Robyn O'Halloran, Edwina Lamborn, Lauren Fletcher<\/div>","<div style=\"word-break: normal\">Miranda Rose, Robyn O'Halloran, Kylie Casey<\/div>","<div style=\"word-break: normal\">Miranda Rose, Damminda Alahakoon, Ian Kneebone, Brooke Ryan, Emma Power, Annie Hill, Leanne Togher, Tim Usherwood, David Copland, Richard Lindley, John E Pierce...<\/div>","<div style=\"word-break: normal\">Professor Leanne Togher, Dr Rachael Rietdijk, Professor Emma Power, Dr Melissa Brunner, Dr Petra Avramovic, Dr Sophie Brassel<\/div>","<div style=\"word-break: normal\">Dr Celia Woolf (Project Lead) and Co-investigators Dr Madeline Cruice and Morganie Naidoo<\/div>","<div style=\"word-break: normal\">Dr Madeline Cruice, Dr Lucy Dipper, Rebecca Bright, Swapnil Gudgil<\/div>","<div style=\"word-break: normal\">Kelly Knollman Porter, Sarah E. Wallace, Karen Hux, Jessica Brown<\/div>","<div style=\"word-break: normal\">Elena Donoso Brown, Sarah E. Wallace, Jamie Lee<\/div>","<div style=\"word-break: normal\">Prof. Dr. Karsten Weber, Prof. Dr. Sonja Haug, Prof. Dr. Norina Lauer, Prof. Dr. Christa Mohr, Prof. Dr. Andrea Pfingsten, Prof. Dr. Georgios Raptis, Edda Currle, Katrin Ettl, Dr. Debora Frommeld, Nina Greiner, Natalie Kudienko, Christof Popp, Anselm Stadler<\/div>","<div style=\"word-break: normal\">Prof.in Dr. Sabine Corsten, Catholic University of Apllied Sciences Mainz, Germany\nProf.in Dr. Juliane Leinweber, Hochschule für angewandte Wissenschaft und Kunst Hildesheim/Holzminden/Göttingen; Germany\nDr. Jürgen Keller, RELIMETRICS GmbH, Berlin, Germany\nFarid Kanbari, POLAVIS GmbH, Berlin; Germany<\/div>","<div style=\"word-break: normal\">Petronilla Battista, Simona Aresta, Gaia C. Santi, Stephanie Grasso, Maria Luisa Gorno Tempini, Maya Henry<\/div>","<div style=\"word-break: normal\">Sarah Wallace, Peter Worthy, David Copland, Kirstine Shrubsole, Kim Barron, Phil Jamieson,  Annie Hill, Janet Wiles, Alex Haslam, Jennifer Lee, Ryan Deslandes, Savita Datta<\/div>","<div style=\"word-break: normal\">Dr Charlotte Johansson Malmeling, Dr Malin Antonsson, Professor Åsa Wengelin<\/div>","<div style=\"word-break: normal\">Dr. Winsy Wong, Dr. Donald Li<\/div>","<div style=\"word-break: normal\">Michael Dean\nHannah Harvey<\/div>","<div style=\"word-break: normal\">A/Prof Sarah Wallace\nDr Peter Worthy\nProf David Copland\nPhillip Jamieson\nKim Barron\nProf Leanne Togher\nDr Kirstine Shrubsole\nDr Anne Hill\nProf Janet Wiles\nProf Alex Haslam\nDr Jennifer Lee\nMr Ryan Deslandes\nMs Savita Datta<\/div>","<div style=\"word-break: normal\">Özlem Oğuz, Memik Yıldız, John Pierce<\/div>","<div style=\"word-break: normal\">Britta Biedermann, Max Coltheart, Deborah Hersh, Lizz Hill, Steve Saunders<\/div>","<div style=\"word-break: normal\">Marina Ruiter, Vitoria Piai, Willemijn Doedens, and others<\/div>","<div style=\"word-break: normal\">Marina Ruiter, Vitoria Piai, Ardi Roelofs<\/div>","<div style=\"word-break: normal\">Emily Rogalski, PhD, Angela Roberts, PhD<\/div>","<div style=\"word-break: normal\">Klaus Kugelmann, Speechcare GmbH; Laura Tuschen, Fraunhofer IDMT; Prof. Dr. Juliane Leinweber, Hochschule für angewandte Wissenschaft und Kunst Hildesheim/Holzminden/Göttingen; Rolf Behrens, Bitnamic GmbH<\/div>","<div style=\"word-break: normal\">Professor Rosemary Varley, Dr Claudia Bruns, Kerry Dathan, Fern Rodgers, Dr Victoria Fleming; Dr Amir H Javadi<\/div>","<div style=\"word-break: normal\">Dr Vasiliki Kladouchou, Professor Katerina Hilari, Jaycie Bohan<\/div>","<div style=\"word-break: normal\">Achini Adikari, John Pierce, Nuwan Pallewela, Dana Wong, Ian Kneebone, Brooke Ryan, Nelson Hernandez, Trevor Bremner, Sue Bremner, Kim Barron, Damminda Alahakoon, Miranda Rose<\/div>","<div style=\"word-break: normal\">Dr Anna Caute, Professor Vicky Joffe, Professor Reinhold Scherer, Dr Bundy Mackintosh, Mark Allinson, Leila Mirza.<\/div>","<div style=\"word-break: normal\">Stephanie Wilson, Madeline Cruice, Jo Wood, Nicola Botting, Abi Roper, Niamh Devane, Ulfa Octaviani<\/div>","<div style=\"word-break: normal\">Dr Jade Dignam, Prof. David Copland, A/Prof. Sarah Wallace, Dr Pete Worthy, Prof. Emma Power, Dr Emmah Doig, Dr Elizabeth Beadle, Ms Emma O'Neill.<\/div>","<div style=\"word-break: normal\">Jacquie Kurland, Polly Stoke, Brendan O'Connor, Anna Liu, Thomas Mackie<\/div>","<div style=\"word-break: normal\">Dr Cristina Romani; Dr Andrew Olson; Louise Lander (SLT)<\/div>","<div style=\"word-break: normal\">Dr Rachael Rietdijk, Dr Liss Bruner, Dr Petra Avramovic, Dr Sophie Brassel, Dr Elise Bogart, Dr Renee Lim, Associate Professor Nikki McCaffrey, Dr Suzy Goldmsith, Naomi Fuller, Victoria Kennedy<\/div>","<div style=\"word-break: normal\">Petronilla Battista, Simona Aresta, Gaia C. Santi<\/div>","<div style=\"word-break: normal\">Humphrey Curtis; Timothy Neate; co-design participants and collaborators from Aphasia Re-Connect<\/div>","<div style=\"word-break: normal\">Humphrey Curtis; Ying Hei Lau; Timothy Neate; 19 co-design participants and collaborators from Aphasia Re-Connect<\/div>"],["<div style=\"word-break: normal\">London, UK<\/div>","<div style=\"word-break: normal\">London, UK<\/div>","<div style=\"word-break: normal\">Banasthali, India<\/div>","<div style=\"word-break: normal\">London, London, United Kingdom; London, London<\/div>","<div style=\"word-break: normal\">Storrs, CT, United States<\/div>","<div style=\"word-break: normal\">Bloomington , Indiana, USA<\/div>","<div style=\"word-break: normal\">Indore, India<\/div>","<div style=\"word-break: normal\">Indore, India<\/div>","<div style=\"word-break: normal\">London, UK<\/div>","<div style=\"word-break: normal\">Pittsburgh, PA, United States<\/div>","<div style=\"word-break: normal\">Manipal, Udupi, India<\/div>","<div style=\"word-break: normal\">Phoenixville, PA, Pennsylvania, USA; Buffalo, NY, New York, USA; Scranton, PA; Athens, Georgia, USA<\/div>","<div style=\"word-break: normal\">Melbourne, Victoria, Australia; Brisbane, Sydney, Perth, Bendigo<\/div>","<div style=\"word-break: normal\">Melbourne, Victoria , Australia; Pittsburgh, USA<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">Pittsburgh, Pennsylvania, United States; Amherst, Massachusetts, United States<\/div>","<div style=\"word-break: normal\">Brisbane, Queensland, Australia<\/div>","<div style=\"word-break: normal\">Eastbourne, United Kingdom<\/div>","<div style=\"word-break: normal\">Ottawa, Canada<\/div>","<div style=\"word-break: normal\">Eskişehir, Turkey<\/div>","<div style=\"word-break: normal\">Regensburg & Mainz, Germany<\/div>","<div style=\"word-break: normal\">Colchester, UK<\/div>","<div style=\"word-break: normal\">Cologne, Germany<\/div>","<div style=\"word-break: normal\">Manipal, Udupi, India<\/div>","<div style=\"word-break: normal\">Boston, United States<\/div>","<div style=\"word-break: normal\">Boston, United States<\/div>","<div style=\"word-break: normal\">Albuquerque, United States<\/div>","<div style=\"word-break: normal\">Walnut Creek, United States<\/div>","<div style=\"word-break: normal\">University Pk, USA<\/div>","<div style=\"word-break: normal\">Sydney, Australia<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">Sydney, Australia<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">Amherst, MA, Massachusetts, US<\/div>","<div style=\"word-break: normal\">Chicago, IL, USA<\/div>","<div style=\"word-break: normal\">Salt Lake City, Utah, United States<\/div>","<div style=\"word-break: normal\">Jerusalem, Israel<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Pittsburgh, PA, USA; Portland, OR, USA<\/div>","<div style=\"word-break: normal\">Portland, OR, United States<\/div>","<div style=\"word-break: normal\">Portland OR, USA<\/div>","<div style=\"word-break: normal\">Greifswald, Germany<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Chicago, IL, United States<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">Edmonton, Canada; Toronto, Canada<\/div>","<div style=\"word-break: normal\">Brisbane, Queensland, Australia; Melbourne, Victoria, Australia<\/div>","<div style=\"word-break: normal\">Brisbane, Australia<\/div>","<div style=\"word-break: normal\">Brisbane, QLD, Australia<\/div>","<div style=\"word-break: normal\">Brisbane, QLD, Australia<\/div>","<div style=\"word-break: normal\">Melbourne, VIC, Australia<\/div>","<div style=\"word-break: normal\">Melbourne, VIC, Australia<\/div>","<div style=\"word-break: normal\">Melbourne, Victoria, Australia; Sydney, Australia; Bendigo, Brisbane<\/div>","<div style=\"word-break: normal\">Sydney, NSW, Australia<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">Pittsburgh, PA, United States<\/div>","<div style=\"word-break: normal\">Pittsburgh, PA, United States<\/div>","<div style=\"word-break: normal\">Regensburg, Germany<\/div>","<div style=\"word-break: normal\">Berlin, Germany<\/div>","<div style=\"word-break: normal\">Bari, Italy, Italy<\/div>","<div style=\"word-break: normal\">Brisbane, Queensland, a<\/div>","<div style=\"word-break: normal\">Gothenburg, Sverige<\/div>","<div style=\"word-break: normal\">Hong Kong SAR, China<\/div>","<div style=\"word-break: normal\">London, London, United Kingdom<\/div>","<div style=\"word-break: normal\">Brisbane, Queensland , Australia<\/div>","<div style=\"word-break: normal\">İstanbul, Turkiye<\/div>","<div style=\"word-break: normal\">Perth, Australia; Sydney, Australia<\/div>","<div style=\"word-break: normal\">Nijmegen, the Netherlands<\/div>","<div style=\"word-break: normal\">Nijmegen, the Netherlands<\/div>","<div style=\"word-break: normal\">Chicago, United States<\/div>","<div style=\"word-break: normal\">Göttingen, Germany<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">London, London, United Kingdom<\/div>","<div style=\"word-break: normal\">Melbourne, Victoria, Australia; Sydney, NSW, Australia; Bendigo, Brisbane<\/div>","<div style=\"word-break: normal\">Colchester, United Kingdom<\/div>","<div style=\"word-break: normal\">London, United Kingdom<\/div>","<div style=\"word-break: normal\">Brisbane, Australia<\/div>","<div style=\"word-break: normal\">Amherst, MA, Massachusetts, US<\/div>","<div style=\"word-break: normal\">Birmingham, United Kingdom<\/div>","<div style=\"word-break: normal\">Sydney, Australia<\/div>","<div style=\"word-break: normal\">Bari, Italy, Italy; Milan, Italy<\/div>","<div style=\"word-break: normal\">London, England, United Kingdom<\/div>","<div style=\"word-break: normal\">London, England, United Kingdom<\/div>"],["<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">No<\/div>","<div style=\"word-break: normal\">Yes<\/div>","<div style=\"word-break: normal\">Yes<\/div>"],["<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Other<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase IV - Effectiveness<\/div>","<div style=\"word-break: normal\">Phase IV - Effectiveness<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Other<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase III - Efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase I - Proof of concept<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Early development work<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Other<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>","<div style=\"word-break: normal\">Phase II - Feasibility, acceptability, preliminary efficacy<\/div>"],["<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Specific software, It is also specific hardware<\/div>","<div style=\"word-break: normal\">Remote-delivered assessments / telehealth for inner speech assessment, in the future!<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Assessment<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific app, Virtual reality, Augmentative and Alternive Communication, communication accessibility, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, Generic software, Augmentative and Alternative Communication, communication accessibility, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Improving social connectedness using tech<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">not yet finally decided<\/div>","<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">A combination of telehealth delivery and natural language processing for data analysis<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Powerpoint<\/div>","<div style=\"word-break: normal\">Specific software, Augmentative and Alternative Communication, communication accessibility<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Framework that can be used for a range of assessment purposes.<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">technology adapation<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific app, tDCS<\/div>","<div style=\"word-break: normal\">Measurement tools<\/div>","<div style=\"word-break: normal\">Specific app, Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Telerehabilitation delivered through Zoom<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Platform<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Specific app<\/div>","<div style=\"word-break: normal\">Specific software, Generic software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Software developed for developmental reading- and writing difficulties<\/div>","<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software, Generic software, Augmentative and Alternative Communication, communication accessibility, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, This will be an assessment app accessible from Desktops, Laptops, Tablets and Mobiles.<\/div>","<div style=\"word-break: normal\">Virtual reality<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Generic software, Augmentative and Alternative Communication, communication accessibility<\/div>","<div style=\"word-break: normal\">Generic software<\/div>","<div style=\"word-break: normal\">Generic software, Augmentative and Alternative Communication, communication accessibility, Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Specific software<\/div>","<div style=\"word-break: normal\">Artificial Intelligence/Machine learning<\/div>","<div style=\"word-break: normal\">Specific software, Augmentative and Alternative Communication, communication accessibility<\/div>","<div style=\"word-break: normal\">Specific software, Augmentative and Alternative Communication, communication accessibility<\/div>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Title<\/th>\n      <th>PI<\/th>\n      <th>Location<\/th>\n      <th>Funded<\/th>\n      <th>Phase<\/th>\n      <th>Category<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":false,"columnDefs":[{"width":200,"targets":[0,1]},{"width":50,"targets":2},{"width":10,"targets":3},{"width":50,"targets":[4,5]},{"className":"dt-center","targets":[2,3,4,5]},{"name":"Title","targets":0},{"name":"PI","targets":1},{"name":"Location","targets":2},{"name":"Funded","targets":3},{"name":"Phase","targets":4},{"name":"Category","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
